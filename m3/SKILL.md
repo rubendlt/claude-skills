@@ -1,7 +1,7 @@
 ---
 name: m3
 user-invocable: true
-description: "Consulta de datos: copia local de Material Design 3 de Google (m3.material.io: fundamentos, estilos, componentes), en markdown buscable. Usar para mínimos de accesibilidad y ergonomía (objetivos táctiles de 48dp, contraste, estados, foco), anatomía y medidas de componentes (botones, campos de texto, diálogos, menús, navegación, listas, chips, snackbar), cuándo usar cada componente, breakpoints y layout adaptable, tipos de movimiento y duraciones, roles de color y redacción de interfaz. Contrapunto Android/web a la skill hig (Apple). Datos y comportamiento, no estética."
+description: "Consulta de datos: copia local de Material Design 3 de Google (m3.material.io: fundamentos, estilos, componentes), en markdown buscable. USAR al construir o revisar UI web o móvil (sobre todo Android/Expo) cuando haga falta una medida, un mínimo o una regla de comportamiento, y como segunda fuente junto a hig cuando Apple no cubre el caso o solo habla de iOS. Sirve para mínimos de accesibilidad y ergonomía (objetivos táctiles de 48dp, contraste, estados, foco), anatomía y medidas de componentes (botones, campos de texto, diálogos, menús, navegación, listas, chips, snackbar), cuándo usar cada componente, breakpoints y layout adaptable, tipos de movimiento y duraciones, roles de color y redacción de interfaz. Contrapunto Android/web a la skill hig (Apple). Datos y comportamiento, no estética. NO usar para decidir el aspecto visual ni en ajustes menores."
 context: fork
 agent: Explore
 ---
