@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // Captura referentes en escritorio (1440×900) y móvil (390×844).
-// Uso: node capture.mjs [--full] <carpeta_salida> <url> [url...]
+// Uso: node capture.mjs [--full] <carpeta_salida> "<url>|<origen>" ["<url>|<origen>"...]
 //   --full  página entera en vez de la primera pantalla
+//   origen  de dónde sale la URL: «búsqueda: <consulta>», «enlace en <página>» o «propia». Obligatorio:
+//           una URL sin origen es una URL adivinada, y se rechaza antes de abrir el navegador
 // Necesita Playwright (en el proyecto, global o vía npx) y un Chromium:
 //   npx -y playwright install chromium
 import { createRequire } from "node:module";
@@ -91,8 +93,14 @@ async function dismissCookies(page) {
 
 const args = process.argv.slice(2);
 const full = args.includes("--full");
-const [out, ...urls] = args.filter((a) => a !== "--full");
-if (!out || !urls.length) { console.error("Uso: node capture.mjs [--full] <salida> <url>..."); process.exit(1); }
+const [out, ...targets] = args.filter((a) => a !== "--full");
+if (!out || !targets.length) { console.error('Uso: node capture.mjs [--full] <salida> "<url>|<origen>"...'); process.exit(1); }
+const sinOrigen = targets.filter((t) => !t.includes("|") || !t.slice(t.indexOf("|") + 1).trim());
+if (sinOrigen.length) {
+  console.error(`Sin origen (¿URL adivinada?): ${sinOrigen.join(", ")}\nBúscala o navega hasta ella y pásala como "<url>|búsqueda: …" o "<url>|enlace en …".`);
+  process.exit(1);
+}
+const urls = targets.map((t) => t.slice(0, t.indexOf("|")).trim());
 
 const pw = findPlaywright();
 if (!pw) { console.error("No encuentro Playwright: npx -y playwright install chromium"); process.exit(1); }

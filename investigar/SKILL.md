@@ -37,11 +37,11 @@ Antes de salir fuera, gratis:
 3. **De fuera:** quien resolvió el mismo patrón con más recursos. Galerías curadas por patrón (Mobbin, Page Flows, Land-book, Godly, Awwwards para estética), design systems públicos y productos líderes del patrón (p. ej., formularios: GOV.UK, Stripe, Typeform).
 4. Descartar los que no resuelven el mismo problema o tienen otro público. Si los del sector local son flojos (fichas de directorio, webs abandonadas), subir a nacional o internacional y decirlo.
 5. **Preseleccionar 5-6 para quedarse con 3-5**: algunos bloquean bots o han cambiado de URL.
-6. **URLs sacadas de una búsqueda o navegando la web del referente, nunca adivinadas** (`/es/contacto/` de memoria suele dar 404).
+6. **URLs sacadas de una búsqueda o navegando la web del referente, nunca adivinadas**, aunque la marca sea famosa y la ruta parezca obvia (`/contact/sales`, `/es/contacto/`: de memoria suelen dar 404). El script exige el origen de cada URL (`"<url>|búsqueda: <consulta>"`, `"<url>|enlace en <página>"`, `"<url>|propia"`) y rechaza las que no lo traen: si no tienes qué poner, busca la URL primero.
 
 **Mirarlos en captura, nunca de memoria:**
 ```sh
-node <dir_de_esta_skill>/scripts/capture.mjs [--full] <carpeta_temporal>/refs <url1> <url2> ...
+node <dir_de_esta_skill>/scripts/capture.mjs [--full] <carpeta_temporal>/refs "<url1>|búsqueda: <consulta>" "<url2>|enlace en <página>" ...
 ```
 - Escritorio (1440×900) y móvil (390×844). Cierra el banner de cookies, baja por la página para que carguen imágenes y mapas diferidos, y oculta los distintivos de desarrollo (Next.js, Vite).
 - **Primera pantalla por defecto; `--full` solo cuando lo importante está más abajo** (la página propia, un formulario largo). Cada captura entera cuesta mucho al leerla.
@@ -54,7 +54,9 @@ node <dir_de_esta_skill>/scripts/capture.mjs [--full] <carpeta_temporal>/refs <u
 
 - Fuentes con datos, por orden: documentación oficial y normas (WCAG, MDN, web.dev, guías de plataforma) → investigación de usabilidad (Nielsen Norman Group, Baymard) → experimentos publicados (CXL, casos A/B con cifras, papers) → nada más.
 - **Un blog de opinión, un hilo o un «10 tips» no es evidencia.** Fecha visible; si el tema cambia (SEO, precios, APIs), reciente.
-- 3-5 búsquedas, lanzadas a la vez; leer la página entera de las 2-3 fuentes clave, no solo el extracto.
+- 3-5 búsquedas, lanzadas a la vez.
+- **El buscador devuelve un resumen, no la página.** Las 2-3 fuentes clave se leen enteras con WebFetch (o con el agente `web-fetch` donde no haya WebFetch: es la herramienta de leer páginas, no un subagente que haya que justificar). Si una no se puede leer (bloqueo, de pago), se usa otra o se dice.
+- Una cifra o una regla que solo se ha visto en el resumen del buscador no se presenta como dato de la fuente: se marca «(según el resumen del buscador)» o se descarta.
 - Si no hay evidencia sólida, decirlo: no rellenar con suposiciones.
 
 ## 4. Responder
@@ -67,7 +69,7 @@ Corto y en este orden:
 4. **Criterio propio:** lo que es opinión, marcado como tal.
 5. **Choques:** qué contradice una decisión del proyecto y si merece reabrirse.
 
-Fuentes al final como enlaces. Propuestas visuales con capturas reales de la web del proyecto, no esquemas.
+Fuentes al final como enlaces, cada una marcada **[leída]** o **[resumen]**; antes de responder, comprobar que las fuentes que sostienen las recomendaciones principales están [leídas]. Propuestas visuales con capturas reales de la web del proyecto, no esquemas.
 
 ## 5. No hacer
 
