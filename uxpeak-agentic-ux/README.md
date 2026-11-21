@@ -18,16 +18,8 @@ Esta skill dota a cualquier agente de inteligencia artificial (Antigravity, Clau
 ## 📂 Estructura del Repositorio
 
 ```text
-├── SKILL.md                          # Instrucción principal ejecutable de la Skill
-├── README.md                         # Documentación general de instalación y uso
-├── references/
-│   └── full_guide.md                 # Guía maestra y transcripciones completas de los 13 videos analizados
-└── .agents/                          # Estructura compatible con detección automática en proyectos
-    └── skills/
-        └── uxpeak-agentic-ux/
-            ├── SKILL.md
-            └── references/
-                └── full_guide.md
+├── SKILL.md    # Todos los tips, agrupados por tipo (conversión, confianza, copy, layout, formularios…)
+└── README.md
 ```
 
 ---
@@ -39,7 +31,7 @@ Para que Antigravity o cualquier agente detecte la skill en tu espacio de trabaj
 
 ```bash
 cd /ruta/a/tu/proyecto
-git clone https://github.com/rubendlt/uxpeak-agentic-ux.git .agents/skills/uxpeak-agentic-ux
+git clone https://github.com/rubendlt/uxpeak-agentic-ux.git .claude/skills/uxpeak-agentic-ux
 ```
 
 ### Opción 2: Uso como repositorio raíz
@@ -60,4 +52,4 @@ Si abres este repositorio como tu workspace activo, la skill estará disponible 
 
 ## 📚 Documentación Completa
 
-Para revisar los detalles video por video y la transcripción de los 13 contenidos analizados de `@uxpeak`, consulta [`references/full_guide.md`](./references/full_guide.md).
+Todo está en [`SKILL.md`](./SKILL.md), ordenado por el problema que resuelve cada tip; las fuentes (IDs de los 13 vídeos) van al final.

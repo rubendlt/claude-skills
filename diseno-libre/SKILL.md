@@ -126,7 +126,7 @@ Con `--rapido`, o si el usuario ha dicho que no le preguntes: elige tú, escribe
 Carga las skills en este orden (el usuario autorizó usar ux-craft desde este arnés):
 
 1. `ux-craft`: SKILL.md, `claridad.md`, `slop.md`, `copy.md`, `mitos.md` y la referencia de plataforma (`web.md` o `movil.md`). Sigue su paso 2 («Si el encargo es construir»).
-2. `uxpeak-agentic-ux`: su SKILL.md. Su `full_guide.md` solo para el patrón concreto que construyes (paywall, onboarding, formulario, estado vacío…).
+2. `uxpeak-agentic-ux`: su SKILL.md entero (los tips van agrupados por tipo; aplica las secciones del patrón que construyes).
 3. Si es una web o una landing: `action-hm:estandar-hm`.
 
 **Si se contradicen, manda:** proyecto > ux-craft (incluido `mitos.md`) > estandar-hm > uxpeak. En concreto, de uxpeak **no** se aplica:
