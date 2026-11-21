@@ -61,7 +61,8 @@ node <dir_de_esta_skill>/scripts/capture.mjs [--full] <carpeta_temporal>/refs "<
 
 ## 3. Qué dice la investigación
 
-- Fuentes con datos, por orden: documentación oficial y normas (WCAG, MDN, web.dev, guías de plataforma) → investigación de usabilidad (Nielsen Norman Group, Baymard) → experimentos publicados (CXL, casos A/B con cifras, papers) → nada más.
+- **Si hace falta NN/g, por la skill `nng`** (fichas → índice local → leer el artículo exacto), nunca buscándolo en la web. Cuenta como una de las fuentes clave leídas enteras.
+- Fuentes con datos, por orden: documentación oficial y normas (WCAG, MDN, web.dev, guías de plataforma) → investigación de usabilidad (NN/g vía `nng`, Baymard) → experimentos publicados (CXL, casos A/B con cifras, papers) → nada más.
 - **Un blog de opinión, un hilo o un «10 tips» no es evidencia.** Fecha visible; si el tema cambia (SEO, precios, APIs), reciente.
 - 3-5 búsquedas, lanzadas a la vez.
 - **El buscador devuelve un resumen, no la página.** Las 2-3 fuentes clave se leen enteras con WebFetch (o con el agente `web-fetch` donde no haya WebFetch: es la herramienta de leer páginas, no un subagente que haya que justificar). Si una no se puede leer (bloqueo, de pago), se usa otra o se dice.

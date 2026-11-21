@@ -131,10 +131,11 @@ Carga las skills en este orden (el usuario autorizó usar ux-craft desde este ar
 4. Según lo que toque la pantalla (solo las que apliquen; **evidencia**, por encima de ux-craft en su terreno):
    - formularios, errores, textos de interfaz, cookies o páginas de estado → `govuk` (la página pertinente);
    - accesibilidad, tamaños de toque o ergonomía móvil → `hig`;
+   - cualquier decisión de usabilidad con duda (navegación, catálogo, buscador, lectura, confianza, conversión) → `nng`;
    - web en móvil (100vh, zoom en campos, notch, hover pegado) → `mobile-native`;
    - movimiento → `animate` para construirlo y `review-animations` al acabar.
 
-**Si se contradicen, manda:** proyecto > govuk / hig en su terreno > ux-craft (incluido `mitos.md`) > estandar-hm > uxpeak. En concreto, de uxpeak **no** se aplica:
+**Si se contradicen, manda:** proyecto > govuk / hig / nng en su terreno > ux-craft (incluido `mitos.md`) > estandar-hm > uxpeak. En concreto, de uxpeak **no** se aplica:
 - cifras sin fuente presentadas como hechos («el 70–90 % confía en el default»);
 - skeleton, sombras teñidas o barra de progreso por defecto: solo si se ganan su sitio (ux-craft, principio 2);
 - presión falsa: cuentas atrás inventadas, progreso regalado engañoso, aversión a la pérdida para retener a quien quiere irse. Persuasión sí; trampas no.
