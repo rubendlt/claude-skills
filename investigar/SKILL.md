@@ -1,6 +1,6 @@
 ---
 name: investigar
-description: "Responde con referencias y evidencia, no de memoria ni por gusto. USAR siempre que el usuario pida una valoración o un juicio (¿qué te parece?, ¿está bien?, ¿es buena idea?, ¿cuál es mejor?, ¿qué harías?, ¿qué recomiendas?, ¿cómo lo mejorarías?, ¿cómo maximizo la conversión?, ¿qué hacen los mejores?) o un encargo de investigar (investiga, mira cómo lo hacen, busca qué se hace), en diseño, UX, conversión, copy, SEO, arquitectura, librerías, rendimiento o seguridad. Mira cómo lo resuelven los mejores (capturas reales) y qué dice la investigación con datos, y recomienda separando evidencia de criterio."
+description: "Responde con referencias y evidencia, no de memoria ni por gusto. USAR cuando la respuesta cambiaría con evidencia o referentes (decisión con alternativas reales, impacto en conversión o usuarios, tema no estudiado antes) y el usuario pida una valoración o un juicio (¿qué te parece?, ¿está bien?, ¿es buena idea?, ¿cuál es mejor?, ¿qué harías?, ¿qué recomiendas?, ¿cómo lo mejorarías?, ¿cómo maximizo la conversión?, ¿qué hacen los mejores?) o un encargo de investigar (investiga, mira cómo lo hacen, busca qué se hace), en diseño, UX, conversión, copy, SEO, arquitectura, librerías, rendimiento o seguridad. Mira cómo lo resuelven los mejores (capturas reales) y qué dice la investigación con datos, y recomienda separando evidencia de criterio."
 argument-hint: "[pregunta o encargo] [--rapido]"
 ---
 
@@ -14,7 +14,9 @@ Una opinión sin respaldo no vale. Ante una pregunta que pide juicio, la respues
 |---|---|---|
 | **Completa** (por defecto) | «¿qué harías para que convierta más?», «¿cómo mejorarías esta página?», «investiga cómo…» | Pasos 1-6 |
 | **Menor** (o `--rapido`) | una palabra, un margen, un nombre, un color | Paso 1 + una búsqueda si hace falta; sin capturas ni paso 6 |
-| **No aplica** | edits mecánicos, bug con causa clara, un hecho conocido con certeza | Responder directo |
+| **No aplica** | edits mecánicos, bug con causa clara, un hecho conocido con certeza, algo ya decidido o estudiado en el proyecto, el usuario pide rapidez | Responder directo y, si era una valoración relevante, decir en una línea por qué no se investigó |
+
+La pregunta clave para elegir: **¿cambiaría la respuesta si mirase referentes o estudios?** Si no, no hay que investigar. En la duda, versión menor.
 
 Lo que ya deciden las instrucciones del proyecto (`CLAUDE.md`, documentos de decisiones) no se reabre con un artículo: si la evidencia lo contradice, se dice y se argumenta, pero no se cambia sin preguntar.
 
