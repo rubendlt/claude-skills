@@ -12,7 +12,7 @@ git clone git@github.com:rubendlt/claude-skills.git ~/.claude/skills
 
 | Skill | Origen |
 |---|---|
-| ux-craft, diseno-libre, uxpeak-agentic-ux, investigar, capturas | Propias |
+| ux-craft, diseno-libre, uxpeak-agentic-ux, kolejain-ui, investigar, capturas | Propias |
 | animate, animate-expo, animation-performance, animation-vocabulary, break-ui, emil-design-eng, find-animation-opportunities, improve-animations, mobile-native, pick-ui-library, prototype, review-animations, apple-design | Emil Kowalski (sin licencia: no publicar) |
 | hig | vabole/apple-skills (texto de las HIG de Apple: no publicar) |
 | govuk | alphagov/govuk-design-system (MIT). Refrescar: `govuk/scripts/update.sh` |
