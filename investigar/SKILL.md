@@ -14,7 +14,7 @@ Una opinión sin respaldo no vale. Ante una pregunta que pide juicio, la respues
 |---|---|---|
 | **Completa** (por defecto) | «¿qué harías para que convierta más?», «¿cómo mejorarías esta página?», «investiga cómo…» | Pasos 1-6 |
 | **Menor** (o `--rapido`) | una palabra, un margen, un nombre, un color | Paso 1 + una búsqueda si hace falta; sin capturas ni paso 6 |
-| **No aplica** | edits mecánicos, bug con causa clara, un hecho conocido con certeza, algo ya decidido o estudiado en el proyecto, el usuario pide rapidez | Responder directo y, si era una valoración relevante, decir en una línea por qué no se investigó |
+| **No aplica** | edits mecánicos, bug con causa clara, un hecho conocido con certeza, algo ya decidido, algo ya estudiado **en sus dos mitades** (paso 1), el usuario pide rapidez | Responder directo y, si era una valoración relevante, decir en una línea por qué no se investigó. Lo que salga de memoria y no de algo visto o leído, marcado como criterio |
 
 La pregunta clave para elegir: **¿cambiaría la respuesta si mirase referentes o estudios?** Si no, no hay que investigar. En la duda, versión menor.
 
@@ -25,7 +25,9 @@ Lo que ya deciden las instrucciones del proyecto (`CLAUDE.md`, documentos de dec
 Antes de salir fuera, gratis:
 - **Proyecto:** `CLAUDE.md`, documentos de decisiones o de errores si existen (`docs/`, `.agent/`, ADRs), el código y la página real.
 - **Skills instaladas** que sean fuente primaria del tema (p. ej. guías de Apple, GOV.UK, design systems, UX): usarlas si están.
-- **Memoria:** estudios de referentes ya hechos para este proyecto o tema. Si existe uno reciente, partir de él y no repetirlo.
+- **Memoria y documentos:** estudios ya hechos para este proyecto o tema. Un estudio tiene dos mitades, **referentes** (paso 2) y **evidencia** (paso 3), y solo cuenta como hecho si cubrió las dos. Si cubrió una, partir de ella y hacer **solo la que falta**; no repetir la cubierta ni saltarse la otra.
+
+**Proporción:** las capturas y búsquedas sirven a la pregunta principal. Un dato suelto de apoyo (p. ej. «los líderes ponen los logos en gris») se comprueba con una búsqueda o se marca como criterio; no abre otra tanda de capturas.
 
 ## 2. Cómo lo hacen los mejores
 
@@ -77,5 +79,5 @@ Fuentes al final como enlaces. Propuestas visuales con capturas reales de la web
 ## 6. Guardar (solo investigación completa)
 
 Para no repetirla dentro de un mes:
-- **Siempre, en la memoria persistente** (barato): tema, fecha, referentes válidos y descartados (y por qué), fuentes clave y conclusión en 3-5 líneas.
+- **Siempre, en la memoria persistente** (barato): tema, fecha, **mitades cubiertas** (referentes / evidencia / las dos), referentes válidos y descartados (y por qué), fuentes clave y conclusión en 3-5 líneas.
 - **Solo si el usuario lo pide o la conclusión es muy visual:** capturas y conclusiones en una página que pueda abrir (un artifact si el entorno lo permite; si no, un `.md` en `docs/` con las imágenes al lado). Si no se hace, ofrecerlo en una línea.
