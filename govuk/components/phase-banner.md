@@ -1,0 +1,37 @@
+---
+title: Phase banner
+description: Use the phase banner component to show users your service is still being worked on
+section: Components
+aliases: alpha banner, beta banner, prototype banner, status banner, feedback banner
+---
+
+Use the phase banner component to show users your service is still being worked on.
+
+## When to use this component
+
+Services hosted on a service.gov.uk domain must use the phase banner until they pass a live assessment.
+
+## How it works
+
+There are 2 ways to use the phase banner component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+
+Use an alpha banner when your service is in alpha, and a beta banner if your service is in private or public beta.
+
+Show the Phase banner inside the `<header>` element, directly after either:
+
+- the [Service navigation component](/components/service-navigation/)
+- the [GOV.UK header component](/components/header/) (if your service does not use the Service navigation component)
+
+If you use Nunjucks, use the `headerEnd` block to place the Phase banner on your page.
+
+See ['Add extra content at the start or end of the `<header>` element' in 'Page template: Blocks and options'](/styles/page-template/#add-extra-content-at-the-start-or-end-of-the-header-element).
+
+Phase banners are shown across all pages of a service, so users should understand it as a service-level message.
+
+You can choose to place the Phase banner in a more appropriate place for your service, however you’ll need to customise the component and provide your own CSS code to make it show correctly.
+
+### Collect feedback from users
+
+Use the [Feedback component](/components/feedback/) to ask users to give feedback about your service and provide them with a link to a feedback page.
+
+[Find out what feedback you need to collect at each phase](https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction#user-satisfaction-through-each-service-phase) in the GOV.UK Service Manual.

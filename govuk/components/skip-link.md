@@ -1,0 +1,36 @@
+---
+title: Skip link
+description: Use the skip link component to help keyboard-only users skip to the main content on a page
+section: Components
+aliases: Skip navigation link
+---
+
+Use the skip link component to help keyboard-only users skip to the main content on a page.
+
+If you use the page template, you'll also get the skip link without having to add it, as it's included by default. However, if you want to customise the default skip link, read the [page template guidance about customising components](/styles/page-template/#changing-template-content).
+
+## When to use this component
+
+All GOV.UK pages must include a skip link. Usually, you should place the skip link immediately after the opening `<body>` tag. However, if you're using a [Cookie banner component](/components/cookie-banner/), place the skip link immediately after the cookie banner.
+
+Some automated accessibility testing tools may warn that the skip link element is not inside a landmark. This warning does not apply to skip links, so you can ignore it. Do not wrap the skip link in a `<nav>` region, or move it inside the header.
+
+## How it works
+
+Some people use the tab key on their keyboard to navigate through the links and form elements on a web page.
+
+Including the skip link component gives users the option to bypass the top-level navigation links and jump to the main content on a page.
+
+The skip link component is visually hidden until a keyboard press activates it.
+
+There are 2 ways to use the skip link component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk), you can use the Nunjucks macro.
+
+## Research on this component
+
+### Persisting skip anchors in URLs
+
+When a user uses the skip link and then a button, any pages that load afterwards might automatically skip to main content in a way that they might not expect.
+
+Usually, predictable and consistent behaviour is better for users. However, we've received mixed feedback on whether this unexpected behaviour is useful or confusing for users, particularly amongst users of assistive technology such as screen readers and keyboard-only navigation.
+
+If you’ve done any user research with users who use the skip link, tell us what you’ve learned. You can see the discussion and [add a comment to the related GitHub issue](https://github.com/alphagov/govuk-frontend/issues/4465).
