@@ -59,7 +59,7 @@ La puerta solo comprueba que el trabajo existe, no que sea bueno: eso lo juzgas 
 
 ## Fase 0 · Brief (5 minutos, no más)
 
-Lee las fuentes de verdad del proyecto (ux-craft § 1: `CLAUDE.md`, tokens, componentes, memorias). Escribe `brief.md` con estos apartados exactos:
+Lee las fuentes de verdad del proyecto (ux-craft § 1: `CLAUDE.md`, tokens, componentes, memorias). Si hay un estudio de `investigar` sobre esta pantalla (memoria, `docs/`), parte de sus referentes y su evidencia y no los repitas. Para ver cómo está hoy la página propia, `capturas` (`.shots/`) antes de capturar de nuevo. Escribe `brief.md` con estos apartados exactos:
 
 - `## Encargo`: qué pantalla, flujo o web, y en qué plataforma.
 - `## Usuario y momento`: quién lo usa, en qué situación (de pie en el gimnasio, en el escritorio comparando…) y con qué frecuencia.
@@ -127,9 +127,14 @@ Carga las skills en este orden (el usuario autorizó usar ux-craft desde este ar
 
 1. `ux-craft`: SKILL.md, `claridad.md`, `slop.md`, `copy.md`, `mitos.md` y la referencia de plataforma (`web.md` o `movil.md`). Sigue su paso 2 («Si el encargo es construir»).
 2. `uxpeak-agentic-ux`: su SKILL.md entero (los tips van agrupados por tipo; aplica las secciones del patrón que construyes).
-3. Si es una web o una landing: `action-hm:estandar-hm`.
+3. Si es una web o una landing: `action-hm:estandar-hm`, si está instalada.
+4. Según lo que toque la pantalla (solo las que apliquen; **evidencia**, por encima de ux-craft en su terreno):
+   - formularios, errores, textos de interfaz, cookies o páginas de estado → `govuk` (la página pertinente);
+   - accesibilidad, tamaños de toque o ergonomía móvil → `hig`;
+   - web en móvil (100vh, zoom en campos, notch, hover pegado) → `mobile-native`;
+   - movimiento → `animate` para construirlo y `review-animations` al acabar.
 
-**Si se contradicen, manda:** proyecto > ux-craft (incluido `mitos.md`) > estandar-hm > uxpeak. En concreto, de uxpeak **no** se aplica:
+**Si se contradicen, manda:** proyecto > govuk / hig en su terreno > ux-craft (incluido `mitos.md`) > estandar-hm > uxpeak. En concreto, de uxpeak **no** se aplica:
 - cifras sin fuente presentadas como hechos («el 70–90 % confía en el default»);
 - skeleton, sombras teñidas o barra de progreso por defecto: solo si se ganan su sitio (ux-craft, principio 2);
 - presión falsa: cuentas atrás inventadas, progreso regalado engañoso, aversión a la pérdida para retener a quien quiere irse. Persuasión sí; trampas no.
@@ -145,5 +150,5 @@ Detalle en `references/verificacion.md`:
 1. Captura el resultado (web: `refs.py capturar`; móvil: simulador o dispositivo) en `verificacion/`.
 2. **Subagente nuevo, sin historial**: recibe las capturas, `decision.md`, la lámina de referentes y las pruebas de `verificacion.md` (claridad, fidelidad a la dirección y «¿parece hecho por IA?»). Ni código ni razonamiento.
 3. Comprueba sus hallazgos (también se equivoca), corrige los 3 más graves y repite. Como mucho 2–3 rondas.
-4. Escáner de ux-craft sobre lo tocado. Si es una web publicada o en preview, ofrece `jurado-hm`.
+4. Escáner de ux-craft sobre lo tocado y `break-ui` con datos extremos (nombres largos, vacíos, cifras enormes) en los componentes nuevos. Si es una web publicada o en preview, ofrece `jurado-hm` si está instalada. En un proyecto con `capturas`, rehaz `.shots/` al cerrar.
 5. Escribe `verificacion/informe.md` y cierra con: dirección aplicada, qué mecanismos tomaste de qué referente, qué descartaste y por qué, y qué queda por decidir.

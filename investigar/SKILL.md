@@ -24,7 +24,16 @@ Lo que ya deciden las instrucciones del proyecto (`CLAUDE.md`, documentos de dec
 
 Antes de salir fuera, gratis:
 - **Proyecto:** `CLAUDE.md`, documentos de decisiones o de errores si existen (`docs/`, `.agent/`, ADRs), el código y la página real.
-- **Skills instaladas** que sean fuente primaria del tema (p. ej. guías de Apple, GOV.UK, design systems, UX): usarlas si están.
+- **Skills instaladas**, según el tema (cargar una o dos que cambien la respuesta, nunca todas por defecto; si no está instalada, seguir sin ella):
+
+  | Skill | Cuándo | Cuenta como |
+  |---|---|---|
+  | `govuk` | formularios, campos, errores, textos de interfaz, cookies, páginas de estado | **evidencia** (probado con usuarios reales) |
+  | `hig` | accesibilidad, tamaños de toque, tipografía dinámica, ergonomía móvil | **evidencia** (norma de plataforma) |
+  | `capturas` | ver la página propia: consultar `.shots/` antes de capturarla con `capture.mjs` | la página real |
+  | `ux-craft`, `uxpeak-agentic-ux`, `emil-design-eng`, `apple-design` | contrastar una idea con la opinión de un experto | **criterio**, nunca evidencia: no van en «Qué dice la evidencia» |
+
+  Si el encargo no es valorar sino **diseñar o rediseñar con libertad creativa**, la skill es `diseno-libre` (ya incluye referentes): no hacer las dos.
 - **Memoria y documentos:** estudios ya hechos para este proyecto o tema. Un estudio tiene dos mitades, **referentes** (paso 2) y **evidencia** (paso 3), y solo cuenta como hecho si cubrió las dos. Si cubrió una, partir de ella y hacer **solo la que falta**; no repetir la cubierta ni saltarse la otra.
 
 **Proporción:** las capturas y búsquedas sirven a la pregunta principal. Un dato suelto de apoyo (p. ej. «los líderes ponen los logos en gris») se comprueba con una búsqueda o se marca como criterio; no abre otra tanda de capturas.
@@ -67,7 +76,9 @@ Corto y en este orden:
 2. **Qué dice la evidencia:** cada regla con su fuente al lado.
 3. **Qué haría aquí:** recomendaciones **priorizadas por impacto**, cada una con su porqué (referente o estudio) y lo que cuesta.
 4. **Criterio propio:** lo que es opinión, marcado como tal.
-5. **Choques:** qué contradice una decisión del proyecto y si merece reabrirse.
+5. **Choques:** antes de escribir este punto, repasar **cada recomendación** del punto 3 contra las reglas del `CLAUDE.md` del proyecto (voz, «una idea una vez», color, movimiento, lo marcado «user») y los documentos de decisiones. Lo que choque se dice aquí y se marca en su recomendación; no se descubre al implementar.
+
+Si una recomendación es visual y el usuario la quiere ver, `prototype` la enseña renderizada en la página real antes de tocar el código definitivo.
 
 Fuentes al final como enlaces, cada una marcada **[leída]** o **[resumen]**; antes de responder, comprobar que las fuentes que sostienen las recomendaciones principales están [leídas]. Propuestas visuales con capturas reales de la web del proyecto, no esquemas.
 
