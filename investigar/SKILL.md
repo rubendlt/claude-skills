@@ -58,6 +58,7 @@ node <dir_de_esta_skill>/scripts/capture.mjs [--full] <carpeta_temporal>/refs "<
 - Página propia: mejor la preview desplegada que el servidor de desarrollo.
 - Requiere Playwright y Chromium (`npx -y playwright install chromium`). Si no hay forma de capturar, decirlo y no sustituirlo por lo que se recuerda de esa web.
 - Leer las imágenes y anotar por referente **qué hace, en concreto**: texto del CTA, posición, número de campos, prueba social, orden, qué pide y qué no.
+- Y después **por qué lo hace**: qué lo causa (una necesidad del usuario, un objetivo de su negocio como vender más referencias o captar emails, una limitación técnica o heredada, su marca, o inercia del sector) y **si esa causa existe en este proyecto**. Lo que no se encuentre escrito por el propio referente o un estudio es inferencia y se marca así.
 
 ## 3. Qué dice la investigación
 
@@ -75,7 +76,7 @@ Corto y en este orden:
 
 1. **Qué hacen los mejores:** patrones que se repiten (con cuáles) y la excepción interesante, si la hay.
 2. **Qué dice la evidencia:** cada regla con su fuente al lado.
-3. **Qué haría aquí:** recomendaciones **priorizadas por impacto**, cada una con su porqué (referente o estudio) y lo que cuesta.
+3. **Qué haría aquí:** recomendaciones **priorizadas por impacto**, cada una con su porqué (referente o estudio) y lo que cuesta. Un referente solo respalda una recomendación si la causa que lo explica existe aquí; si funciona allí por un motivo que aquí no está, va a lo descartado con ese motivo, aunque lo hagan todos los grandes.
 4. **Criterio propio:** lo que es opinión, marcado como tal.
 5. **Choques:** antes de escribir este punto, repasar **cada recomendación** del punto 3 contra las reglas del `CLAUDE.md` del proyecto (voz, «una idea una vez», color, movimiento, lo marcado «user») y los documentos de decisiones. Lo que choque se dice aquí y se marca en su recomendación; no se descubre al implementar.
 
