@@ -1,0 +1,53 @@
+{
+  "skill_name": "ux-craft",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "pasa /ux-craft por la pantalla de progreso de la app (src/app/(tabs)/progreso.tsx), solo revisa, no cambies nada todavía",
+      "expected_output": "Informe único con hallazgos de slop y de craft (archivo:línea, regla o marca, veredicto Mantener/Racionar/Quitar/Sustituir/Corregir), respetando la estética industrial documentada en CLAUDE.md; sin editar archivos.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "el admin huele mucho a IA, limpia el dashboard y las stat cards (admin/src/pages/DashboardPage.tsx y admin/src/components/StatCard.tsx) para que no parezca vibe-coded",
+      "expected_output": "Cambios locales aplicados (transition-all, hover lift/rotate decorativos, radios/sombras por defecto), cambios estructurales propuestos sin aplicar, lint/tests ejecutados y resumen final.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "revisa los textos de los datos demo y de la ui de mensajes, que no parezcan escritos por chatgpt",
+      "expected_output": "Detecta em dashes tipo 'PALABRA — fragmento' en nombres de rutinas y copy genérico; mantiene emojis de reacciones y vistas previas de adjuntos como contenido funcional.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "/ux-craft movil revisa la pantalla de login, solo revisar",
+      "expected_output": "Lee movil.md además de slop.md y copy.md; informe único con hallazgos de craft (zonas táctiles, autocompletado y pegado en contraseña, texto al 200 %, estado pulsado, estados de error) y de slop, cada uno con archivo:línea, regla citada y veredicto (incluido Corregir); sin editar archivos.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "/ux-craft construye la pantalla de ajustes de notificaciones",
+      "expected_output": "Construye con los tokens del proyecto y sin marcas de slop; antes de terminar pasa el escáner y la revisión rápida de la plataforma sobre lo escrito y lo corrige sin informe intermedio; ejecuta lint/typecheck/tests; cierra con técnicas aplicadas, descartadas y pendientes.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "/ux-craft web construye la página de listado de socios del panel de administración",
+      "expected_output": "La pantalla ocupa todo el ancho de la ventana (sin max-w-7xl mx-auto ni container en el layout); el ancho extra se aprovecha con columnas de la tabla o un panel de detalle; textos y formularios llevan su propio límite; la verificación visual se hace también a 1920 px.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "/ux-craft la pantalla de reservas no se entiende, la gente no encuentra cómo reservar y dice que cuesta leerla. revísala",
+      "expected_output": "Lee claridad.md; escribe la pregunta de la pantalla y su acción principal; hace capturas (escritorio y 390 px) y las revisa un subagente nuevo sin el código con las pruebas de 1 s, 5 s, desenfoque y primer clic, o dice que no puede renderizar; hallazgos de claridad con archivo:línea y regla citada (un solo primario visible sin scroll, peso y color antes que tamaño, iconos sin etiqueta, texto gris claro o fino, tarjetas donde hace falta comparar); separa cambios locales de estructurales.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "/ux-craft revisa la pantalla de checkout: cada sección lleva un subtítulo explicando qué hacer, hay un texto de ayuda bajo el botón de pagar y el campo de tarjeta tiene ayuda con el formato",
+      "expected_output": "Trata los subtítulos y la ayuda bajo el botón como síntoma: propone el cambio de estructura que los hace innecesarios (orden de las secciones, agrupación, jerarquía, botón con verbo y objeto como 'Pagar 42 €') y después quitarlos, no reescribirlos; mantiene la ayuda de formato del campo de tarjeta porque da información que el diseño no puede mostrar; cita la regla de mínimo texto con archivo:línea.",
+      "files": []
+    }
+  ]
+}

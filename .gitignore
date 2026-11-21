@@ -1,0 +1,7 @@
+# Sincronizado desde claude.ai por la app (no es una skill)
+synced/
+# Enlaces a ~/.lazyweb/repos (los gestiona lazyweb-update)
+lazyweb*
+__pycache__/
+*.pyc
+.DS_Store
