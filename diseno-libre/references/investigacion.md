@@ -77,12 +77,14 @@ Para ahorrar tokens, pide más resultados de los que necesitas (`limit` 10–12)
 - **Problema del brief que toca:** «no sabe qué entrenar hoy»
 - **Mecanismo:** la semana en fila (L–D) y el reto en curso (9/10 paseos) arriba; debajo, categorías y una sola «primera clase» destacada.
 - **Por qué funciona:** el progreso semanal convierte «qué hago hoy» en «me falta 1». (inferencia | fuente: <url>)
+- **Por qué lo hicieron así:** Peloton vive de la suscripción y de que vuelvas cada día; la racha semanal sirve a eso. (inferencia | fuente: <url>)
+- **¿Esa causa existe aquí?:** sí: nuestro usuario también abre la app sin plan. Si no existiera, el mecanismo va a «No tomar» aunque funcione allí.
 - **Tomar:** progreso de la semana como primer bloque, en una sola línea.
 - **No tomar:** la cuadrícula de categorías con foto: es catálogo, no decisión, y empuja a navegar.
 - **Convención o diferencia:** convención (lo hacen 4 de 6 del sector).
 ```
 
-Se puede escribir «No tomar: nada»; lo que no vale es dejarlo en blanco.
+Se puede escribir «No tomar: nada»; lo que no vale es dejarlo en blanco. Tampoco vale «Tomar» sin haber respondido «¿Esa causa existe aquí?»: lo que funciona allí por un motivo que aquí no existe es copia, no mecanismo.
 
 ## Referencia del usuario (`--ref`)
 
@@ -93,6 +95,7 @@ Cuando el usuario trae una referencia, se sigue de verdad. Además de la ficha, 
 - **Tipografía**: número de tamaños y pesos, proporción titular/cuerpo, mayúsculas, tracking.
 - **Color**: cuántos colores hay y qué papel tiene cada uno (fondo, superficie, texto, acento), no los hex del referente si el proyecto tiene tokens.
 - **Densidad y ritmo**: aire o compacto, y cuántos elementos caben sin scroll.
+- **Por qué está así**: para cada rasgo que vas a reproducir, qué lo justifica en la referencia. Seguir una referencia es entender su lógica y aplicarla, no calcar: si un rasgo responde a algo que aquí no existe, dilo al usuario en vez de reproducirlo a ciegas.
 - **Qué se adapta y por qué**: lo que no se reproduce por choque con el proyecto, explicado.
 
 En la fase 4 se compara lado a lado con la misma anchura (`verificacion.md`).
