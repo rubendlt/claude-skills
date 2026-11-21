@@ -48,7 +48,35 @@ async function launch(chromium) {
   throw new Error("Sin navegador: npx -y playwright install chromium");
 }
 
-// 3. Cerrar el banner de cookies si lo hay (primero «rechazar»).
+// 3. Detectar páginas que no sirven: error HTTP, Cloudflare/captcha, 404 servido con 200.
+async function unusable(page, response) {
+  const status = response?.status() ?? 0;
+  if (status >= 400) return `HTTP ${status}`;
+  const title = (await page.title().catch(() => "")).toLowerCase();
+  const text = (await page.locator("body").innerText({ timeout: 2000 }).catch(() => "")).slice(0, 3000).toLowerCase();
+  if (/just a moment|attention required|un momento/.test(title)
+    || /verify(ing)? (that )?you('re| are) (a )?human|verifique que es un ser humano|checking your browser|cf-ray|captcha/.test(text)) return "bloqueo anti-bots (Cloudflare/captcha)";
+  if (/\b404\b|not found|no encontrada|no existe/.test(title)
+    || (text.length < 600 && /page not found|página no encontrada|error code: 404/.test(text))) return "página no encontrada (404)";
+  return null;
+}
+
+// 4. Bajar por la página para que carguen imágenes y mapas diferidos, y volver arriba.
+async function loadLazy(page) {
+  await page.evaluate(async () => {
+    const step = window.innerHeight;
+    // behavior "instant": con scroll-behavior: smooth en la web, la vuelta arriba no llegaría a tiempo
+    for (let y = 0; y < document.body.scrollHeight; y += step) {
+      window.scrollTo({ top: y, behavior: "instant" });
+      await new Promise((r) => setTimeout(r, 150));
+    }
+    window.scrollTo({ top: 0, behavior: "instant" });
+    await new Promise((r) => setTimeout(r, 200));
+  }).catch(() => {});
+  await page.waitForLoadState("networkidle", { timeout: 5000 }).catch(() => {});
+}
+
+// 5. Cerrar el banner de cookies si lo hay (primero «rechazar»).
 async function dismissCookies(page) {
   for (const re of [/^(rechazar|reject|decline|deny|denegar)/i, /^(aceptar|accept|agree|allow|entendido|ok)/i]) {
     const btn = page.getByRole("button", { name: re }).first();
@@ -75,6 +103,10 @@ const views = {
   desk: { viewport: { width: 1440, height: 900 } },
   movil: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 },
 };
+// Distintivos de desarrollo (Next.js, Vite…) que tapan contenido en capturas locales.
+const HIDE_DEV = "nextjs-portal, [data-nextjs-toast], #vite-error-overlay { display: none !important; }";
+
+let failed = 0;
 for (const url of urls) {
   const u = new URL(url);
   const slug = (u.hostname.replace(/^www\./, "") + u.pathname.replace(/\/$/, "")).replace(/[^\w.]+/g, "-");
@@ -82,13 +114,19 @@ for (const url of urls) {
     const ctx = await browser.newContext({ ...opts, locale: "es-ES" });
     const page = await ctx.newPage();
     try {
-      await page.goto(url, { waitUntil: "networkidle", timeout: 30000 }).catch(() => page.waitForLoadState("load"));
+      const response = await page.goto(url, { waitUntil: "networkidle", timeout: 30000 })
+        .catch(async () => { await page.waitForLoadState("load"); return null; });
+      const why = await unusable(page, response);
+      if (why) { failed++; console.error(`✗ ${url} (${name}): ${why}. No se guarda: busca otra URL u otro referente.`); await ctx.close(); if (name === "desk") break; continue; }
+      await page.addStyleTag({ content: HIDE_DEV }).catch(() => {});
       const cookies = await dismissCookies(page);
+      await loadLazy(page);
       const file = join(out, `${slug}-${name}${full ? "-full" : ""}.png`);
       await page.screenshot({ path: file, fullPage: full });
       console.log(file + (cookies ? "  (banner de cookies cerrado)" : ""));
-    } catch (e) { console.error(`✗ ${url} (${name}): ${e.message.split("\n")[0]}`); }
+    } catch (e) { failed++; console.error(`✗ ${url} (${name}): ${e.message.split("\n")[0]}`); }
     await ctx.close();
   }
 }
 await browser.close();
+if (failed) { console.error(`${failed} captura(s) fallida(s).`); process.exitCode = 2; }

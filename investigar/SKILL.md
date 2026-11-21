@@ -33,13 +33,18 @@ Antes de salir fuera, gratis:
 1. Definir el problema concreto: «formulario de presupuesto B2B», no «web bonita».
 2. **Del sector:** buscar competidores reales (`<servicio> <ciudad/país>`, los que posicionan arriba, los que cita el usuario) y quedarse con los 2-3 mejor resueltos.
 3. **De fuera:** quien resolvió el mismo patrón con más recursos. Galerías curadas por patrón (Mobbin, Page Flows, Land-book, Godly, Awwwards para estética), design systems públicos y productos líderes del patrón (p. ej., formularios: GOV.UK, Stripe, Typeform).
-4. Descartar los que no resuelven el mismo problema o tienen otro público. Total: **3-5**.
+4. Descartar los que no resuelven el mismo problema o tienen otro público. Si los del sector local son flojos (fichas de directorio, webs abandonadas), subir a nacional o internacional y decirlo.
+5. **Preseleccionar 5-6 para quedarse con 3-5**: algunos bloquean bots o han cambiado de URL.
+6. **URLs sacadas de una búsqueda o navegando la web del referente, nunca adivinadas** (`/es/contacto/` de memoria suele dar 404).
 
 **Mirarlos en captura, nunca de memoria:**
 ```sh
 node <dir_de_esta_skill>/scripts/capture.mjs [--full] <carpeta_temporal>/refs <url1> <url2> ...
 ```
-- Escritorio (1440×900) y móvil (390×844); `--full` para la página entera (formularios, fichas, flujos largos). Intenta cerrar el banner de cookies.
+- Escritorio (1440×900) y móvil (390×844). Cierra el banner de cookies, baja por la página para que carguen imágenes y mapas diferidos, y oculta los distintivos de desarrollo (Next.js, Vite).
+- **Primera pantalla por defecto; `--full` solo cuando lo importante está más abajo** (la página propia, un formulario largo). Cada captura entera cuesta mucho al leerla.
+- Las páginas bloqueadas (Cloudflare, captcha) o con 404 salen como `✗` y no se guardan: sustituirlas por otro candidato, no leerlas.
+- Página propia: mejor la preview desplegada que el servidor de desarrollo.
 - Requiere Playwright y Chromium (`npx -y playwright install chromium`). Si no hay forma de capturar, decirlo y no sustituirlo por lo que se recuerda de esa web.
 - Leer las imágenes y anotar por referente **qué hace, en concreto**: texto del CTA, posición, número de campos, prueba social, orden, qué pide y qué no.
 
@@ -72,5 +77,5 @@ Fuentes al final como enlaces. Propuestas visuales con capturas reales de la web
 ## 6. Guardar (solo investigación completa)
 
 Para no repetirla dentro de un mes:
-- Las capturas y conclusiones, en un documento o página que el usuario pueda abrir (un artifact si el entorno lo permite; si no, un `.md` en `docs/` del proyecto con las imágenes al lado).
-- Una línea en la memoria persistente: tema, fecha, enlace y conclusión en una frase.
+- **Siempre, en la memoria persistente** (barato): tema, fecha, referentes válidos y descartados (y por qué), fuentes clave y conclusión en 3-5 líneas.
+- **Solo si el usuario lo pide o la conclusión es muy visual:** capturas y conclusiones en una página que pueda abrir (un artifact si el entorno lo permite; si no, un `.md` en `docs/` con las imágenes al lado). Si no se hace, ofrecerlo en una línea.
