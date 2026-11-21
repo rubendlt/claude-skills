@@ -60,4 +60,3 @@ Fuentes al final como enlaces. Propuestas visuales: con capturas reales de la we
 - Implementar: una pregunta pide opinión; se implementa tras «hazlo».
 - Copiar la estética de un referente: se trasladan técnicas y por qués, no el look.
 - Inventar cifras («aumenta la conversión un 30 %») sin el estudio que las da.
-- Subagentes para investigar (salvo skills que ya los usan, como `hig` o `govuk`).
