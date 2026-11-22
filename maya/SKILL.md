@@ -41,6 +41,7 @@ Un hover, una transición o un estilo **sí** son MAYA cuando son más actuales 
 | `references/donde-buscar.md` | **Siempre que se busquen huecos o se audite**: tareas típicas por tipo de producto, con su norma de sector, la norma fuera del sector, la idea avanzada, el ancla para que se acepte y la trampa |
 | `references/casos.md` | Para citar un caso real: 13 avances aceptados y 6 que se pasaron, con lo que avanzó, el ancla que lo hizo aceptable y la fuente |
 | `references/evidencia.md` | Para respaldar con estudios (Hekkert, Google 2012, Material 3 Expressive, Giora, Reinecke) |
+| `scripts/estados.mjs` | Capturas: `pagina` (páginas enteras de referentes), `hover` y `foco` (estado normal frente a estado activo de un elemento). Busca Playwright y Chromium solo |
 
 ## Lo que dice la evidencia
 
@@ -84,7 +85,12 @@ En tres líneas: quién es, si sabe del tema y **con qué frecuencia** usa el pr
 ### 2. Listar qué se va a evaluar, en tres capas
 
 - **Función:** de 3 a 6 tareas que el usuario viene a hacer (pedir presupuesto, saber si le cabe, comparar, fiarse, contactar, volver a encontrar algo). Sácalas del `CLAUDE.md`, de las rutas y de las CTA.
-- **Interacción y movimiento:** hover de enlaces, botones y tarjetas; foco; pulsación; apertura de menús y desplegables; transiciones entre estados; carga; scroll; galerías; formularios mientras se rellenan. Revísalos en el CSS (`hover:`, `transition`, `@keyframes`) y en el navegador.
+- **Interacción y movimiento:** hover de enlaces, botones y tarjetas; foco; pulsación; apertura de menús y desplegables; transiciones entre estados; carga; scroll; galerías; formularios mientras se rellenan. Inventario rápido en el código:
+  ```bash
+  rg -o "(group-)?hover:[a-z0-9\[\]\.\-/:]+" src -g '*.tsx' | sd '^[^:]+:' '' | sort | uniq -c | sort -rn | head -30
+  rg -n "transition|@keyframes|animation-timeline|:active|focus-visible|prefers-reduced" src -g '*.css'
+  ```
+  Busca también los componentes con estado propio (galerías, fotos al pasar el ratón, menús) y lee su comentario: suele decir por qué se hizo así.
 - **Aspecto:** estilo general, color, tipografía, iconos, materiales (sombras, desenfoques, profundidad), tratamiento de imagen y composición.
 
 `donde-buscar.md` tiene, para cada capa, la norma habitual, la norma fuera del sector, una idea avanzada, el ancla y la trampa.
@@ -96,7 +102,9 @@ Por cada tarea o elemento, en una tabla:
 | Capa | Elemento | Norma del sector | Norma del usuario fuera del sector | Lo más avanzado | Producto actual | Estado |
 |---|---|---|---|---|---|---|
 
-Para la interacción y el movimiento, las capturas fijas no bastan: mira los estados (hover, foco, pulsado) con Playwright (`page.hover`, `page.focus`) o lee el CSS, y en los referentes fíjate en cómo responden, no solo en cómo se ven.
+Para la interacción y el movimiento, las capturas fijas no bastan. Captura los estados con `scripts/estados.mjs hover|foco` en la web propia (de 4 a 6 elementos: botón principal, enlace, tarjeta de listado, tarjeta con foto, menú) y en 2 o 3 referentes, y júntalos en un montaje (normal | hover) para verlos en una sola imagen. En webs de terceros los selectores fallan a menudo (banners, elementos ocultos): usa selectores concretos y, si fallan, describe su conducta como criterio, no como medida.
+
+Mira también **qué aparece** en el estado activo, no solo cómo se mueve: un hover bien animado que enseña algo peor (una imagen técnica, un texto cortado) es un fallo de aspecto.
 
 - **Norma del sector:** sobre capturas de 5 a 8 competidores (cómo hacerlas: `investigar` §2; la web propia: `capturas`). Si capturas fuera del proyecto con Playwright y no lo encuentra, cárgalo desde `~/.npm/_npx/*/node_modules/playwright` con `createRequire` y pásale `executablePath` del Chromium de `~/.cache/ms-playwright`.
 - **Norma fuera del sector:** cómo resuelve el usuario una tarea parecida en productos que usa a diario. Nombra productos concretos y conocidos, no supuestos.
@@ -124,10 +132,31 @@ Un avance pasa solo si responde que sí a todo:
 
 ### 6. Entregar
 
-1. La tabla del paso 3, resumida.
-2. **Lo que ya está en MAYA** (para no tocarlo).
-3. **Lo que se ha pasado**, si hay algo.
-4. **De 1 a 3 avances**, con tu recomendación primero. De cada uno: tarea, estado actual, solución ideal, hasta dónde se retrocede y por qué, ancla, caso parecido de `casos.md`, evidencia o criterio (separados), riesgo y cómo probarlo.
+Plantilla:
+
+```markdown
+## MAYA: <producto>
+Usuario: <quién, si sabe del tema, frecuencia> → dosis: <corta | media | amplia>
+Medido: <referentes capturados, estados capturados, lo que quedó como criterio>
+
+| Capa | Elemento | Sector | Fuera del sector | Producto | Estado |
+(una fila por elemento evaluado; Estado = por detrás | en la norma | en MAYA | pasado)
+
+### Ya en MAYA (no tocar)
+- <elemento> — <ancla> — <caso parecido>
+
+### Fallos
+- <se ha pasado / ejecución que empeora>, con captura y caso parecido
+
+### Tensiones con las reglas del proyecto
+- <algo que choca con una regla del CLAUDE.md o con lo decidido>: se señala, no se decide
+
+### Avances propuestos (recomendación primero, 1-3)
+1. <capa · elemento> — estado actual → ideal → hasta dónde se retrocede y por qué
+   Ancla: <A1-A7> · Caso: <casos.md> · Evidencia / criterio · Riesgo · Cómo probarlo
+```
+
+Si casi todo está «en MAYA», dilo sin inventar avances: un informe con un solo avance bueno vale más que tres de relleno.
 
 Las propuestas visuales se enseñan con variantes renderizadas (`prototype`), no con esquemas. No se implementa nada hasta que el usuario elija.
 
