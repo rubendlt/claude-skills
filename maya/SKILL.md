@@ -34,6 +34,12 @@ Un hover, una transición o un estilo **sí** son MAYA cuando son más actuales 
 
 **Error típico (cometido en la primera versión de esta skill):** proponer «una foto de obra en la galería» o «un mapa de obras» como hueco MAYA. Eso es contenido. La pregunta MAYA es: **¿qué elemento (de aspecto, interacción o función) podría ser más avanzado, y cuánto avance aguanta este usuario?**
 
+## Cuándo rinde y cuándo no
+
+- **Rinde mucho** al diseñar o rediseñar (antes de fijar el estilo o la interacción), al valorar una propuesta atrevida y en productos que llevan tiempo sin tocarse, porque suelen estar «por detrás».
+- **Rinde poco** en un producto ya muy pulido: lo normal es que casi todo salga «en MAYA» y que lo útil sean fallos de ejecución en los estados. Entonces haz la versión corta: estados de 4 a 6 elementos y las tareas principales, sin la tabla completa.
+- **No la uses** para encontrar fallos generales de interfaz (eso es `ux-craft`, `break-ui`) ni para diferenciarse (`ux-craft`, `diseno-libre`).
+
 ## Archivos
 
 | Archivo | Cuándo se lee |
@@ -103,6 +109,8 @@ Por cada tarea o elemento, en una tabla:
 |---|---|---|---|---|---|---|
 
 Para la interacción y el movimiento, las capturas fijas no bastan. Captura los estados con `scripts/estados.mjs hover|foco` en la web propia (de 4 a 6 elementos: botón principal, enlace, tarjeta de listado, tarjeta con foto, menú) y en 2 o 3 referentes, y júntalos en un montaje (normal | hover) para verlos en una sola imagen. En webs de terceros los selectores fallan a menudo (banners, elementos ocultos): usa selectores concretos y, si fallan, describe su conducta como criterio, no como medida.
+
+**Norma fuera del sector para la interacción, sin capturar:** las webs de Apple o Stripe suelen fallar al capturar sus estados. Usa la documentación local: `m3/foundations/interaction/states.md` (hover, foco, pulsado y arrastre, con sus opacidades: +8 %, +10 %, +10 % y +16 %) y la skill `hig` para foco, puntero y respuesta al toque. Eso cuenta como evidencia de la norma; tu recuerdo de cómo lo hace Apple, solo como criterio.
 
 Mira también **qué aparece** en el estado activo, no solo cómo se mueve: un hover bien animado que enseña algo peor (una imagen técnica, un texto cortado) es un fallo de aspecto.
 
