@@ -1,6 +1,6 @@
 # Casos de empresas grandes
 
-Cada caso dice qué se quedó **típico** (el ancla), qué **cambió** (la sorpresa), qué **patrón** de `SKILL.md` ilustra y de dónde sale. **Fuente:** *primaria* = la propia empresa o su gente; *prensa* = medio que la cita; *comentario* = interpretación de terceros. Recopilado el 22/11/2026: lo marcado como primaria se leyó entero; el resto, a partir de resúmenes de búsqueda.
+Cada caso dice qué se quedó **típico** (el ancla), qué **avanzó** (la sorpresa, que siempre es una mejora real de la tarea), qué **ancla** de `SKILL.md` lo hizo aceptable (los códigos P1-P7 equivalen a A1-A7) y de dónde sale. **Fuente:** *primaria* = la propia empresa o su gente; *prensa* = medio que la cita; *comentario* = interpretación de terceros. Recopilado el 22/11/2026: lo marcado como primaria se leyó entero; el resto, a partir de resúmenes de búsqueda.
 
 ## Aciertos
 

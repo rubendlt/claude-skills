@@ -20,7 +20,9 @@ Estudios con datos sobre lo familiar y lo nuevo. Recopilado el 22/11/2026. Se in
 - **Sedley y Müller (2013), Google, CHI'13**: el rechazo al cambio es la reacción negativa a corto plazo ante un cambio. En el paso de Docs List a Google Drive describen acciones que permitieron «a launch with no aversion». [Google Research](https://research.google/pubs/minimizing-change-aversion-for-the-google-drive-launch/). *Las tácticas no se pudieron leer.*
 - **Jared Spool** ([UIE](https://archive.uie.com/brainsparks/2012/07/16/googles-take-on-change-aversion-misses-the-point/)): la gente no odia el cambio, odia un cambio mal hecho.
 
-## Marcos de trabajo (criterio de profesionales, no estudios)
+## Relacionado, pero no es MAYA
+
+Estos marcos sirven para diferenciar una marca o decidir qué conservar en un rediseño. No miden cuánto avance aguanta el usuario: úsalos solo como apoyo (por ejemplo, para saber qué es intocable en un rediseño, A6).
 
 - **Activos distintivos** (Jenni Romaniuk, Ehrenberg-Bass): lo que identifica a una marca sin leer su nombre se mide por **fama** (cuánta gente lo asocia a la marca) y **unicidad** (que no lo asocie a otras). Esos activos son la zona intocable de una marca. [Contagious](https://contagious.com/io/article/jenni-romaniuk-on-distinctive-assets). *Solo fuentes secundarias.*
 - **Códigos residuales, dominantes y emergentes** (semiótica de marca, a partir de Raymond Williams, 1981): los códigos de una categoría están pasados de moda (residuales), son la norma (dominantes) o están empezando (emergentes). Los emergentes y los prestados de categorías cercanas dan más margen, con más riesgo. [Branding Strategy Insider](https://brandingstrategyinsider.com/2018/10/how-semiotics-helps-brands-encapsulate-value/), [SIS](https://www.sisinternational.com/expertise/semiotics-market-research/).
