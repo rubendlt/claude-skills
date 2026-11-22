@@ -2,7 +2,7 @@
 
 ## Capturas
 
-- **Web:** `refs.py capturar <url local o preview> <carpeta>/verificacion/<pantalla>` (1440 y 390; `--alto` para la página entera). Para 1920 o estados concretos, añade la anchura con `--anchos 1440,1920,390`.
+- **Web:** `node ~/.claude/skills/investigar/scripts/capture.mjs [--full] <carpeta>/verificacion "<url local o preview>|propia"` (1440 y 390). Para otras anchuras o estados concretos, la skill `capturas` o Playwright a mano.
 - **Móvil:** simulador iOS `xcrun simctl io booted screenshot <ruta>.png`; Android `adb exec-out screencap -p > <ruta>.png`. En dispositivo físico, pide la captura al usuario.
 - Con datos reales y en los estados que existan: normal, vacío, cargando y error.
 - Lado a lado con el referente o la referencia del usuario, a la misma anchura:
@@ -11,9 +11,9 @@
 python3 ~/.claude/skills/diseno-libre/scripts/refs.py lamina <carpeta>/verificacion/comparar.png --columnas 2 referencia.png resultado.png
 ```
 
-## Encargo para el revisor (subagente nuevo)
+## Revisión en frío
 
-Pásale solo rutas de imágenes y textos, nunca código ni tu razonamiento:
+Hazla tú, mirando solo imágenes y textos, como si no hubieras visto el código. Si el usuario pide un revisor aparte, pásale este encargo tal cual (solo rutas, nunca código ni tu razonamiento):
 
 > Eres un revisor de diseño que no ha visto cómo se hizo esto. Abre con Read: [capturas del resultado], [lamina.png de referentes], [comparar.png si hay referencia del usuario]. Lee [decision.md] y la pregunta de la pantalla: «[…]», acción principal: «[…]».
 >
@@ -26,11 +26,9 @@ Pásale solo rutas de imágenes y textos, nunca código ni tu razonamiento:
 >
 > Termina con los 3 problemas más graves, en este orden de prioridad: jerarquía, agrupación y composición, fidelidad a la dirección, texto/color/detalle, motion.
 
-Si el cambio es grande, lanza dos revisores en paralelo: encuentran cosas distintas.
+## Después de la revisión
 
-## Después del revisor
-
-- Comprueba cada hallazgo en la captura antes de corregirlo: el revisor también se equivoca.
+- Comprueba cada hallazgo en la captura antes de corregirlo.
 - Corrige los 3 más graves, vuelve a capturar y repite. Como mucho 2–3 rondas; a veces la intermedia es la mejor.
 - Escáner: `python3 ~/.claude/skills/ux-craft/scripts/scan.py <rutas tocadas>`.
 - Web publicada o en preview: ofrece `jurado-hm`.

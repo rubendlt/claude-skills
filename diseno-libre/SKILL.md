@@ -1,6 +1,6 @@
 ---
 name: diseno-libre
-description: Arnés para diseñar UI/UX con libertad creativa sin caer en slop. Antes de dibujar, busca referentes reales del sector (y de fuera) que resolvieron problemas parecidos, los mira en capturas, los analiza y presenta en un artifact al menos 3 ideas adaptadas al proyecto; luego construye con ux-craft + uxpeak-agentic-ux y verifica contra los referentes. USAR cuando el usuario dé libertad creativa para diseñar o rediseñar una pantalla, flujo, app o web ("libertad creativa", "como tú veas", "propón un diseño", "sorpréndeme", "a tu criterio", "carta blanca"), cuando pida /diseno-libre, o cuando dé una referencia visual que haya que seguir.
+description: Arnés para diseñar UI/UX con libertad creativa sin caer en slop. Antes de dibujar, investiga referentes y evidencia con la skill investigar y presenta en un artifact al menos 3 ideas adaptadas al proyecto; luego construye con ux-craft, en gris primero, y verifica contra lo decidido. USAR cuando el usuario dé libertad creativa para diseñar o rediseñar una pantalla, flujo, app o web ("libertad creativa", "como tú veas", "propón un diseño", "sorpréndeme", "a tu criterio", "carta blanca"), cuando pida /diseno-libre, o cuando dé una referencia visual que haya que seguir.
 argument-hint: "[encargo] [--rapido] [--ref <url|imagen>...]"
 ---
 
@@ -10,8 +10,8 @@ Un modelo con libertad creativa y sin datos produce la media de lo que ha visto.
 
 ## Reglas que no se negocian
 
-1. **Se mira, no se recuerda.** Un referente cuenta solo si su captura está descargada en disco y la has abierto con Read. Describir una app de memoria no es investigar.
-2. **Primero entender por qué, después decidir si se toma.** Nada se copia porque esté en una web buena. Ante cada decisión de un referente (qué lidera, qué se esconde, por qué ese orden, ese tamaño, ese texto), pregúntate qué problema, usuario o restricción la produjo: una necesidad del usuario, un objetivo de su negocio (vender más, retener, captar emails), una limitación técnica o heredada, su marca, o simple inercia del sector. Luego, si esa causa existe en este proyecto. Si existe, se toma el mecanismo adaptado; si no, se descarta aunque se vea bien (el carrusel de una tienda existe para vender más referencias; en una web cuyo único objetivo es contactar, esa causa no está). Si no encuentras el porqué, es una hipótesis: dilo y no la presentes como dato. El aspecto (colores, fuentes, ilustraciones) sale siempre del proyecto, nunca del referente.
+1. **La investigación es la de `investigar`.** Cómo encontrar referentes, mirarlos en captura (nunca de memoria), entender por qué lo hacen y si esa causa existe aquí, y qué evidencia cuenta: todo eso está en `investigar` §1-3 y no se repite aquí. Este arnés añade lo que viene después: ideas, decisión, construcción y verificación.
+2. **El aspecto sale del proyecto, nunca del referente.** Del referente se toma el mecanismo adaptado, y solo si su causa existe aquí (el carrusel de una tienda existe para vender más referencias; en una web cuyo único objetivo es contactar, esa causa no está).
 3. **La media del sector también es slop.** Lo que hacen casi todos es una convención: se respeta porque el usuario la espera. Pero la identidad sale de los huecos, no de juntar lo que hace todo el mundo.
 4. **Cada decisión cita su porqué:** un referente (archivo), un dato del producto o una regla con fuente. Si no tiene porqué, sobra.
 5. **El proyecto manda** (principio 1 de ux-craft): tokens, marca y `CLAUDE.md` del proyecto están por encima de cualquier referente.
@@ -72,7 +72,6 @@ Lee las fuentes de verdad del proyecto (ux-craft § 1: `CLAUDE.md`, tokens, comp
   Referentes: 8
   Vecinos: 2
   Direcciones: 3
-  Subagentes: 2 (sector directo, vecinos)
   Por qué: pantalla nueva con un patrón conocido; lo que no está claro es cómo explicar la recomendación del día.
   ```
 
@@ -82,12 +81,12 @@ Si no sabes cuál es la acción principal o el usuario, pregunta antes de seguir
 
 Mide el alcance por lo que **no sabes**, no por el tamaño del encargo. Una pantalla pequeña con un problema nuevo (cómo explicar un cobro raro) pide más que una grande con un patrón resuelto (ajustes).
 
-| Situación | Referentes | Vecinos | Direcciones | Subagentes |
-|---|---|---|---|---|
-| Ajuste de un componente o un estado; patrón muy resuelto | 0–3 | 0 | 3 | 0 |
-| Pantalla nueva con patrón conocido | 4–8 | 1–2 | 3 | 0–1 |
-| Pantalla clave (home, paywall, onboarding) o problema poco resuelto | 8–12 | 2–3 | 3–4 | 2 |
-| Flujo o producto nuevo, o sector que no conoces | 12–20, incluidos flujos completos | 3+ | 4–5 | 2–3 |
+| Situación | Referentes | Vecinos | Direcciones |
+|---|---|---|---|
+| Ajuste de un componente o un estado; patrón muy resuelto | 0–3 | 0 | 3 |
+| Pantalla nueva con patrón conocido | 4–8 | 1–2 | 3 |
+| Pantalla clave (home, paywall, onboarding) o problema poco resuelto | 8–12 | 2–3 | 3–4 |
+| Flujo o producto nuevo, o sector que no conoces | 12–20, incluidos flujos completos | 3+ | 4–5 |
 
 Sube un nivel si la pantalla toca dinero o conversión (añade experimentos de Lazyweb), si el usuario pidió explícitamente algo distinto o si el sector es muy homogéneo (hay que ir a los vecinos para salir de la media). Baja un nivel si el usuario trae sus referencias o si el proyecto ya tiene un sistema de diseño maduro que deja poco margen.
 
@@ -99,12 +98,13 @@ Con 0 referentes, el arnés se reduce a: brief, 3 ideas rápidas en el artifact,
 
 ## Fase 1 · Referentes
 
-Detalle en `references/investigacion.md`. En resumen:
+Carga `investigar` y haz sus pasos 1-3 (lo que ya hay, cómo lo hacen los mejores, qué dice la investigación) con el alcance del brief y una búsqueda por cada «Problema a resolver». Todo inline, sin subagentes. Lo propio de este arnés está en `references/investigacion.md`:
 
-1. **Subagentes según el alcance del brief** (`general-purpose`, en paralelo), uno por frente: sector directo, sectores vecinos y, si es web, webs reales del sector. Con alcance pequeño, investiga tú directamente. Pásales el brief, la carpeta de destino y la plantilla de ficha de `investigacion.md` (copia el bloque «Encargo para el subagente»).
-2. Fuentes, por orden: **Lazyweb** (pantallas, flujos y experimentos reales), **captura directa** de webs reales con `refs.py capturar`, y **búsqueda web** de casos de estudio para saber *por qué* tomaron cada decisión.
+1. Capturas en `<carpeta>/referentes/` con el `capture.mjs` de `investigar`. En apps móviles, además, Lazyweb si está instalado (pantallas, flujos y experimentos reales).
+2. Una ficha por referente en `fichas.md` con la plantilla de `investigacion.md`, y la evidencia (con [leída]/[resumen]) al final del mismo archivo.
 3. Los números son los del brief. Busca hasta que cada problema tenga al menos un referente que lo resuelva bien, o hasta estar seguro de que nadie lo resuelve (eso también es un hallazgo: es un hueco). Diez capturas que repiten el mismo patrón valen lo que una; no rellenes.
-4. Monta la hoja de contacto (`refs.py lamina`) y ábrela tú. **Revisa las fichas contra las capturas**: los subagentes también se inventan cosas.
+4. Monta la hoja de contacto (`refs.py lamina`) y ábrela.
+5. Guarda el estudio en memoria como dice `investigar` §6 (con las dos mitades cubiertas), para que una valoración posterior de la misma pantalla no lo repita.
 
 Con `--ref` (el usuario trae sus referencias): esas van primero y mandan. Se analizan con la ficha detallada de `investigacion.md` § «Referencia del usuario» y el resto de la búsqueda solo completa lo que no cubren.
 
@@ -126,14 +126,14 @@ Con `--rapido`, o si el usuario ha dicho que no le preguntes: elige tú, escribe
 Carga las skills en este orden (el usuario autorizó usar ux-craft desde este arnés):
 
 1. `ux-craft`: SKILL.md, `claridad.md`, `slop.md`, `copy.md`, `mitos.md` y la referencia de plataforma (`web.md` o `movil.md`). Sigue su paso 2 («Si el encargo es construir»).
-2. `uxpeak-agentic-ux`: su SKILL.md entero (los tips van agrupados por tipo; aplica las secciones del patrón que construyes).
+2. `ux-craft/references/expertos/uxpeak/guia.md` entero (los tips van agrupados por tipo; aplica las secciones del patrón que construyes) y, si el patrón lo pide, otro experto de esa carpeta según la tabla de ux-craft.
 3. Si es una web o una landing: `action-hm:estandar-hm`, si está instalada.
 4. Según lo que toque la pantalla (solo las que apliquen; **evidencia**, por encima de ux-craft en su terreno):
    - formularios, errores, textos de interfaz, cookies o páginas de estado → `govuk` (la página pertinente);
    - accesibilidad, tamaños de toque o ergonomía móvil → `hig`;
    - cualquier decisión de usabilidad con duda (navegación, catálogo, buscador, lectura, confianza, conversión) → `nng`;
    - web en móvil (100vh, zoom en campos, notch, hover pegado) → `mobile-native`;
-   - movimiento → `animate` para construirlo y `review-animations` al acabar.
+   - movimiento → `movimiento` (modo construir y, al acabar, revisar).
 
 **Si se contradicen, manda:** proyecto > govuk / hig / nng en su terreno > ux-craft (incluido `mitos.md`) > estandar-hm > uxpeak. En concreto, de uxpeak **no** se aplica:
 - cifras sin fuente presentadas como hechos («el 70–90 % confía en el default»);
@@ -148,8 +148,8 @@ Mientras construyes, ten `decision.md` abierto: cada mecanismo que tomaste de un
 
 Detalle en `references/verificacion.md`:
 
-1. Captura el resultado (web: `refs.py capturar`; móvil: simulador o dispositivo) en `verificacion/`.
-2. **Subagente nuevo, sin historial**: recibe las capturas, `decision.md`, la lámina de referentes y las pruebas de `verificacion.md` (claridad, fidelidad a la dirección y «¿parece hecho por IA?»). Ni código ni razonamiento.
-3. Comprueba sus hallazgos (también se equivoca), corrige los 3 más graves y repite. Como mucho 2–3 rondas.
+1. Captura el resultado (web: `capture.mjs` de `investigar` con origen `propia`, o `.shots/` si el proyecto usa `capturas`; móvil: simulador o dispositivo) en `verificacion/`.
+2. **Revisión en frío**: pasa las pruebas de `verificacion.md` (claridad, fidelidad a la dirección y «¿parece hecho por IA?») mirando solo las capturas, `decision.md` y la lámina, no el código. Un subagente revisor solo si el usuario lo pide.
+3. Corrige los 3 problemas más graves y repite. Como mucho 2–3 rondas.
 4. Escáner de ux-craft sobre lo tocado y `break-ui` con datos extremos (nombres largos, vacíos, cifras enormes) en los componentes nuevos. Si es una web publicada o en preview, ofrece `jurado-hm` si está instalada. En un proyecto con `capturas`, rehaz `.shots/` al cerrar.
 5. Escribe `verificacion/informe.md` y cierra con: dirección aplicada, qué mecanismos tomaste de qué referente, qué descartaste y por qué, y qué queda por decidir.

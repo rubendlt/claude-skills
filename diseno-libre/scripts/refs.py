@@ -2,7 +2,6 @@
 """Utilidades del arnés diseno-libre (solo biblioteca estándar + Playwright vía npx).
 
   refs.py bajar <manifiesto.json> <carpeta>
-  refs.py capturar <url> <prefijo> [--alto] [--anchos 1440,390]
   refs.py lamina <salida.png> [--columnas N] <imagen>...
   refs.py puerta <carpeta-encargo> <brief|referentes|decision|cierre>
 """
@@ -17,7 +16,6 @@ import tempfile
 import urllib.request
 
 IMG = {".png", ".jpg", ".jpeg", ".webp"}
-ALTOS = {390: 844, 375: 812, 430: 932}
 
 
 def die(msg, code=1):
@@ -80,16 +78,6 @@ def bajar(manifiesto, carpeta):
     meta.write_text(json.dumps(previo, ensure_ascii=False, indent=2))
     if fallos:
         die(f"{fallos} descargas fallaron", 2)
-
-
-# ---------------------------------------------------------------- capturar
-def capturar(url, prefijo, pagina_entera, anchos):
-    pw = playwright_cmd()
-    pre = pathlib.Path(prefijo)
-    pre.parent.mkdir(parents=True, exist_ok=True)
-    for ancho in anchos:
-        nombre = {1440: "escritorio", 390: "movil"}.get(ancho, str(ancho))
-        shot(pw, url, pre.parent / f"{pre.name}-{nombre}.png", ancho, ALTOS.get(ancho, 900), pagina_entera)
 
 
 # ---------------------------------------------------------------- lamina
@@ -232,15 +220,6 @@ def main(a):
     cmd, rest = a[0], a[1:]
     if cmd == "bajar" and len(rest) == 2:
         bajar(*rest)
-    elif cmd == "capturar" and len(rest) >= 2:
-        anchos = [1440, 390]
-        if "--anchos" in rest:
-            i = rest.index("--anchos")
-            anchos = [int(x) for x in rest[i + 1].split(",")]
-            del rest[i:i + 2]
-        alto = "--alto" in rest
-        rest = [x for x in rest if x != "--alto"]
-        capturar(rest[0], rest[1], alto, anchos)
     elif cmd == "lamina" and len(rest) >= 2:
         cols = 4
         if "--columnas" in rest:
