@@ -10,7 +10,7 @@ description: >-
 
 # Kole Jain: UI práctica por problema
 
-Tips de **20 de sus 54 vídeos** leídos por subtítulos (otros 21 descargados y sin leer; 13, los más recientes, sin bajar por límite de YouTube: ver «Pendiente»). Agrupados por problema, no por vídeo. Son **criterio de un diseñador**, no estudios: los números (85 % blanco, ×1,27…) son reglas de bolsillo suyas. Para evidencia de usabilidad, `nng`.
+Tips de **31 de sus 54 vídeos** leídos por subtítulos (los otros 23 están descargados y sin leer: ver «Pendiente»). Agrupados por problema, no por vídeo. Son **criterio de un diseñador**, no estudios: los números (85 % blanco, ×1,27…) son reglas de bolsillo suyas. Para evidencia de usabilidad, `nng`.
 
 **Antes de aplicar nada: manda el proyecto.** Si el `CLAUDE.md` fija una regla (un solo radio, sin animaciones, una sola tinta de acento…), esa gana. Los tips de movimiento, ilustraciones lúdicas y «romper la caja» suelen chocar con webs corporativas sobrias: úsalos solo si el proyecto los admite.
 
@@ -117,7 +117,64 @@ Tips de **20 de sus 54 vídeos** leídos por subtítulos (otros 21 descargados y
 - **Lenguaje cercano, sin jerga** (Basecamp: «cuidamos los detalles», no «orgullosos de nuestra atención al detalle»).
 - **Páginas 404 y de error**: ocasión para tono propio.
 
+## 9. Se nota que lo hizo una IA (y cómo evitarlo)
+
+- **La IA copia la apariencia, no la razón.** Un elemento sin motivo se nota: flecha que apunta abajo en un menú que se abre arriba, el email repetido en un popover donde ya sale el nombre, ayuda en el menú cuando ya hay botón de ayuda. Para cada elemento: ¿qué espera el usuario aquí?
+- **Ley de Tesler**: la complejidad no desaparece, se mueve. Mejor que la absorba el sistema (calendario con fecha escrita, no tres desplegables) que el usuario.
+- **Onboarding de diapositivas en un modal no ayuda** (él cita un test de NN/g: 91 % de éxito con intro y 94 % sin ella; sin verificar). Mejor preguntar qué va a hacer el usuario y adaptarle el producto, y llevarle a crear lo primero.
+- **Navegación como Wikipedia**: cada sustantivo es enlace (proyecto, responsable), con vista previa al pasar el ratón. Una IA convierte cada petición en una página suelta solo enlazada desde el menú lateral.
+- **Antes de pedir nada a una IA**: ¿por qué enseñar esto?, ¿cómo lo usan de verdad?, ¿qué querrán ver después?, ¿qué dejo fuera? Sin criterio propio, la IA pone el suyo (el promedio).
+- **Diseñar con Claude/IA**: indicar qué es, para qué sirve, qué elementos concretos lleva, que use una librería de iconos (si no, emojis), y subir una captura de referencia **de una web real y limpia** (no de Dribbble: la IA no ve los detalles finos y los omite).
+
+## 10. Interacción y confianza
+
+- **No confirmar con modal lo que el usuario ya iba a hacer**: borrar y mostrar aviso con «Deshacer», o mover a «Eliminados recientemente» (30 días). El modal solo para lo irreversible de verdad (envío masivo, pagos).
+- **Guardado automático e historial** en vez de botón «Guardar», cuando se pueda deshacer.
+- **Retardo para distinguir acciones** (clic / doble clic): solo si compiten; si el primer clic vale igual, sin retardo.
+- **Submenús tolerantes**: el triángulo invisible hacia el submenú evita que se cierre al moverse en diagonal.
+- **Mostrar la intención adivinada** (en arrastrar y soltar, marcar dónde caerá y acelerar el scroll cerca del borde).
+- **Acción al soltar, no al pulsar**, en botones que se pueden cancelar arrastrando fuera.
+- **Cada botón, 4 estados** (normal, hover, pulsado, deshabilitado) y campos con foco, error y aviso; indicador de carga y mensaje de éxito; un microfeedback que confirme (p. ej. «Copiado»).
+- **Más opciones → peor decisión.** Quitar botones y decisiones (TikTok: un único gesto).
+- **Ley de Fitts**: objetivos grandes y cerca del pulgar; en móvil, lo importante a mano (derecha para los diestros).
+
+## 11. Hacer la pantalla fácil de escanear
+
+- **Nadie lee la pantalla entera**: llega con una pregunta y busca la respuesta. Todo lo siguiente sirve a eso.
+- **Alinear a bordes**: texto a la izquierda, cifras a la derecha, como un ticket. Los bordes sostienen el diseño sin separadores. Una línea a ancho completo rompe esos bordes.
+- **Diferenciar el contenido homogéneo**: agrupar (por fecha, por tipo), avatares, iconos, viñetas, enlaces azules. Una lista de texto uniforme cansa; por eso la IA mete listas y tablas.
+- **Símbolo antes que explicación**: cuando algo no se entiende, el reflejo es añadir texto, y eso lo hace más difícil de leer. Usar iconos y diagramas universales.
+- **El acento es diferencia, no propiedad**: si todo está azul, nada destaca. Lo que cambia respecto a lo de al lado es lo que llama la atención. Un checkbox apagado no lleva color.
+- **Cuando una tarjeta basta, quitar la tarjeta**: una línea de columna cumple la función del borde.
+
+## 12. Hero y landing: anatomía y proceso
+
+- **Esqueleto común**: bloque de texto, navegación, cifras y la imagen. Texto con **distancias de agrupación** (subtítulo 8 px, etiqueta superior 12 px, botones 32 px). Titular de ~7 palabras y subtítulo de ~14.
+- **Imagen**: no tapar el centro; fondo no cargado (si no, el texto se pierde); texto sobre foto → degradado lineal, o degradado + desenfoque gradual, no un velo uniforme.
+- **Cifras con jerarquía por opacidad** (mismo tamaño, la segunda línea al 55 %).
+- **Que el diseño parezca hecho para su público**: un sitio «de restaurantes» sin una foto de restaurante parece robot. Imágenes atmosféricas, paleta sacada de las propias fotos, textura/ruido, una serif para dar personalidad (carta impresa).
+- **Método «Frankenstein»**: montar el wireframe mezclando secciones de varios referentes, adaptadas a lo propio (cinta de logos, pasos con imágenes grandes, pestañas de color a pantalla completa con un 90 % menos de texto). Después se prueba otro estilo sobre el mismo layout.
+- **Cambiar la sensación con el mismo layout**: amistoso (fondo cálido, esquinas muy redondas, botones grandes) vs. profesional (esquinas menos redondas, imágenes más sobrias, ruido de fondo).
+- **Aprender**: coleccionar ~20 heros, anotar proximidad, contraste y jerarquía; copiar al píxel uno (distancias, altura de la barra); rehacer el mismo layout en dos «sabores». **Copiar para entender, no «rediseñar» a ojo.**
+- **Escala de tamaños**: máximo ~6 en una web, y en dashboards nada de más de 24 px.
+- **Interletrado −2/−3 % e interlineado 110-120 %** en títulos grandes, y ya se ve profesional.
+- **Botón fantasma**: ancho ≈ el doble del alto; los enlaces del lateral son botones sin fondo hasta el hover.
+- **Iconos del tamaño del interlineado** (p. ej. 24 px) y el texto alineado.
+
+## 13. Componentes concretos
+
+- **Barra de pestañas móvil**: sin botón central «+» salientes (es la pestaña que menos se usa); iconos alineados, estado activo claro (relleno + color de marca), foto de perfil si la hay, etiquetas legibles si los iconos no son obvios.
+- **Gráfico de línea**: líneas de cuadrícula y marcadores; sin curvas suavizadas (no se ve dónde acaba) ni degradado que desvanezca el último dato; leyenda; periodo anterior en gris.
+- **Tarjetas repetidas**: la tarjeta entera es el enlace, con flecha que aparece al pasar el ratón; CTA propio solo si la acción es concreta. Tarjeta con foto: degradado suave de abajo arriba.
+- **Pricing**: botón con borde (no relleno) si baja la jerarquía; marcas ✓ en vez de viñetas; incluir una prestación que ese plan no tiene; nombre y descripción de cada plan; aviso del precio real; separar precio y prestaciones con un fondo tenue.
+- **Modal de registro**: etiquetas **encima** del campo, no solo como placeholder; ejemplo en el placeholder; subtítulo «Crear cuenta»; enlace a iniciar sesión; campos con fondo blanco roto y borde al 40 %.
+- **Pie de página**: con 3-5 enlaces, centrado (logo, enlaces, redes, copyright a un lado); las columnas de 23 enlaces son para webs que tienen 23.
+- **Chips**: no confundir con botones: más finos, sin color de CTA; relleno vertical = la mitad o un cuarto del horizontal.
+- **Carrusel**: indicador de posición, flechas junto a él, contraste sobre cualquier foto.
+- **Pegatinas** (estrella de 12 puntas, tipografía display, sombra sin desenfoque): solo en estilos lúdicos.
+
 ## Pendiente
 
-- 13 vídeos sin leer (descarga limitada por YouTube con 429): «Why everyone can tell you're a vibe coder», «Why the best software must LIE to you», «The secret behind weirdly perfect UI designs», «The one thing vibe coding CAN'T fix about your website», «The stupid simple way to learn UI/UX design in exactly 10 minutes», «Every UI/UX Concept Explained in Under 10 Minutes», «Vibe Coding a Pro UI in SECONDS With AI», «7 ui design trends…», «I spent a week gamifying apps», «TikTok's UX…», «Upgrading 9 CRUCIAL UI Elements», «Create A Portfolio With No Experience», «Prototyping Professional Load Animations in Figma: Part 1».
-- 21 vídeos con subtítulos descargados y sin leer (Figma paso a paso, macOS, móvil, dashboards básicos, micro-animaciones, recursos, precios freelance, portfolio, rediseños de Spotify/Google/finanzas/skincare). Repetir la lectura si hace falta más detalle.
+- Los 12 vídeos antes bloqueados ya están leídos, salvo «Create A Portfolio With No Experience», «Prototyping Professional Load Animations in Figma: Part 1» e «I spent a week gamifying apps» (no aplican a webs corporativas).
+- 21 vídeos con subtítulos descargados y sin leer (Figma paso a paso, macOS, móvil, dashboards básicos, micro-animaciones, recursos, precios freelance, rediseños de Spotify/Google/finanzas/skincare). Repetir la lectura si hace falta más detalle.
+- Descarga de subtítulos: `yt-dlp` reciente en un venv + `--cookies-from-browser firefox --ignore-no-formats-error`. Sin cookies, YouTube devuelve 429.
