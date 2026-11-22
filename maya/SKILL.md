@@ -12,6 +12,7 @@ Esta skill sirve para dos cosas: **encontrar huecos** (dónde puede ser distinta
 
 | Archivo | Cuándo se lee |
 |---|---|
+| `references/donde-buscar.md` | **Siempre que se busquen huecos o se audite**: inventario de lo propio del proyecto, mapa por elemento de pantalla (convención, hueco habitual, trampa) y preguntas que destapan cada patrón |
 | `references/casos.md` | Para citar o comparar con un caso real: 13 aciertos y 6 fallos con lo que se quedó típico, lo que cambió y la fuente |
 | `references/evidencia.md` | Para respaldar una recomendación con estudios (Hekkert, Google 2012, Material 3 Expressive, Giora, Reinecke) o marcos (activos distintivos, códigos, ERRC) |
 
@@ -65,6 +66,12 @@ Se miran sobre capturas reales, nunca sobre el código.
 
 En tres líneas: qué pantalla o producto es, qué tiene que conseguir (su acción principal) y quién lo usa (si sabe del tema y si lo usa a menudo o de tarde en tarde). Eso fija la dosis (reglas de abajo). Lee el `CLAUDE.md` del proyecto, `DECISIONES.md` y la memoria: lo decidido no es hueco.
 
+### 1b. Inventario de lo propio
+
+Antes de mirar pantallas, busca en el repo y en los documentos del cliente qué tiene este proyecto que no tenga la competencia: cifras comprobables, fotos propias, medidas, proceso, casos, lugar, activos de marca (tabla en `donde-buscar.md`). Apúntalo en cinco a diez líneas. Los mejores huecos salen de aquí: un formato que el usuario conoce, con algo dentro que solo tiene este cliente (P3).
+
+Después lista las pantallas reales del proyecto (rutas, `shots.config.json`, `CLAUDE.md`) y elige las de más tráfico o más peso en la conversión. No se recorre todo: home, listado, ficha y contacto suelen bastar.
+
 ### 2. Medir la convención
 
 Captura de 5 a 8 referentes del sector y de 2 a 3 de fuera que resuelvan la misma tarea para el mismo tipo de usuario (cómo: `investigar` §2; la web propia: `capturas`). Haz un inventario por elemento:
@@ -92,7 +99,7 @@ Con la matriz ERRC (`evidencia.md`), decide qué **eliminar** (inercia), **reduc
 
 ### 5. Recorrer los 7 patrones
 
-Para cada elemento de la zona libre, pregúntate si encaja algún patrón: ¿hay una forma conocida que pueda hacer más (P1)?, ¿un formato de otra app que este usuario ya use (P2)?, ¿contenido que solo tiene este cliente (P3)?, ¿un eje de ejecución donde ir muy por encima del sector (P4)?, ¿un límite que pueda ser útil (P5)? Para la marca, P6; para un rediseño, P7.
+Recorre cada pantalla con el mapa por elemento de `donde-buscar.md` (convención, hueco habitual, trampa) y hazle a cada elemento de la zona libre las preguntas de cada patrón: ¿hay una forma conocida que pueda hacer más (P1)?, ¿un formato de otra app que este usuario ya use (P2)?, ¿contenido que solo tiene este cliente (P3)?, ¿un eje de ejecución donde ir muy por encima del sector (P4)?, ¿un límite que pueda ser útil (P5)? Para la marca, P6; para un rediseño, P7.
 
 ### 6. Filtrar cada candidato
 
