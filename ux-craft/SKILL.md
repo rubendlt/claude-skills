@@ -36,7 +36,7 @@ Una pantalla no está terminada si no se entiende de un vistazo, si le falta té
 
 Si el trabajo toca web y móvil, lee las dos. Las reglas comunes están abajo, en este archivo.
 
-**Criterio por tema** (opinión de diseñadores, no evidencia: por debajo del proyecto, de `govuk`/`hig`/`m3`/`nng` y de este archivo). Esta skill es la pasada (claridad, medidas, craft y slop); el criterio de cada tipo de trabajo está en su skill. Carga **una**, la del problema, nunca todas:
+**Criterio por tema** (opinión de diseñadores, no evidencia: por debajo del proyecto, de `normas`/`nng` y de este archivo). Esta skill es la pasada (claridad, medidas, craft y slop); el criterio de cada tipo de trabajo está en su skill. Carga **una**, la del problema, nunca todas:
 
 | Si la pantalla o la duda es de… | Skill |
 |---|---|

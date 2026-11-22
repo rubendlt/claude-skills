@@ -7,7 +7,7 @@ description: >-
   interacción y confianza (deshacer, estados, feedback), estados vacío/carga/error, gestos al estilo Apple, rediseñar sin
   perder usuarios y producto con IA. Junta los consejos de Tim Gabe, UX Peak, Kole Jain y Apple. USAR al diseñar o
   revisar una app o un flujo de producto (alta, onboarding, home de app, paywall, perfil, panel), al decidir cómo
-  retener o cobrar, o al montar la navegación móvil. Medidas y componentes nativos: hig (iOS) y m3 (Android); técnica de
+  retener o cobrar, o al montar la navegación móvil. Medidas y componentes nativos: normas (Apple y Material); técnica de
   móvil y anti-slop: ux-craft (movil.md); una web que debe sentirse nativa en el móvil: mobile-native; animación y gestos:
   movimiento. NO usar para webs de empresa sin cuentas (conversion, diseno-web) ni en ajustes menores.
 argument-hint: "[app, flujo o pantalla]"
@@ -15,7 +15,7 @@ argument-hint: "[app, flujo o pantalla]"
 
 # Apps móviles: valor rápido, hábito sin trampas, todo al alcance del pulgar
 
-Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y componentes mandan `hig` y `m3`. Cada consejo lleva su autor; guías completas en `~/.claude/skills/fuentes/<autor>/guia.md` (Gabe tiene temas sueltos en `fuentes/timgabe/references/`).
+Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y componentes manda la norma (`normas`: Apple y Material comparadas). Cada consejo lleva su autor; guías completas en `~/.claude/skills/fuentes/<autor>/guia.md` (Gabe tiene temas sueltos en `fuentes/timgabe/references/`).
 
 ## 1. Onboarding y primera sesión
 
@@ -57,7 +57,7 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 ## 5. Navegación móvil y ergonomía
 
 - **Barra inferior de 3 a 5 destinos estructurales** (máx. 6); nunca ayuda, legales ni cerrar sesión (UX Peak § 11). Sin botón central «+» saliente (Jain § 13).
-- **Iconos 24 px, etiquetas legibles, zona táctil ≥ 44 pt / 48 dp**, zona segura inferior (UX Peak § 11; mínimos exactos en `hig`/`m3`).
+- **Iconos 24 px, etiquetas legibles, zona táctil ≥ 44 pt / 48 dp**, zona segura inferior (UX Peak § 11; mínimos exactos en `normas`).
 - **Estado activo con dos cambios** (relleno + color), no solo color (UX Peak, Jain).
 - **Acciones críticas abajo, en el arco del pulgar** (UX Peak, Gabe, Jain § 10: Fitts).
 - **Rediseñar = no quitar lo que se usa cada día:** mapear las tareas diarias de cada grupo antes de mover nada; «perdido» y «movido» se sienten igual; por fases (Gabe: Sonos). Cuánto avanzar: skill `maya`.
@@ -93,4 +93,4 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - [ ] ¿Un enfoque por pantalla y la acción principal al alcance del pulgar?
 - [ ] ¿Estados vacío, carga, error y éxito diseñados?
 - [ ] ¿Cobro transparente, sin trampas de hábito?
-- [ ] ¿Medidas y componentes según `hig`/`m3`, y pasada de `ux-craft` (`movil.md`)?
+- [ ] ¿Medidas y componentes según `normas`, y pasada de `ux-craft` (`movil.md`)?

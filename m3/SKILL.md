@@ -1,4 +1,5 @@
 ---
+disable-model-invocation: true
 name: m3
 user-invocable: true
 description: "Consulta de datos: copia local de Material Design 3 de Google (m3.material.io: fundamentos, estilos, componentes), en markdown buscable. USAR al construir o revisar UI web o móvil (sobre todo Android/Expo) cuando haga falta una medida, un mínimo o una regla de comportamiento, y como segunda fuente junto a hig cuando Apple no cubre el caso o solo habla de iOS. Sirve para mínimos de accesibilidad y ergonomía (objetivos táctiles de 48dp, contraste, estados, foco), anatomía y medidas de componentes (botones, campos de texto, diálogos, menús, navegación, listas, chips, snackbar), cuándo usar cada componente, breakpoints y layout adaptable, tipos de movimiento y duraciones, roles de color y redacción de interfaz. Contrapunto Android/web a la skill hig (Apple). Datos y comportamiento, no estética. NO usar para decidir el aspecto visual ni en ajustes menores."
@@ -15,7 +16,7 @@ Guía oficial de Google para Material 3, descargada del contenido que sirve m3.m
 1. Busca abajo la página que responde a la pregunta y lee **solo la sección** pertinente. Cada página tiene pestañas como `## Overview / Specs / Guidelines / Accessibility`; usa `grep -n "^## " <archivo>` para saltar. Si no está clara, `grep -ril "<término>" foundations styles components`.
 2. Devuelve la regla o la medida concreta citando archivo y sección (p. ej. `components/text-fields.md` › Guidelines → «…»), con la URL `source` si hace falta.
 3. **Datos y comportamiento, no estética.** Formas redondeadas, color dinámico, M3 Expressive y la escala tipográfica son la identidad de Google. No los traslades. Sí traslada los mínimos (tamaños táctiles, contraste, estados), cuándo usar cada componente, la anatomía y la redacción.
-4. Si choca con el `CLAUDE.md` del proyecto, manda el proyecto, y dilo. Si choca con `hig` o `govuk`: en web para público general manda `govuk` en formularios y textos; M3 y HIG son guías de plataforma.
+4. Si choca con el `CLAUDE.md` del proyecto, manda el proyecto, y dilo. Si choca con `hig` o `govuk`, no manda ninguna por defecto: se decide con los criterios de la skill `normas`.
 5. Las imágenes van como `> [imagen] alt — pie`: el pie suele ser una regla («Do/Don't», medidas). Las tablas de tokens no se descargan; donde salen, la página lo indica con *Tokens (ver specs en la web)*.
 6. Unidades en `dp`. En web, 1dp ≈ 1px CSS.
 

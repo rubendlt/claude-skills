@@ -15,7 +15,7 @@ argument-hint: "[página o encargo]"
 
 # Conversión: que el visitante correcto dé el paso
 
-Criterio de diseñadores con experiencia, **no evidencia**. Orden de autoridad: el proyecto (`CLAUDE.md`, decisiones) > evidencia (`govuk`, `hig`, `nng`, estudios citados) > esta skill. Cada consejo lleva su autor; el texto completo de cada uno está en `~/.claude/skills/fuentes/<autor>/guia.md`. Las cifras sin fuente son anécdotas del autor: no citarlas como dato.
+Criterio de diseñadores con experiencia, **no evidencia**. Orden de autoridad: el proyecto (`CLAUDE.md`, decisiones) > evidencia (`normas`, `nng`, estudios citados) > esta skill. Cada consejo lleva su autor; el texto completo de cada uno está en `~/.claude/skills/fuentes/<autor>/guia.md`. Las cifras sin fuente son anécdotas del autor: no citarlas como dato.
 
 Casos de antes y después para justificar un cambio: `references/casos-crawford.md` (energía, consultoría, salud, audiovisual, adquisiciones, agencia, catálogo industrial).
 
@@ -85,7 +85,7 @@ Casos de antes y después para justificar un cambio: `references/casos-crawford.
 ## 7. Páginas y piezas de captación
 
 - **Orden de una página de captación:** resultado + contacto directo → ¿encajo? → la prueba más relevante → oferta → proceso → la confianza que les trajo → FAQ → la misma acción (Crawford). Bloque tipo: titular de problema o resultado → subtítulo → visual → pruebas → un CTA (Gabe).
-- **Formulario de primer contacto:** nombre, email y una línea; cada campo extra pierde gente (Crawford). Largo solo si personaliza o filtra (Gabe). Cómo se comporta cada campo y cada error: skill `govuk`.
+- **Formulario de primer contacto:** nombre, email y una línea; cada campo extra pierde gente (Crawford). Largo solo si personaliza o filtra (Gabe). Cómo se comporta cada campo y cada error: skill `normas`.
 - **Confirmación = el final que se recuerda (peak-end):** celebra lo hecho, dice qué pasa ahora y cuándo; cuidar también esperas y errores (Gabe).
 - **Sobre nosotros con el foco girado:** «tienes este problema, así lo resolvemos, por esto puedes fiarte» (Crawford).
 - **Proceso:** tantos pasos como haya de verdad, mejor en tiempo que numerados (Crawford).

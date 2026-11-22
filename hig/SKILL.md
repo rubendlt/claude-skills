@@ -1,4 +1,5 @@
 ---
+disable-model-invocation: true
 name: hig
 user-invocable: true
 description: "Fact lookup: Apple Human Interface Guidelines corpus (greppable markdown). Query on demand for accessibility and ergonomic minimums (hit-target sizes, Dynamic Type), platform terminology, system component capabilities, and App-Review-relevant conventions. Not design direction."

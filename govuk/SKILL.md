@@ -1,4 +1,5 @@
 ---
+disable-model-invocation: true
 name: govuk
 description: "Consulta de datos: copia local del GOV.UK Design System (componentes, patrones, estilos), guía con investigación de usuarios reales, también mayores y poco digitales. Usar para decidir cómo debe funcionar un formulario, un campo (nombre, email, teléfono, dirección, fecha), un mensaje de error o validación, una página de confirmación, de error 404/500, un banner de cookies, una navegación o un texto de interfaz claro. Datos y comportamiento, no estética."
 context: fork
@@ -14,7 +15,7 @@ Guía oficial del Government Digital Service británico (alphagov/govuk-design-s
 1. Busca en el índice de abajo la página que responde a la pregunta y léela entera; si no está clara, `grep -ril "<término>" components patterns styles`.
 2. Devuelve la regla concreta, citando la página (p. ej. `patterns/validation.md` → «…»), y el porqué si la guía lo da.
 3. **Datos y comportamiento, no estética.** El aspecto de GOV.UK (negro, amarillo de foco, tipografía propia, tamaños) es identidad del Gobierno británico: no lo traslades. Sí traslada qué hace cada pieza, cuándo usarla y cómo se redacta.
-4. Si choca con una regla del `CLAUDE.md` del proyecto, manda el proyecto; dilo.
+4. Si choca con una regla del `CLAUDE.md` del proyecto, manda el proyecto; dilo. Si choca con `hig` o `m3`, se decide con los criterios de la skill `normas`.
 5. Los textos de ejemplo están en inglés: adáptalos al castellano, no los traduzcas literal.
 6. Los enlaces internos (`/patterns/...`) son relativos a https://design-system.service.gov.uk.
 

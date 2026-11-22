@@ -28,9 +28,8 @@ Por **para qué sirven**, no por de dónde salen. Claude Code solo lee skills en
 | | `maya` | Cuánto avanzar una tarea frente a lo que el usuario ya conoce |
 | | `movimiento` | Animación, transiciones, gestos (web y Expo) |
 | | `mobile-native` | Web que se sienta nativa en el móvil |
-| **Evidencia** | `hig` | Apple Human Interface Guidelines |
-| | `m3` | Material Design 3 |
-| | `govuk` | GOV.UK Design System |
+| **Evidencia** | `normas` | Consulta Apple, Material y GOV.UK a la vez y decide con criterios escritos (ninguna manda por defecto) |
+| | `hig`, `m3`, `govuk` | Copias locales que lee `normas`; no se activan solas (`disable-model-invocation`), se pueden llamar a mano |
 | | `nng` | Índice y fichas de Nielsen Norman Group |
 | **Herramientas** | `capturas` | Capturas en `.shots/` con caché |
 | | `break-ui` | Probar una UI con datos extremos |
@@ -57,7 +56,7 @@ Movidas a su skill: casos de Crawford → `conversion/references/casos-crawford.
 
 | Contenido | Origen |
 |---|---|
-| ux-craft, diseno-libre, investigar, capturas, nng, m3, maya, conversion, diseno-web, premium, tiendas, apps-moviles, spec, best-of-n; resúmenes de `fuentes/` (crawford, kolejain, timgabe, uxpeak, selfmade) | Propias |
+| ux-craft, diseno-libre, investigar, capturas, nng, m3, maya, normas, conversion, diseno-web, premium, tiendas, apps-moviles, spec, best-of-n; resúmenes de `fuentes/` (crawford, kolejain, timgabe, uxpeak, selfmade) | Propias |
 | movimiento, break-ui, mobile-native, pick-ui-library, prototype, `fuentes/emil`, `fuentes/apple` | Emil Kowalski (sin licencia: no publicar) |
 | hig | vabole/apple-skills (texto de las HIG de Apple: no publicar) |
 | govuk | alphagov/govuk-design-system (MIT). Refrescar: `govuk/scripts/update.sh` |

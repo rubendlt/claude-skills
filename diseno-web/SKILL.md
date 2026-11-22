@@ -9,7 +9,7 @@ description: >-
   Crawford. USAR al construir, maquetar o revisar visualmente una página o sección web, al elegir paleta, fuentes, escala o
   layout, o cuando una web se vea desordenada o a plantilla. Para que el visitante actúe usar conversion; para que parezca
   cara, premium; para apps nativas, apps-moviles; para la pasada de claridad y anti-slop, ux-craft; medidas y mínimos de
-  accesibilidad, hig/m3. NO usar en ajustes menores ni en lo ya decidido.
+  accesibilidad, normas. NO usar en ajustes menores ni en lo ya decidido.
 argument-hint: "[página, sección o encargo]"
 ---
 

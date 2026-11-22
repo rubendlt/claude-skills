@@ -7,7 +7,7 @@ description: >-
   (reseñas, garantías), carrito vacío y post-compra, y catálogo grande ordenado para comprador profesional. Junta los
   consejos de UX Peak, Sam Crawford, Kole Jain y Tim Gabe. USAR al diseñar o revisar una ficha de producto, un listado o
   categoría, filtros, buscador de catálogo, carrito, checkout o precios. Para el contacto o presupuesto de una web de
-  servicios, conversion; para que parezca de lujo, premium; formularios y errores del checkout, govuk. NO usar en
+  servicios, conversion; para que parezca de lujo, premium; formularios y errores del checkout, normas. NO usar en
   ajustes menores ni en lo ya decidido.
 argument-hint: "[ficha, listado, filtros, carrito…]"
 ---
@@ -72,7 +72,7 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto (si es un catálog
 - **Cifras específicas y reales** en reseñas y ventas (UX Peak § 4).
 - **Carrito vacío que enseña** qué hacer y lleva a la acción (UX Peak § 13).
 - **Post-compra:** confirmación rotunda, contacto en un toque y línea de tiempo de estados; es el tramo de más incertidumbre (UX Peak § 13).
-- Campos, errores y confirmación del checkout: skill `govuk`.
+- Campos, errores y confirmación del checkout: skill `normas`.
 
 ## Antipatrones rápidos (UX Peak)
 

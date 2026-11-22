@@ -28,8 +28,7 @@ Antes de salir fuera, gratis:
 
   | Skill | Cuándo | Cuenta como |
   |---|---|---|
-  | `govuk` | formularios, campos, errores, textos de interfaz, cookies, páginas de estado | **evidencia** (probado con usuarios reales) |
-  | `hig` | accesibilidad, tamaños de toque, tipografía dinámica, ergonomía móvil | **evidencia** (norma de plataforma) |
+  | `normas` | formularios, campos, errores, textos de interfaz, cookies, páginas de estado, accesibilidad, tamaños de toque, componentes, ergonomía móvil (Apple, Material y GOV.UK comparadas) | **evidencia** (norma de plataforma; GOV.UK, probado con usuarios reales) |
   | `capturas` | ver la página propia: consultar `.shots/` antes de capturarla con `capture.mjs` | la página real |
   | `maya` | decidir cuánto avanzar una tarea o función frente a lo que el usuario ya acepta, o valorar un rediseño sobre usuarios actuales | **evidencia** donde cita estudio o caso; **criterio** donde lo marca |
   | `conversion`, `diseno-web`, `premium`, `tiendas`, `apps-moviles` (consejos de Crawford, Kole Jain, Tim Gabe, UX Peak, Self-Made, Emil y Apple, por tema) | contrastar una idea con la opinión de diseñadores | **criterio**, nunca evidencia: no van en «Qué dice la evidencia» |
