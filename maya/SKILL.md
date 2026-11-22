@@ -1,6 +1,6 @@
 ---
 name: maya
-description: "Principio MAYA (Most Advanced Yet Acceptable, Raymond Loewy): cuánto innovar y dónde sin que el usuario deje de reconocer lo que ve. USAR cuando haya que decidir entre algo convencional y algo distintivo en UI, una web, una marca o un producto; cuando un diseño parezca «demasiado raro», «a plantilla» o «igual que todos»; antes de un rediseño sobre usuarios que ya usan el producto; cuando diseno-libre, ux-craft o investigar tengan que medir la dosis de novedad de una propuesta; o cuando el usuario mencione MAYA o Loewy. NO usar en ajustes menores (un margen, una palabra), dudas técnicas ni decisiones ya tomadas en el proyecto."
+description: "Principio MAYA (Most Advanced Yet Acceptable, Raymond Loewy): encuentra los huecos de una página, pantalla o web donde se puede ser distinto sin que el usuario deje de reconocer lo que ve, y dice cuánto innovar en cada uno. Mapea la convención del sector, separa lo intocable de lo libre y propone 1-3 huecos con su ancla conocida. USAR cuando el usuario pida dónde destacar, dónde diferenciarse o dónde aplicar MAYA; cuando haya que decidir entre algo convencional y algo distintivo en UI, una web, una marca o un producto; cuando un diseño parezca «demasiado raro», «a plantilla» o «igual que todos»; antes de un rediseño sobre usuarios que ya usan el producto; cuando diseno-libre, ux-craft o investigar tengan que medir la dosis de novedad de una propuesta; o cuando el usuario mencione MAYA o Loewy. NO usar en ajustes menores (un margen, una palabra), dudas técnicas ni decisiones ya tomadas en el proyecto."
 argument-hint: "[propuesta o pantalla a evaluar]"
 ---
 
@@ -8,7 +8,7 @@ argument-hint: "[propuesta o pantalla a evaluar]"
 
 Raymond Loewy (diseñador industrial, años 50) lo resumió así: la gente quiere lo nuevo, pero rechaza lo que no reconoce. Un diseño tiene que innovar lo justo para que el usuario lo siga entendiendo. Derek Thompson (*The Atlantic*, *Hit Makers*) lo dice al revés: «para vender algo sorprendente, hazlo familiar; para vender algo familiar, hazlo sorprendente».
 
-Esta skill da la **dosis**: qué se queda convencional, qué puede ser distinto y cuánto. No da el aspecto, que sale del proyecto (`ux-craft` principio 1), ni sustituye a la ley de Jakob de `ux-craft/references/claridad.md` § 6 («convenciones antes que originalidad»): esa es la mitad «aceptable» de MAYA, y aquí está el principio completo.
+Esta skill **encuentra los huecos** (dónde se puede ser distinto) y da la **dosis** (cuánto). No da el aspecto, que sale del proyecto (`ux-craft` principio 1), ni sustituye a la ley de Jakob de `ux-craft/references/claridad.md` § 6 («convenciones antes que originalidad»): esa es la mitad «aceptable» de MAYA, y aquí está el principio completo.
 
 ## Qué dice la evidencia
 
@@ -21,7 +21,69 @@ Esta skill da la **dosis**: qué se queda convencional, qué puede ser distinto 
 
 Casi todo lo demás que circula sobre MAYA (iPod → iPhone, Google Glass, Newton, Apple Watch) es comentario sin datos: vale como ejemplo, no como prueba.
 
-## Cómo se aplica
+## Buscar huecos
+
+El trabajo principal de esta skill: dada una pantalla, una página o una web entera, encontrar dónde cabe algo distinto que se siga entendiendo. **No se busca de memoria**: la convención se mide sobre capturas reales.
+
+### 1. Acotar
+
+En tres líneas: qué pantalla es, qué tiene que conseguir (su acción principal) y quién la usa (si sabe del tema y si la usa a menudo o de tarde en tarde). Eso fija la dosis (reglas 3-4 de abajo). Lee el `CLAUDE.md` del proyecto, `DECISIONES.md` y la memoria: lo decidido no es hueco.
+
+### 2. Medir la convención
+
+Captura de 5 a 8 referentes del sector y de 2 a 3 de fuera que resuelvan la misma tarea para el mismo tipo de usuario (cómo capturar y elegir: `investigar` §2; la página propia: `capturas`). Después haz un inventario por elemento de la pantalla (cabecera, primer pantallazo, prueba de confianza, listado, ficha, CTA, contacto, pie…):
+
+| Elemento | Lo que hacen | Cuántos | Convención |
+|---|---|---|---|
+| p. ej. primer pantallazo | foto de ambiente + titular genérico | 7/8 | fuerte |
+
+- **Fuerte** (casi todos igual): el usuario lo espera.
+- **Débil** (cada uno a su manera): el usuario no espera nada concreto; hay margen.
+- **Nadie lo hace**: o es un hueco o no sirve. Se decide en el paso 5.
+
+### 3. Clasificar cada elemento propio en tres zonas
+
+- **Intocable**: lo que el usuario usa para orientarse o actuar: navegación, CTA, formularios, teléfono, buscador, iconos estándar, dónde está cada cosa. Si la convención es fuerte y sirve para algo, se queda tal cual (ley de Jakob, Google 2012).
+- **Libre**: lo que el usuario mira pero no usa para hacer nada: fotos, escala, tipografía, ritmo, cómo se cuenta la prueba, el tono del texto. Aquí están los huecos.
+- **Inercia del sector**: lo que todos hacen sin que ayude al usuario (carrusel automático, foto de stock, «soluciones integrales»). Es convención, pero vacía: se puede sustituir por algo con función, manteniendo el sitio y el papel que el usuario espera.
+
+### 4. Buscar huecos de cinco tipos
+
+Cada tipo tiene un **ancla conocida**, la parte que el usuario ya reconoce, y una **sorpresa**, la parte nueva. *(Esta tipología es criterio, construida sobre Loewy y Thompson: «lo sorprendente, hazlo familiar; lo familiar, hazlo sorprendente».)*
+
+| Tipo | Ancla conocida | Sorpresa | Ejemplo |
+|---|---|---|---|
+| **Contenido que solo tú tienes** | el formato habitual del sector | datos, fotos o medidas propias que nadie más puede poner | una tarjeta de proyecto normal, pero con la cifra real contada en obra |
+| **Préstamo de otro ámbito** | un formato que el usuario ya usa en otra parte (ficha técnica, plano, factura, índice, comparador) | que aparezca en este sector | las medidas de una mesa con cota de plano en lugar de una lista |
+| **Escala y ritmo** | el mismo elemento, en el mismo sitio | tamaño, recorte o cadencia fuera de lo normal | una foto de obra a sangre donde todos ponen miniaturas |
+| **Lenguaje concreto** | la misma sección y el mismo papel | decirlo con verbos y cifras donde el sector es vago | «Medimos, suministramos y montamos» frente a «soluciones integrales» |
+| **Convención débil** | lo que el usuario espera en general de ese bloque | una forma propia, porque nadie fija cómo debe ser | cómo se presenta el proceso de trabajo |
+
+No hay hueco en la zona intocable. Si un hueco cae ahí, se descarta aunque sea bonito.
+
+### 5. Filtrar cada candidato
+
+Un hueco solo pasa si responde que sí a todo:
+
+1. **¿Resuelve algo del usuario** (confianza, comprensión, decisión) o es solo para diferenciarse? Lo segundo no vale.
+2. **¿Se entiende sin explicarlo?** Si hace falta una leyenda o una instrucción, se ha pasado.
+3. **¿Es el único eje nuevo de esa pantalla?** Si ya hay otro, se elige uno.
+4. **¿Cabe en el proyecto** (marca, tokens, reglas del `CLAUDE.md`)?
+5. **¿Se puede sostener con contenido real?** Un hueco de «contenido propio» sin datos de verdad es humo.
+
+### 6. Entregar
+
+Primero el mapa de convención (tabla del paso 2, resumida). Después de **1 a 3 huecos**, ordenados con tu recomendación primero. De cada uno:
+
+- **Dónde**: página y elemento.
+- **Ancla y sorpresa**: qué se queda típico y qué cambia.
+- **Por qué**: el referente o dato que lo apoya, separando evidencia de criterio.
+- **Riesgo**: qué podría no entenderse.
+- **Cómo probarlo**: la prueba rápida de abajo sobre una captura o una variante renderizada (`prototype`).
+
+Si las propuestas son visuales, enséñalas con capturas o variantes renderizadas, no con esquemas. Es una propuesta: no se implementa hasta que el usuario elija.
+
+## Reglas de dosis
 
 1. **Separa estructura y ejecución.** La estructura y la interacción son convencionales: navegación, formularios, iconos, dónde está cada cosa y cómo se pulsa. Lo distintivo va en la ejecución: fotos, escala, tipografía, ritmo, copy, detalle. *(Evidencia: Google 2012, ley de Jakob; el reparto es criterio.)*
 2. **Un solo eje nuevo por pantalla.** Si dos cosas son nuevas a la vez, una sobra. *(Criterio, coherente con el freno mutuo de Hekkert.)*
@@ -42,7 +104,7 @@ Los segundos de la primera prueba son criterio, no un umbral medido.
 
 ## Cómo encaja con las demás skills
 
-- `diseno-libre`: al filtrar las ideas y antes de recomendar una, di de cada idea qué parte es convencional y cuál es su eje nuevo (reglas 1-2 de arriba).
+- `diseno-libre`: al filtrar las ideas y antes de recomendar una, usa los pasos 2-5 de «Buscar huecos» para que cada idea salga de un hueco medido y diga su ancla y su sorpresa.
 - `ux-craft`: claridad § 6 cubre la mitad aceptable; esta skill decide cuánto se puede salir de ahí.
 - `investigar`: la evidencia de arriba ya está recogida; para un caso concreto, mira los referentes del sector y mide dónde está su convención antes de decidir cuánto alejarse.
 - `nng`: `mental-models`, `aesthetic-usability-effect` y la heurística 4 (consistencia y estándares) para respaldar la parte de convención.
