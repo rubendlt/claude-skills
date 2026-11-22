@@ -1,6 +1,6 @@
 ---
 name: ux-craft
-description: Pasada de UI/UX para web y móvil (construir, revisar o limpiar pantallas) - claridad (jerarquía, legibilidad, intuición, revisión sobre capturas), técnica con fuente primaria (Apple, Linear, Stripe, GOV.UK...) y quitar el "AI slop", con criterio de expertos (Kole Jain, Tim Gabe, UX Peak, Emil Kowalski, Apple) en landing, conversión y CTA, onboarding, retención, paywalls y pulido. Incluye escáner. USAR cuando haya que construir, revisar o pulir una pantalla, componente o flujo de UI (web o móvil), cuando algo «se vea a plantilla», cuando el usuario pregunte por jerarquía, legibilidad, claridad, paleta, tipografía o CTA, o cuando la pida por su nombre o la cargue diseno-libre.
+description: Pasada de UI/UX para web y móvil (construir, revisar o limpiar pantallas) - claridad (jerarquía, legibilidad, intuición, revisión sobre capturas), técnica con fuente primaria (Apple, Linear, Stripe, GOV.UK...) y quitar el "AI slop", con criterio de expertos (Kole Jain, Tim Gabe, UX Peak, Self-Made Web Designer, Emil Kowalski, Apple) en landing, conversión y CTA, onboarding, retención, paywalls y pulido. Incluye escáner. USAR cuando haya que construir, revisar o pulir una pantalla, componente o flujo de UI (web o móvil), cuando algo «se vea a plantilla», cuando el usuario pregunte por jerarquía, legibilidad, claridad, paleta, tipografía o CTA, o cuando la pida por su nombre o la cargue diseno-libre.
 argument-hint: "[web|movil] [rutas, pantalla o encargo] [--solo-revisar]"
 ---
 
@@ -42,6 +42,7 @@ Si el trabajo toca web y móvil, lee las dos. Las reglas comunes están abajo, e
 |---|---|
 | `kolejain` | color y modo oscuro, tipografía, jerarquía, espaciado, iconos, sombras, layouts de landing y dashboard, estados vacíos, «se ve a plantilla» |
 | `timgabe` | landing y conversión/CTA; en apps, onboarding, retención y hábito, gamificación, paywalls, diseño emocional, rediseños sin perder usuarios (temas en `timgabe/references/`) |
+| `selfmade` | webs de cliente: qué layout lleva una sección según cuántas ideas tiene (1 a 5+ columnas) y cómo pasa a móvil; variación y equilibrio entre secciones; qué estilo de web pide el cliente; proceso (moodboard, stylescape, borrador, la home como plano); protagonista y rima visual para no parecer plantilla (temas en `selfmade/references/`) |
 | `uxpeak` | heurísticas de CRO y psicología del comportamiento: formularios, fichas de producto, precios, onboarding, dashboards. No aplicar cifras sin fuente ni presión falsa |
 | `emil` | pulido de componentes y los detalles que hacen que algo se sienta bien (Emil Kowalski). Para motion, la skill `movimiento` |
 | `apple` | interfaz al estilo Apple en web: gestos, springs, sheets, materiales y profundidad, tipografía óptica, reduced-motion |

@@ -114,7 +114,7 @@ Detalle en `references/sintesis.md`. Escribe `sintesis.md`:
 
 1. **Convenciones** (las hacen ≥ la mitad de los referentes del sector): se mantienen salvo una razón escrita.
 2. **Huecos**: dónde fallan, dónde son todos iguales y qué resuelve bien un vecino que el sector no ha copiado.
-3. **Las ideas (direcciones) del brief**: mínimo 3, más si vale la pena. Tienen que diferenciarse en estructura o en mecanismo, no solo en color. Cada una con: idea en una frase, qué toma de quién (con archivo), qué hace distinto y por qué, estructura en texto de la pantalla principal y riesgo.
+3. **Las ideas (direcciones) del brief**: mínimo 3, más si vale la pena. Tienen que diferenciarse en estructura o en mecanismo, no solo en color (para variar la estructura y la personalidad: `ux-craft/references/expertos/selfmade/references/layouts.md` y `estilos.md`, criterio, no evidencia). Cada una con: idea en una frase, qué toma de quién (con archivo), qué hace distinto y por qué, estructura en texto de la pantalla principal y riesgo.
 4. Pasa el **filtro anti-slop** de `sintesis.md` a cada dirección.
 
 Después **publica las ideas en un artifact** (`sintesis.md` § 4): referentes clave con sus capturas, convenciones, huecos y cada idea con su boceto en gris, con tu recomendación primero. Da el enlace al usuario y **para** hasta que elija. Su elección va a `decision.md` (`Dirección elegida:` + ajustes que pida + `Artifact: <url>`). Si cambias las ideas tras su respuesta, vuelve a publicar en la misma URL.
