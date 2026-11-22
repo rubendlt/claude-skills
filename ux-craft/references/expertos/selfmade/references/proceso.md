@@ -30,6 +30,7 @@ De 6SCl (su sistema para webs de 10.000 $), O7Ma (cinco pasos), nZ2B (inspiraci�
 ## 5. La home es el plano del resto
 
 - Al diseñar la home no haces una página: haces **piezas** (secciones, botones, layouts) que se reutilizan en todo el sitio, como piezas de Lego.
+- **Primero lo imprescindible** (sobre nosotros y contacto); servicios, recursos, portfolio o blog después, según el objetivo. Se puede mejorar luego.
 - Las demás páginas **no se diseñan de cero**: el visitante busca patrones para orientarse, y un patrón distinto en cada página le obliga a aprender otra vez. Solo cuando una pieza no sirve se vuelve al moodboard.
 
 ## 6. Revisiones con límite
@@ -43,5 +44,8 @@ De 6SCl (su sistema para webs de 10.000 $), O7Ma (cinco pasos), nZ2B (inspiraci�
 - **Bucle de crítica:** hacer → pedir crítica concreta a alguien un poco más avanzado (no a quien dice «qué bonito») → corregir. Sin la crítica solo repites tus errores.
 - **Cantidad antes que perfección:** «por cada buena canción he escrito 60 o 70 malas». Un notable es una repetición necesaria para llegar al sobresaliente.
 - **Dejar tiempo para jugar** con ideas fuera del trabajo pagado: de ahí salen las ideas nuevas.
+- **Copiar para aprender está bien; el límite es copiar y pegar y cobrarlo.** Con influencia fuerte, al terminar se ve de dónde viene, pero no es una copia.
+- **Los límites ayudan:** un encargo sin restricciones es el más difícil («¿por dónde empiezo?»). Requisitos, normas y accesibilidad dan un camino.
+- **Libreta de frustraciones:** apuntar lo que te molesta y lo que te gusta al usar otras webs (lo que no se puede desplazar bien, lo que se pasó de creativo).
 - Dominar una técnica difícil que pocos tienen (3D, GSAP…) y usarla como sello.
-- Las fases emocionales del proceso creativo (euforia → «esto es horrible» → aprender → fluir): no entusiasmarse al principio y, en el bajón, buscar a alguien que anime a seguir.
+- Las fases emocionales del proceso creativo (euforia → «esto es horrible» → aprender → fluir): no entusiasmarse al principio y, en el bajón, buscar a alguien que anime a seguir. En la última fase, **ponerse un límite** (30 minutos para terminar la página) y sacarlo sin darle más vueltas.

@@ -10,7 +10,7 @@ description: >-
 
 # Self-Made Web Designer: layout, estilo y proceso de webs de cliente
 
-Consejos de @SelfMadeWebDesigner (Chris, ex pastor y músico, diseñador web autodidacta que ahora trabaja en Showit), leídos por subtítulos: 29 vídeos de diseño enteros (más 2 leídos sin nada de diseño). El resto del canal es de negocio (clientes, precios, Upwork, freelancing) y tutoriales de herramientas: fuera. Detalle en `references/fuentes.md`. Agrupado **por problema, no por vídeo**.
+Consejos de @SelfMadeWebDesigner (Chris, ex pastor y músico, diseñador web autodidacta que ahora trabaja en Showit), leídos por subtítulos: 27 vídeos de diseño enteros (más 2 leídos que no traían nada de diseño; 1 sin leer porque YouTube limitó la descarga). El resto del canal es de negocio (clientes, precios, Upwork, freelancing) y tutoriales de herramientas: fuera. Detalle en `references/fuentes.md`. Agrupado **por problema, no por vídeo**.
 
 Es **criterio**, no investigación. Las cifras que da («el 85 % solo ve la primera pantalla», «solo el 20 % pasa del pliegue», «el 90 % del tráfico es móvil, pero no en mis clientes») no tienen fuente: no citarlas como dato. Para evidencia, `nng`; para las «leyes» populares, `ux-craft/references/mitos.md`.
 
