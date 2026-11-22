@@ -12,7 +12,7 @@ Un modelo con libertad creativa y sin datos produce la media de lo que ha visto.
 
 1. **La investigación es la de `investigar`.** Cómo encontrar referentes, mirarlos en captura (nunca de memoria), entender por qué lo hacen y si esa causa existe aquí, y qué evidencia cuenta: todo eso está en `investigar` §1-3 y no se repite aquí. Este arnés añade lo que viene después: ideas, decisión, construcción y verificación.
 2. **El aspecto sale del proyecto, nunca del referente.** Del referente se toma el mecanismo adaptado, y solo si su causa existe aquí (el carrusel de una tienda existe para vender más referencias; en una web cuyo único objetivo es contactar, esa causa no está).
-3. **La media del sector también es slop.** Lo que hacen casi todos es una convención: se respeta porque el usuario la espera. Pero la identidad sale de los huecos, no de juntar lo que hace todo el mundo. Cuánto alejarse de esa convención lo mide la skill `maya`: en cada idea, di qué parte se queda convencional y cuál es su único eje nuevo.
+3. **La media del sector también es slop.** Lo que hacen casi todos es una convención: se respeta porque el usuario la espera. Pero la identidad sale de los huecos, no de juntar lo que hace todo el mundo. Si una idea propone resolver una tarea de forma nueva, pásala por la skill `maya` (estado de la tarea, ancla y hasta dónde retroceder).
 4. **Cada decisión cita su porqué:** un referente (archivo), un dato del producto o una regla con fuente. Si no tiene porqué, sobra.
 5. **El proyecto manda** (principio 1 de ux-craft): tokens, marca y `CLAUDE.md` del proyecto están por encima de cualquier referente.
 

@@ -77,7 +77,7 @@ Algo parece intuitivo si el usuario ya sabe lo que necesita para usarlo, o si se
 - **Los controles imitan lo que controlan.** Si hacen falta etiquetas para explicar un control, falla esa correspondencia (Apple).
 - **Iconos con etiqueta visible.** Sin texto, solo los glifos estándar: casa, lupa, carrito, impresora y hamburguesa (mejor con "Menú"). El corazón y la estrella son ambiguos. El tooltip no cuenta. Si cuesta más de 5 s pensar un icono para algo, va con texto (NN/g).
 - **Palabras del usuario, no del sistema:** nada de "Sincronizar entidad". Si una etiqueta necesita explicación, se cambia la etiqueta.
-- **Convenciones antes que originalidad** (ley de Jakob): el logo lleva al inicio, la lupa busca y la navegación está donde la ponen las demás apps. Cuánto y dónde salirse de la convención lo decide la skill `maya`.
+- **Convenciones antes que originalidad** (ley de Jakob): el logo lleva al inicio, la lupa busca y la navegación está donde la ponen las demás apps. Si una tarea puede resolverse de forma más avanzada que la convención, cuánto avance aguanta el usuario lo decide la skill `maya`.
 - **X o "Cancelar":** la X solo si no se ha introducido nada. Con datos, "Cancelar" y un verbo que diga qué se guarda (Apple).
 - **Reconocer mejor que recordar:** opciones a la vista, recientes y valores ya rellenados. Nada que haya que recordar de otra pantalla.
 - **Lo que se usa a diario no se esconde**, aunque la pantalla quede menos limpia (Nielsen, Wroblewski). La navegación, visible en escritorio, y en móvil a la vista si hay 4 destinos o menos. Excepción: en una pantalla de tarea (redactar, pagar) se quita la navegación y solo queda la salida.
