@@ -31,6 +31,7 @@ Antes de salir fuera, gratis:
   | `govuk` | formularios, campos, errores, textos de interfaz, cookies, páginas de estado | **evidencia** (probado con usuarios reales) |
   | `hig` | accesibilidad, tamaños de toque, tipografía dinámica, ergonomía móvil | **evidencia** (norma de plataforma) |
   | `capturas` | ver la página propia: consultar `.shots/` antes de capturarla con `capture.mjs` | la página real |
+  | `maya` | decidir cuánto innovar frente a la convención del sector, o valorar un rediseño sobre usuarios actuales | **evidencia** donde cita estudio o caso; **criterio** donde lo marca |
   | `ux-craft` (y sus `references/expertos/`: Kole Jain, Tim Gabe, UX Peak, Emil, Apple) | contrastar una idea con la opinión de un experto | **criterio**, nunca evidencia: no van en «Qué dice la evidencia» |
 
   Si el encargo no es valorar sino **diseñar o rediseñar con libertad creativa**, la skill es `diseno-libre`: usa estos pasos 1-3 como su fase de referentes y sigue con ideas, construcción y verificación.
