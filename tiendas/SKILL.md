@@ -7,8 +7,7 @@ description: >-
   (reseñas, garantías), carrito vacío y post-compra, y catálogo grande ordenado para comprador profesional. Junta los
   consejos de UX Peak, Sam Crawford, Kole Jain y Tim Gabe. USAR al diseñar o revisar una ficha de producto, un listado o
   categoría, filtros, buscador de catálogo, carrito, checkout o precios. Para el contacto o presupuesto de una web de
-  servicios, conversion; para que parezca de lujo, premium; formularios y errores del checkout, normas. NO usar en
-  ajustes menores ni en lo ya decidido.
+  servicios, conversion; para que parezca de lujo, premium; formularios y errores del checkout, normas. También para preguntas cortas (leer solo la sección pertinente). NO usar en cambios de código triviales (un margen, una palabra) ni en lo ya decidido.
 argument-hint: "[ficha, listado, filtros, carrito…]"
 ---
 
@@ -32,6 +31,8 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto (si es un catálog
 - **Señales de confianza pegadas al nombre:** nombre + valoración + nº de reseñas (UX Peak § 4).
 - **Badge de estado** («Más vendido») solo si es cierto (UX Peak § 2).
 - **Barra de compra fija abajo en móvil** y cabecera contextual con el nombre cuando la foto sale de pantalla (UX Peak § 2).
+- **Hoja superpuesta en móvil:** el contenido sube como tarjeta sobre la foto al hacer scroll (UX Peak § 2).
+- **Badges cortos:** «20 % dto.» mejor que «20 % de descuento» + icono (UX Peak § 5).
 - **Todas las fichas en el mismo orden** (especificaciones, aplicaciones, pedir presupuesto): aprendes a leer una y sabes leer todas (Crawford, caso Flowcorp).
 - **3D o despiece solo para explicar** uniones o detalles ocultos que justifican el precio (UX Peak § 14).
 
@@ -43,6 +44,8 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto (si es un catálog
 - **Sin etiquetas redundantes** («Precio:» delante de «14 €») (UX Peak § 3).
 - **Compra única frente a suscripción:** tarjetas con la recomendada preseleccionada y sus ventajas, revelación progresiva de la oferta escalonada (UX Peak § 2).
 - **Selector de cantidad pegado al botón** con pills de cantidades habituales (UX Peak § 2).
+- **Unidad integrada en el campo** (divisa como botón dentro del importe) (UX Peak § 10).
+- **Persuasión sí, trampas no:** urgencia, stock bajo o «X personas mirando» solo si son reales (UX Peak).
 - **Decir qué pasa después y cuándo** (envío, cobro) junto al botón (Gabe).
 
 ## 4. Catálogo, listados y filtros

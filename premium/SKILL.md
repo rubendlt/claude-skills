@@ -8,7 +8,7 @@ description: >-
   Tim Gabe, Kole Jain, Self-Made Web Designer, UX Peak, Emil Kowalski y Apple. USAR cuando algo «parezca barato», «poco
   profesional», «de plantilla» o «hecho con IA», cuando se pida que parezca más premium, más caro, más cuidado o más
   memorable, o antes de una pasada de pulido. Para que convierta, conversion; para el oficio visual de base, diseno-web;
-  para medir cuánta novedad aguanta, maya; para el escáner de slop, ux-craft. NO usar en ajustes menores.
+  para medir cuánta novedad aguanta, maya; para el escáner de slop, ux-craft. También para preguntas cortas (leer solo la sección pertinente). NO usar en cambios de código triviales (un margen, una palabra) ni en lo ya decidido.
 argument-hint: "[página, pantalla o encargo]"
 ---
 

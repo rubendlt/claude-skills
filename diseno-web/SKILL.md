@@ -9,7 +9,7 @@ description: >-
   Crawford. USAR al construir, maquetar o revisar visualmente una página o sección web, al elegir paleta, fuentes, escala o
   layout, o cuando una web se vea desordenada o a plantilla. Para que el visitante actúe usar conversion; para que parezca
   cara, premium; para apps nativas, apps-moviles; para la pasada de claridad y anti-slop, ux-craft; medidas y mínimos de
-  accesibilidad, normas. NO usar en ajustes menores ni en lo ya decidido.
+  accesibilidad, normas. También para preguntas cortas (leer solo la sección pertinente). NO usar en cambios de código triviales (un margen, una palabra) ni en lo ya decidido.
 argument-hint: "[página, sección o encargo]"
 ---
 
@@ -33,6 +33,9 @@ Referencias de esta skill:
 - **Lista la jerarquía antes de estilar:** 1.º, 2.º, 3.º (Jain).
 - **Convenciones aburridas en lo que debe ser invisible** (logo a inicio, menú donde se espera); originalidad en las ideas (Crawford, ley de Jakob; Self-Made: el primer «amigo» solo quiere sentirse a salvo).
 - **Diseñar para cada contexto, no encoger el escritorio** (Self-Made, Crawford § 8).
+- **Cada web es un reparto de prioridades** (SEO, conversión, rendimiento, accesibilidad, marca): decidir qué manda en este proyecto y a veces en cada sección (Self-Made).
+- **Nada se añade por defecto:** sombras, skeleton, halos o 3D solo si resuelven algo en esa pantalla (UX Peak).
+- **No intentar ser original de cero:** tomar lo que funciona y adaptarlo al contexto (Self-Made).
 
 ## 2. Layout y ritmo
 
@@ -43,6 +46,9 @@ Referencias de esta skill:
 - **Equilibrio, no simetría** (Self-Made).
 - **Mucha información apilada:** líneas e iconos para que se vea dónde empieza cada idea (Self-Made).
 - **«Mostrar más» mejor que scroll infinito**: deja llegar al pie. Scrolljacking, casi nunca (Jain).
+- **Secciones típicas:** hero, propuesta de valor, características, CTA y pie como segunda navegación (Gabe). **Secciones útiles** para variar: banda fina de foto con texto como separador, pestañas (diseñar *todas*), carrusel de 3-10 tarjetas, bento simple, texto a solas con aire (Jain § 5).
+- **Una página con una sola misión** y sin CTA en cabecera necesita uno claro en el cuerpo (Jain § 5).
+- **Navegación como Wikipedia:** cada sustantivo que tiene página es enlace, no solo el menú (Jain § 9).
 - **Mostrar el contenido, no un banner hacia él** (UX Peak § 9).
 - **Un sistema aburrido pero coherente** supera a uno ingenioso y caótico; la home es el plano de las demás páginas (Crawford, Self-Made `proceso.md` § 5).
 
@@ -56,6 +62,7 @@ Referencias de esta skill:
 - **50-75 caracteres por línea** (~600-700 px); más de 3 líneas, a la izquierda; nunca mezclar centrado e izquierda en un bloque (Gabe, Self-Made).
 - **Opacidad para la jerarquía del texto:** titular 100 %, subtítulo ~60-80 % (Gabe, Self-Made, Jain). Contraste AA siempre; gris claro sobre blanco cansa: medirlo (Crawford).
 - **Texto grande como elemento visual** una o dos veces por página (Jain). Display solo en textos cortos (Self-Made).
+- **Tipografía fluida sin breakpoints** con `clamp()` (Jain § 2).
 - Errores típicos: H1 más pequeño que un subtítulo, mismo peso en todo, espaciado excesivo, cuerpo diminuto en móvil (Crawford).
 
 ## 4. Color
@@ -75,6 +82,7 @@ Referencias de esta skill:
 - **Más aire, menos contenedores, menos líneas** (Gabe, Jain § 3). Cuando una tarjeta basta, quitar la tarjeta (Jain § 11).
 - **Márgenes constantes:** 16 aquí y 22 allí transmite descuido (UX Peak § 7).
 - **Esquinas anidadas:** radio interior = exterior − distancia; un radio por tipo de componente (Jain).
+- **Grupos del bloque de hero:** subtítulo a 8 px del titular, etiqueta superior a 12 px, botones a 32 px (Jain § 12).
 
 ## 6. Iconos, sombras, degradados, separadores
 
@@ -83,6 +91,9 @@ Referencias de esta skill:
 - **Sombras grandes y tenues** (4-8 % de opacidad, mucho blur) o ninguna; sobre color, teñidas (UX Peak § 7, Jain). Si las tarjetas se lavan, mejor borde que sombra (Jain).
 - **Degradados:** variación del mismo color o ninguno (Jain); si lo primero que dicen es «qué degradado», sobra (Crawford).
 - **Separadores suaves** o solo espacio (UX Peak). Alinear a bordes: texto a la izquierda, cifras a la derecha (Jain § 11).
+- **Tablas y listas:** números a la derecha, chips para valores finitos, truncar lo largo, atenuar filas inactivas (Jain § 4).
+- **Símbolo antes que explicación:** si algo no se entiende, añadir texto lo empeora; arreglar la estructura o usar un icono universal (Jain § 11).
+- **Profundidad, siempre sutil** (textura, ruido, vidrio) y sin competir con el protagonista, si el proyecto la admite (Self-Made § 3).
 
 ## 7. Imágenes y texto sobre foto
 
@@ -102,6 +113,7 @@ Referencias de esta skill:
 - **Carrusel:** indicador de posición y contraste sobre cualquier foto (Jain); manual y que deje ver el siguiente (Crawford, caso Renew); nunca lo importante dentro de un carrusel en móvil (Crawford § 8).
 - **Menú con imágenes** en el desplegable da contexto (Jain § 5); menú de 4 elementos mejor que 9 (Crawford).
 - **Cada botón con 4 estados** y campos con foco, error y aviso (Jain § 10).
+- **Submenús tolerantes:** triángulo invisible hacia el submenú para que no se cierre en diagonal (Jain § 10).
 - **Contenido real, no perfecto:** nombres largos, textos que truncan, listas vacías (Jain, UX Peak § 13). Para forzarlo: skill `break-ui`.
 
 ## 9. Estilo y proceso
@@ -116,5 +128,7 @@ Referencias de esta skill:
 
 - **Prueba del vistazo y de entornar los ojos:** titular y CTA siguen destacando (Self-Made § 7, Crawford).
 - **Recorrer la página de abajo arriba** y en un móvil real en una mano (Self-Made, Crawford § 8).
+- **Móvil: reordenar, no encoger:** titular y CTA antes que la imagen, todo a la izquierda, menú en su esquina, no encadenar imagen tras imagen, cuerpo legible sin zoom; probar con mala cobertura (Crawford § 8).
+- **Que nada se mueva al cargar** mientras el usuario va a leer o pulsar (Self-Made § 7).
 - **Ver el diseño en la pantalla real**, no con zoom (Jain).
 - Pasada completa de claridad, medidas y anti-slop: skill `ux-craft`. Capturas: `capturas`.

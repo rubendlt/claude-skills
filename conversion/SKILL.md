@@ -9,7 +9,7 @@ description: >-
   casos de antes y después. USAR al construir o revisar una home, landing, página de servicio o contacto cuyo objetivo es
   que el visitante contacte, pida presupuesto o reserve; al auditar por qué una web «no convierte»; al decidir CTA, orden
   de secciones o prueba social. Para tiendas (ficha, carrito, precios) usar tiendas; para que parezca cara, premium; para
-  apps (onboarding, paywalls), apps-moviles. NO usar en ajustes menores ni en lo ya decidido.
+  apps (onboarding, paywalls), apps-moviles. También para preguntas cortas (leer solo la sección pertinente). NO usar en cambios de código triviales (un margen, una palabra) ni en lo ya decidido.
 argument-hint: "[página o encargo]"
 ---
 
@@ -25,6 +25,7 @@ Casos de antes y después para justificar un cambio: `references/casos-crawford.
 - **¿Quién llega, de dónde y qué sabe ya? ¿Qué tiene que entender o creer antes de decidir?** Eso da razón a cada sección, su orden y su peso (Crawford; UX Peak § 1: qué duda le frena justo antes de la acción).
 - **La oferta en una frase** y que hero, menú, ejemplos y CTA defiendan esa misma oferta (Crawford, caso Designjoy).
 - **Cada página, un trabajo:** inicio = primera impresión; sobre nosotros = confianza; servicios = deseo; contacto = quitar fricción (Crawford).
+- **La home no es una galería de todo lo que hace la empresa:** ayuda al visitante correcto a reconocerse, entender la oferta, creerla y dar el paso (Crawford).
 - **Ejercicio de la sección:** por cada una, escribir qué ayuda a entender o a hacer; si no se sabe, probablemente sobra (Crawford).
 - **Resolver el problema del cliente, no «hacer bonito»:** quien paga quiere clientes (Jain § 8). Un rediseño más bonito que hundió las ventas por olvidar el recorrido (Crawford, su caso de aviso).
 
@@ -99,6 +100,8 @@ Casos de antes y después para justificar un cambio: `references/casos-crawford.
 - **No rediseñar sin diagnosticar:** encontrar dónde abandonan y arreglar esa fuga (Crawford).
 - **Recorrer la ruta de cada tipo de cliente**, y al revés desde la confirmación, buscando callejones y frenos (Crawford, Self-Made).
 - **Probar el formulario:** campo obligatorio vacío, envío real que llega a la bandeja que se lee, confirmación clara (Crawford).
+- **Teclado y zoom:** Tab por toda la página, foco visible, se llega al CTA (Crawford). Señales de abandono: sin HTTPS, © viejo, noticias paradas, enlaces rotos.
+- **Persuasión sí, trampas no:** urgencia, escasez o pérdida solo si son reales, y nunca para retener a quien quiere irse (UX Peak).
 - **Medir:** separar «abrió contacto» de «envió»; calidad de las consultas, no solo cuántas; grabaciones para ver atascos; un cambio cada vez y anotado (Crawford). Prueba con alguien de fuera pensando en voz alta (Self-Made). Evidencia de usabilidad: skill `nng`.
 - **Cinco preguntas:** ¿su único trabajo? ¿la primera pantalla dice dónde estoy, qué obtengo y por qué importa? ¿venden las palabras? ¿premium por lo quitado o barata por lo añadido? ¿rápida, encontrable y mantenida? (Crawford)
 

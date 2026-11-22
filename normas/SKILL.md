@@ -8,8 +8,9 @@ description: >-
   formularios y sus campos (nombre, email, teléfono, dirección, fecha, contraseña), errores y validación, páginas de
   confirmación, 404/500, cookies, breakpoints y layout, tipografía, movimiento (duraciones, easing) y redacción de
   interfaz. USAR al construir o revisar UI web o móvil (iOS, Android, Expo) cuando haga falta una regla, una medida o
-  cómo se comporta algo, o para respaldar una decisión con norma. Es evidencia y comportamiento, no estética. NO usar
-  para el aspecto visual, en ajustes menores ni en lo ya decidido.
+  cómo se comporta algo, o para respaldar una decisión con norma; también en preguntas cortas y aunque la medida parezca conocida (se
+  cita de la fuente, no de memoria). Es evidencia y comportamiento, no estética. NO usar para el aspecto visual,
+  para cambios de código triviales (un margen, una palabra) ni en lo ya decidido.
 argument-hint: "[pregunta, componente o pantalla] [ios|android|web]"
 ---
 

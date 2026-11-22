@@ -9,7 +9,7 @@ description: >-
   revisar una app o un flujo de producto (alta, onboarding, home de app, paywall, perfil, panel), al decidir cómo
   retener o cobrar, o al montar la navegación móvil. Medidas y componentes nativos: normas (Apple y Material); técnica de
   móvil y anti-slop: ux-craft (movil.md); una web que debe sentirse nativa en el móvil: mobile-native; animación y gestos:
-  movimiento. NO usar para webs de empresa sin cuentas (conversion, diseno-web) ni en ajustes menores.
+  movimiento. NO usar para webs de empresa sin cuentas (conversion, diseno-web) ni en cambios de código triviales. También para preguntas cortas (leer solo la sección pertinente).
 argument-hint: "[app, flujo o pantalla]"
 ---
 
@@ -70,6 +70,8 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - **Proyectar el estado futuro antes de confirmar** («saldo 1.200 € → 950 €») (UX Peak § 4).
 - **Valores por defecto inteligentes, chips en vez de texto libre, recientes arriba** (UX Peak § 10). Control según el momento: rueda para aproximado y único, campo para exacto o repetido.
 - **Ley de Tesler:** que la complejidad la absorba el sistema, no el usuario (Jain § 9).
+- **Optimizar el caso más frecuente:** lo importante a ≤ 3 toques, acciones secundarias ocultas (Gabe).
+- **Badges** arriba a la derecha del icono, solo para lo importante (UX Peak § 11).
 - **Gestos al estilo Apple** (respuesta inmediata, seguimiento 1:1, interrumpible, muelles, rubber-banding, materiales): `fuentes/apple/guia.md`; para construirlos, skill `movimiento` (expo).
 
 ## 7. Dashboards, datos y estados
@@ -86,6 +88,14 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - **El chat junto al trabajo**, no en una caja vacía central; respuestas que se escanean y se comprueban (Gabe).
 - **Lo emocional e identitario** es la defensa cuando los agentes absorben lo funcional (Gabe).
 - Más en `fuentes/timgabe/references/producto-ia.md`.
+
+## 9. Estrategia de producto (para decidir qué construir)
+
+- **Opiniones fuertes y sobreentregar a un tipo de usuario** antes que competir en funciones (Gabe, Raycast).
+- **Caballo de Troya:** tecnología compleja dentro de un patrón familiar (Gabe, Spotify: Discover Weekly es una playlist). Coherencia = coste de cambio.
+- **Borrar microfricción** del camino de alta al primer éxito: autocompletar, un clic, datos de ejemplo en vez de vacío (Gabe, Netflix).
+- **Mecanismos de enganche** (máquina de ansia, juego infinito, marcador invisible) son moralmente ambiguos: el propio autor lo avisa (Gabe, `fuentes/timgabe/references/gamificacion.md`).
+- **Proceso:** fidelidad por fases (baja → media → alta) y tokens definidos para el traspaso a código (UX Peak § 15). Planificar el flujo en cajas antes de dibujar (Jain § 6).
 
 ## Antes de dar por buena una pantalla
 
