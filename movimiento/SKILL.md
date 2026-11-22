@@ -24,4 +24,4 @@ Cuando una guía mencione otra skill por su nombre antiguo (`animate`, `review-a
 
 - **El proyecto manda.** Si su `CLAUDE.md` limita el movimiento (p. ej., «nada se mueve si no lo mueve el usuario»), las guías solo sirven para lo permitido. Mejor proponer menos movimiento que justificar más.
 - **Sin subagentes por defecto.** Donde una guía diga que se lancen subagentes en paralelo (auditar), hazlo inline salvo que el usuario los pida.
-- El pulido general de interfaz (no solo motion) de Emil Kowalski y Apple está en `ux-craft/references/expertos/`.
+- El pulido general de interfaz (no solo motion) de Emil Kowalski y Apple está en `~/.claude/skills/fuentes/emil/` y `fuentes/apple/` (y resumido en las skills `premium` y `apps-moviles`).

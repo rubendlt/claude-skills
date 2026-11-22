@@ -18,9 +18,9 @@ Es **criterio**, no investigación. Las cifras que da («el 85 % solo ve la prim
 
 | Para esto | Aquí | En otro sitio |
 |---|---|---|
-| Elegir el layout de una sección según cuántas ideas lleva (1, 2, 3, 4, 5+ columnas) y cómo pasa a móvil | **`references/layouts.md`** | — |
-| Decidir la personalidad de una web a partir de lo que dice el cliente («algo limpio», «que impresione») | **`references/estilos.md`** | Cuánto avanzar una función sin perder al usuario: skill `maya` |
-| Proceso de un proyecto de cliente: moodboard, stylescape, borrador, revisiones, de la home al resto | **`references/proceso.md`** | Fase de referentes con evidencia: `investigar`; arnés creativo: `diseno-libre` |
+| Elegir el layout de una sección según cuántas ideas lleva (1, 2, 3, 4, 5+ columnas) y cómo pasa a móvil | **`diseno-web/references/layouts.md`** | — |
+| Decidir la personalidad de una web a partir de lo que dice el cliente («algo limpio», «que impresione») | **`diseno-web/references/estilos.md`** | Cuánto avanzar una función sin perder al usuario: skill `maya` |
+| Proceso de un proyecto de cliente: moodboard, stylescape, borrador, revisiones, de la home al resto | **`diseno-web/references/proceso.md`** | Fase de referentes con evidencia: `investigar`; arnés creativo: `diseno-libre` |
 | Que la web no parezca de plantilla: protagonista, rima visual, profundidad, fuentes | § 3 de este archivo | Marcas de slop: `ux-craft/references/slop.md`; tips de pulido: `kolejain` |
 | Escala tipográfica, interlineado, espaciado de 8, 60-30-10 | § 4, solo lo que añade | Más completo en `timgabe` (visual-web) y `kolejain` |
 | Conversión, CTA, formularios | § 5, solo lo que añade | `timgabe` (conversion-web) y `uxpeak` |

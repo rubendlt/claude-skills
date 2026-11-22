@@ -32,7 +32,7 @@ Antes de salir fuera, gratis:
   | `hig` | accesibilidad, tamaños de toque, tipografía dinámica, ergonomía móvil | **evidencia** (norma de plataforma) |
   | `capturas` | ver la página propia: consultar `.shots/` antes de capturarla con `capture.mjs` | la página real |
   | `maya` | decidir cuánto avanzar una tarea o función frente a lo que el usuario ya acepta, o valorar un rediseño sobre usuarios actuales | **evidencia** donde cita estudio o caso; **criterio** donde lo marca |
-  | `ux-craft` (y sus `references/expertos/`: Kole Jain, Tim Gabe, UX Peak, Self-Made Web Designer, Emil, Apple) | contrastar una idea con la opinión de un experto | **criterio**, nunca evidencia: no van en «Qué dice la evidencia» |
+  | `conversion`, `diseno-web`, `premium`, `tiendas`, `apps-moviles` (consejos de Crawford, Kole Jain, Tim Gabe, UX Peak, Self-Made, Emil y Apple, por tema) | contrastar una idea con la opinión de diseñadores | **criterio**, nunca evidencia: no van en «Qué dice la evidencia» |
 
   Si el encargo no es valorar sino **diseñar o rediseñar con libertad creativa**, la skill es `diseno-libre`: usa estos pasos 1-3 como su fase de referentes y sigue con ideas, construcción y verificación.
 - **Memoria y documentos:** estudios ya hechos para este proyecto o tema. Un estudio tiene dos mitades, **referentes** (paso 2) y **evidencia** (paso 3), y solo cuenta como hecho si cubrió las dos. Si cubrió una, partir de ella y hacer **solo la que falta**; no repetir la cubierta ni saltarse la otra.

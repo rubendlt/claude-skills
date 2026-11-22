@@ -113,7 +113,7 @@ Algo parece intuitivo si el usuario ya sabe lo que necesita para usarlo, o si se
 Quien escribió el código lee en él sus intenciones: la claridad se juzga sobre la pantalla renderizada, y la juzga otro. El revisor de IA también se equivoca (bastantes falsos positivos y mal criterio para la gravedad), así que sus hallazgos son hipótesis que hay que comprobar (Anthropic, Nielsen).
 
 1. **Capturas** a 1440 px, 1920 px y 390 px, con datos reales, en los estados normal, vacío, cargando y error. Si el cambio es de estilo o de sistema, en todas las vistas que lo usan (Linear).
-2. **Un subagente nuevo, sin el historial**, recibe solo las capturas, la pregunta y la acción principal de § 1 y las pruebas de abajo; ni el código ni el razonamiento. Devuelve cada hallazgo con su gravedad: bloquea la tarea, la entorpece o es cosmético. Si el cambio es grande, dos revisores, porque encuentran problemas distintos.
+2. **Un subagente nuevo, sin el historial**, recibe solo las capturas, la pregunta y la acción principal de § 1 y las pruebas de abajo; ni el código ni el razonamiento. Devuelve cada hallazgo con su gravedad: bloquea la tarea, la entorpece o es cosmético. Si el cambio es grande, dos revisores, porque encuentran problemas distintos. Si la cuenta no usa subagentes (lo dice el `CLAUDE.md` global o la memoria), hazlo tú: abre solo las capturas, sin volver al código, y pasa las mismas pruebas.
 3. **Pruebas:**
    - **Primer vistazo (1 s y 5 s):** ¿qué se ve primero y coincide con la pregunta de la pantalla? Para alguien que no conoce el producto, ¿de qué va la pantalla y qué se puede hacer en ella?
    - **Desenfoque de 5–10 px:** se siguen distinguiendo lo principal, lo secundario y los grupos.

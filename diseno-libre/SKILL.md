@@ -114,7 +114,7 @@ Detalle en `references/sintesis.md`. Escribe `sintesis.md`:
 
 1. **Convenciones** (las hacen ≥ la mitad de los referentes del sector): se mantienen salvo una razón escrita.
 2. **Huecos**: dónde fallan, dónde son todos iguales y qué resuelve bien un vecino que el sector no ha copiado.
-3. **Las ideas (direcciones) del brief**: mínimo 3, más si vale la pena. Tienen que diferenciarse en estructura o en mecanismo, no solo en color (para variar la estructura y la personalidad: `ux-craft/references/expertos/selfmade/references/layouts.md` y `estilos.md`, criterio, no evidencia). Cada una con: idea en una frase, qué toma de quién (con archivo), qué hace distinto y por qué, estructura en texto de la pantalla principal y riesgo.
+3. **Las ideas (direcciones) del brief**: mínimo 3, más si vale la pena. Tienen que diferenciarse en estructura o en mecanismo, no solo en color (para variar la estructura y la personalidad: `diseno-web/references/layouts.md` y `estilos.md`, criterio, no evidencia). Cada una con: idea en una frase, qué toma de quién (con archivo), qué hace distinto y por qué, estructura en texto de la pantalla principal y riesgo.
 4. Pasa el **filtro anti-slop** de `sintesis.md` a cada dirección.
 
 Después **publica las ideas en un artifact** (`sintesis.md` § 4): referentes clave con sus capturas, convenciones, huecos y cada idea con su boceto en gris, con tu recomendación primero. Da el enlace al usuario y **para** hasta que elija. Su elección va a `decision.md` (`Dirección elegida:` + ajustes que pida + `Artifact: <url>`). Si cambias las ideas tras su respuesta, vuelve a publicar en la misma URL.
@@ -126,7 +126,7 @@ Con `--rapido`, o si el usuario ha dicho que no le preguntes: elige tú, escribe
 Carga las skills en este orden (el usuario autorizó usar ux-craft desde este arnés):
 
 1. `ux-craft`: SKILL.md, `claridad.md`, `slop.md`, `copy.md`, `mitos.md` y la referencia de plataforma (`web.md` o `movil.md`). Sigue su paso 2 («Si el encargo es construir»).
-2. `ux-craft/references/expertos/uxpeak/guia.md` entero (los tips van agrupados por tipo; aplica las secciones del patrón que construyes) y, si el patrón lo pide, otro experto de esa carpeta según la tabla de ux-craft.
+2. La skill de tema que toque según la tabla de ux-craft (`conversion`, `diseno-web`, `premium`, `tiendas` o `apps-moviles`): aplica las secciones del patrón que construyes; una segunda solo si el encargo cruza dos temas.
 3. Si es una web o una landing: `action-hm:estandar-hm`, si está instalada.
 4. Según lo que toque la pantalla (solo las que apliquen; **evidencia**, por encima de ux-craft en su terreno):
    - formularios, errores, textos de interfaz, cookies o páginas de estado → `govuk` (la página pertinente);
