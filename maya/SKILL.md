@@ -1,6 +1,6 @@
 ---
 name: maya
-description: "Principio MAYA (Most Advanced Yet Acceptable, Raymond Loewy): encuentra en una web o app las tareas que podrían resolverse de forma más avanzada (más directa, más útil, más actual) y dice hasta dónde avanzar antes de que el usuario lo rechace por desconocido. Compara cada tarea con la norma del sector, con lo que el usuario ya usa a diario fuera del sector y con la solución ideal, y propone el avance máximo con un ancla conocida. Casos de Apple, Google, Stripe, Spotify, Figma, Linear, Arc, Snapchat. USAR cuando el usuario pida dónde aplicar MAYA, cómo modernizar o adelantarse sin perder a los usuarios, si algo es demasiado avanzado o se ha quedado anticuado, cuánto innovar en una función, antes de un rediseño sobre usuarios actuales, cuando diseno-libre, ux-craft o investigar tengan que medir cuánta novedad aguanta una propuesta, o cuando mencione MAYA o Loewy. NO usar para diferenciar una marca o decorar (eso es ux-craft/slop), en ajustes menores ni en decisiones ya tomadas."
+description: "Principio MAYA (Most Advanced Yet Acceptable, Raymond Loewy): encuentra en una web o app dónde se puede ser más avanzado (más actual, más directo, más pulido) sin que el usuario deje de entenderlo, en tres capas: aspecto (estilo, color, tipografía, iconos, materiales, imagen), interacción y movimiento (hovers, foco, pulsación, transiciones, carga, scroll, microinteracciones) y función (tareas). Compara cada elemento con la norma del sector, con lo que el usuario ya ve a diario fuera del sector y con lo más avanzado, y propone el avance máximo con un ancla conocida. Casos de Apple, Google, Stripe, Spotify, Figma, Linear, Airbnb, Arc, Snapchat. USAR cuando el usuario pida dónde aplicar MAYA, cómo modernizar o adelantarse sin perder a los usuarios, si un diseño, una animación o un hover es demasiado atrevido o se ha quedado anticuado, cuánto innovar en el estilo, la interacción o una función, antes de un rediseño sobre usuarios actuales, cuando diseno-libre, ux-craft, movimiento o investigar tengan que medir cuánta novedad aguanta una propuesta, o cuando mencione MAYA o Loewy. NO usar en ajustes menores ni en decisiones ya tomadas."
 argument-hint: "[web, app, función o propuesta]"
 ---
 
@@ -12,20 +12,27 @@ Raymond Loewy, diseñador industrial (años 50), acuñó *Most Advanced Yet Acce
 
 Tres ideas que no hay que perder:
 
-1. **El eje es el avance, no la diferencia.** «Avanzado» significa más cerca de la mejor solución posible para la tarea del usuario: más directa, más útil, con menos pasos, más actual. Ser distinto, decorar o poner contenido propio no es avanzar.
-2. **«Aceptable» lo fija el usuario, no el diseñador.** Es lo que ya conoce y entiende, y eso incluye lo que usa a diario fuera del sector: su banco, Amazon, Google Maps, WhatsApp. Ese umbral se mueve con el tiempo (iOS pudo dejar el esqueuomorfismo en 2013 porque la gente ya sabía usar una pantalla táctil).
-3. **Se avanza al máximo y se retrocede hasta lo aceptable**, no al revés. Primero se imagina la mejor solución y luego se le añade un ancla conocida o se reparte en pasos, en lugar de partir de lo de siempre y retocarlo.
+1. **El eje es el avance, no la diferencia.** «Avanzado» significa más actual y mejor resuelto que la norma, en cualquiera de las tres capas:
+   - **Aspecto:** estilo, color, tipografía, iconos, materiales, imagen. Por ejemplo, Material 3 Expressive, Liquid Glass, los iconos en 3D de Airbnb en 2025 o el paso de iOS al diseño plano.
+   - **Interacción y movimiento:** hover, foco, pulsación, transiciones, carga, scroll, gestos, microinteracciones. Por ejemplo, la animación de la Dynamic Island o la velocidad de Linear.
+   - **Función:** cómo se resuelve una tarea. Por ejemplo, Stripe con tu clave en los ejemplos o Wrapped.
+
+   Ser distinto sin ser más actual (otro color porque sí, una animación de plantilla, contenido propio) no es avanzar.
+2. **«Aceptable» lo fija el usuario, no el diseñador.** Es lo que ya conoce y entiende, y eso incluye lo que ve y usa a diario fuera del sector: las apps de Apple y Google, su banco, Amazon, Instagram. Si un hover, una transición o un estilo ya es normal en esos productos, aquí resulta avanzado y aceptable a la vez. El umbral se mueve con el tiempo: iOS pudo dejar el esqueuomorfismo en 2013 porque la gente ya sabía usar una pantalla táctil.
+3. **Se avanza al máximo y se retrocede hasta lo aceptable**, no al revés. Primero se imagina la versión más avanzada y luego se le añade un ancla conocida o se reparte en pasos, en lugar de partir de lo de siempre y retocarlo.
 
 ### Qué NO es MAYA
 
 | Se confunde con | Por qué no es | Dónde va |
 |---|---|---|
-| Diferenciarse de la competencia, que no parezca una plantilla | puede ser distinto sin ser más avanzado | `ux-craft` (slop), `diseno-libre` |
-| Poner contenido propio (fotos reales, cifras, casos) | mejora la confianza, pero no resuelve la tarea de forma más avanzada | `ux-craft`, conversión |
-| Decoración original, animaciones | no acerca la tarea a su mejor solución | `movimiento`, `ux-craft` |
+| Diferenciarse sin ser más actual (otro color, otra forma porque sí) | distinto no es avanzado | `ux-craft` (slop), `diseno-libre` |
+| Poner contenido propio (fotos reales, cifras, casos) | mejora la confianza, pero no es más avanzado | `ux-craft`, conversión |
+| Animación o efecto de plantilla (fade al hacer scroll, lift con spring) | es lo de todos, no un avance; ver `ux-craft/references/slop.md` | `movimiento`, `ux-craft` |
 | Respetar las convenciones (ley de Jakob) | es solo la mitad «aceptable» | `ux-craft/references/claridad.md` § 6 |
 
-**Error típico (cometido en la primera versión de esta skill):** proponer «una foto de obra en la galería» o «un mapa de obras» como hueco MAYA. Eso es contenido. La pregunta MAYA es: **¿qué tarea podría resolverse de forma más avanzada, y cuánto avance aguanta este usuario?**
+Un hover, una transición o un estilo **sí** son MAYA cuando son más actuales o están mejor resueltos que la norma y se entienden al instante. Cómo construir la animación es cosa de la skill `movimiento`; MAYA decide si va, hasta dónde llega y qué la hace reconocible.
+
+**Error típico (cometido en la primera versión de esta skill):** proponer «una foto de obra en la galería» o «un mapa de obras» como hueco MAYA. Eso es contenido. La pregunta MAYA es: **¿qué elemento (de aspecto, interacción o función) podría ser más avanzado, y cuánto avance aguanta este usuario?**
 
 ## Archivos
 
@@ -74,16 +81,22 @@ Señales de «pasado», sacadas de los casos: muchas cosas nuevas a la vez para 
 
 En tres líneas: quién es, si sabe del tema y **con qué frecuencia** usa el producto. Eso fija cuánto avance aguanta (reglas de dosis). Lee el `CLAUDE.md` del proyecto, `DECISIONES.md` y la memoria: lo decidido no se reabre.
 
-### 2. Listar las tareas
+### 2. Listar qué se va a evaluar, en tres capas
 
-De 3 a 6 tareas que el usuario viene a hacer, no pantallas. Por ejemplo: pedir presupuesto, saber si algo le sirve o le cabe, comparar, decidir si fiarse, saber el plazo, contactar, volver a encontrar algo. Sácalas del `CLAUDE.md`, de las rutas y de las CTA. `donde-buscar.md` tiene las típicas por tipo de producto.
+- **Función:** de 3 a 6 tareas que el usuario viene a hacer (pedir presupuesto, saber si le cabe, comparar, fiarse, contactar, volver a encontrar algo). Sácalas del `CLAUDE.md`, de las rutas y de las CTA.
+- **Interacción y movimiento:** hover de enlaces, botones y tarjetas; foco; pulsación; apertura de menús y desplegables; transiciones entre estados; carga; scroll; galerías; formularios mientras se rellenan. Revísalos en el CSS (`hover:`, `transition`, `@keyframes`) y en el navegador.
+- **Aspecto:** estilo general, color, tipografía, iconos, materiales (sombras, desenfoques, profundidad), tratamiento de imagen y composición.
 
-### 3. Tres niveles por tarea
+`donde-buscar.md` tiene, para cada capa, la norma habitual, la norma fuera del sector, una idea avanzada, el ancla y la trampa.
 
-Por cada tarea, en una tabla:
+### 3. Tres niveles por elemento
 
-| Tarea | Norma del sector | Norma del usuario fuera del sector | Solución ideal | Producto actual | Estado |
-|---|---|---|---|---|---|
+Por cada tarea o elemento, en una tabla:
+
+| Capa | Elemento | Norma del sector | Norma del usuario fuera del sector | Lo más avanzado | Producto actual | Estado |
+|---|---|---|---|---|---|---|
+
+Para la interacción y el movimiento, las capturas fijas no bastan: mira los estados (hover, foco, pulsado) con Playwright (`page.hover`, `page.focus`) o lee el CSS, y en los referentes fíjate en cómo responden, no solo en cómo se ven.
 
 - **Norma del sector:** sobre capturas de 5 a 8 competidores (cómo hacerlas: `investigar` §2; la web propia: `capturas`). Si capturas fuera del proyecto con Playwright y no lo encuentra, cárgalo desde `~/.npm/_npx/*/node_modules/playwright` con `createRequire` y pásale `executablePath` del Chromium de `~/.cache/ms-playwright`.
 - **Norma fuera del sector:** cómo resuelve el usuario una tarea parecida en productos que usa a diario. Nombra productos concretos y conocidos, no supuestos.
@@ -103,7 +116,7 @@ Para las tareas «por detrás» o «en la norma del sector», parte de la soluci
 
 Un avance pasa solo si responde que sí a todo:
 
-1. **¿Resuelve la tarea mejor** (menos pasos, menos dudas, menos espera)? Si solo se ve distinto, no es MAYA.
+1. **¿Es más avanzado de verdad?** En función: menos pasos, dudas o espera. En interacción: responde mejor, más rápido o con más sentido (dice qué es pulsable, qué ha pasado, de dónde viene). En aspecto: más actual y mejor acabado que la norma, no solo distinto.
 2. **¿Se usa sin aprender?** Si hace falta una instrucción, se ha pasado.
 3. **¿Es lo único nuevo de esa pantalla?**
 4. **¿Lo puede sostener el proyecto** (datos reales, mantenimiento, tamaño del equipo)? En un negocio pequeño, el avance que requiere mantenimiento diario es sobreingeniería.
@@ -120,8 +133,8 @@ Las propuestas visuales se enseñan con variantes renderizadas (`prototype`), no
 
 ## Reglas de dosis
 
-1. **El aspecto general, típico; el avance, en la tarea.** *(Evidencia: Google 2012, Material 3 Expressive.)*
-2. **Un solo avance por pantalla.** *(Criterio; coherente con Hekkert y Arc.)*
+1. **La estructura, típica; el avance, en el estilo, la interacción o la tarea.** El sitio y el papel de cada cosa no se tocan. *(Evidencia: Google 2012, Material 3 Expressive.)*
+2. **Un solo avance protagonista por pantalla.** Los detalles de interacción pulidos y coherentes en toda la web (hover, foco, pulsación) cuentan como un solo avance de ejecución (A4), no como muchos. *(Criterio; coherente con Hekkert y Arc.)*
 3. **Cuanto menos experto y menos frecuente sea el usuario, más corto el avance**, y más anclado en lo que ya usa fuera. Los usuarios diarios y los expertos aguantan más. *(Evidencia: Hekkert, Arc.)*
 4. **Lo práctico pide más tipicidad**: formularios, pagos, contacto, datos legales. *(Evidencia: Hekkert; Google cita la banca.)*
 5. **Nunca forma nueva y función nueva a la vez.** *(Criterio: Loewy, Giora.)*
@@ -131,7 +144,8 @@ Las propuestas visuales se enseñan con variantes renderizadas (`prototype`), no
 ## Cómo encaja con las demás skills
 
 - `diseno-libre`: cuando una idea propone algo nuevo en una tarea, pásala por los pasos 3-5 y di su estado, su ancla y hasta dónde retrocede.
-- `ux-craft`: claridad § 6 es la mitad aceptable; diferenciarse y quitar el slop también son cosa suya, no de MAYA.
+- `ux-craft`: claridad § 6 es la mitad aceptable; quitar el slop también es cosa suya.
+- `movimiento`: construye la animación o el hover que MAYA decide; MAYA dice hasta dónde llega.
 - `investigar`: capturas del sector y evidencia nueva.
 - `nng`: `mental-models`, heurística 4 (consistencia y estándares).
 - `prototype`: para enseñar los avances renderizados.
