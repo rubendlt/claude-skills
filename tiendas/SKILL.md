@@ -13,7 +13,25 @@ argument-hint: "[ficha, listado, filtros, carrito…]"
 
 # Tiendas y catálogos: que se entienda, se compare y se decida
 
-Criterio de diseñadores, **no evidencia**. Manda el proyecto (si es un catálogo sin precios ni carrito, ignorar lo de compra y quedarse con ficha, listado y confianza). Cada consejo lleva su autor; guías completas en `~/.claude/skills/fuentes/<autor>/guia.md`. Evidencia de usabilidad en comercio (Baymard, NN/g): skill `nng` o `investigar`.
+Criterio de diseñadores, **no evidencia**. Manda el proyecto (si es un catálogo sin precios ni carrito, ignorar lo de compra y quedarse con ficha, listado y confianza). Cada consejo lleva su autor; guías completas en `~/.claude/skills/fuentes/<autor>/guia.md`. La evidencia medida (Baymard, NN/g) va en su propio apartado y manda sobre el criterio; para ampliarla, `nng` o `investigar`.
+
+## Evidencia (mide, no opina)
+
+Por encima del criterio de los demás apartados cuando choquen.
+
+**Baymard** (baymard.com/lists/cart-abandonment-rate, actualizada el 28/10/2026):
+- Abandono medio de carrito: **70,22 %** (media de 50 estudios, 2006-2025; rango 55-84 %). El 42 % «solo miraba».
+- Por qué abandonan en el pago, quitando a los que solo miraban: **costes extra demasiado altos 40 %** (envío, impuestos, tasas) · entrega lenta 20 % · no se fiaba con la tarjeta 19 % · **obligaba a crear cuenta 18 %** · proceso largo o complicado 17 % · errores o caídas 17 % · devoluciones poco claras 13 % · **no veía el total desde el principio 12 %** · tarjeta rechazada 10 % · pocos métodos de pago 9 %.
+- Un pago ideal cabe en **12-14 elementos (7-8 campos)**; la media de EE. UU. enseña 23,48 (14,88 campos). Casi todos pueden recortar un 20-60 %.
+- Arreglando la usabilidad del pago, un comercio grande puede ganar de media un **35,26 % de conversión** (estimación de Baymard; ellos mismos dicen que no es fácil).
+
+**NN/g:**
+- **Comprar sin registrarse:** no obligar a crear cuenta; ofrecerla dentro del pago (una contraseña opcional) y decir antes de empezar que será opcional (*optional-registration*).
+- **Costes:** tasas poco habituales y envíos anormalmente caros, **al principio**, no al final; impuestos y envío estándar pueden esperar al pago si es lo que el comprador espera (*ecommerce-taxes-fees*, estudio en EE. UU.: en Europa el precio se muestra con IVA).
+- **Carrito:** página con el carrito completo, foto y detalles de cada artículo, enlace a su ficha y quitar fácil, también poniendo la cantidad a 0 (*shopping-cart*).
+- **Pago en móvil:** total claro sin subidas inesperadas, campos con el teclado adecuado y autocompletado, pagos rápidos (monedero) para no teclear la tarjeta (*mobile-checkout-ux*).
+- **Ficha:** responder de antemano las preguntas del producto, permitir comparar con la misma información en cada artículo, y enseñar opiniones, también las malas (*ecommerce-product-pages*).
+- **Filtros:** categorías relevantes, predecibles, sin jerga y ordenadas por prioridad (*filter-categories-values*).
 
 ## 1. Antes de diseñar
 

@@ -17,6 +17,8 @@ De N1Cl (estilos) y waHu (tendencias 2026). Su tesis: casi toda web memorable ca
 
 ## Tendencias que ve para 2026
 
+> Foto de finales de 2025 (Self-Made). Caduca: a partir de 2027, contrastar con referentes actuales (`investigar`) antes de usarla.
+
 Su regla para todas: **¿encaja con la marca y con el objetivo de la web?** Si no, la empeora por muy bonita que sea. «Los clientes no necesitan webs que ganen premios, sino webs que ayuden a su negocio».
 
 | Tendencia | Qué es | Si encaja, cómo probarla |

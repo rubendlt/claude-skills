@@ -1,15 +1,14 @@
 ---
 name: apps-moviles
 description: >-
-  Criterio de producto y diseño para apps móviles y web apps con cuenta (Expo/React Native, iOS, Android, SaaS):
+  Criterio de producto y diseño para apps móviles de consumo (Expo/React Native, iOS, Android):
   onboarding y primeros 60 segundos, retención y hábito, diseño emocional y celebraciones, gamificación (rachas, rankings,
-  recompensas) con su ética, monetización y paywalls, navegación inferior y ergonomía del pulgar, dashboards y datos,
-  interacción y confianza (deshacer, estados, feedback), estados vacío/carga/error, gestos al estilo Apple, rediseñar sin
+  recompensas) con su ética, monetización y paywalls, navegación inferior y ergonomía del pulgar, interacción y confianza (deshacer, estados, feedback), estados vacío/carga/error, gestos al estilo Apple, rediseñar sin
   perder usuarios y producto con IA. Junta los consejos de Tim Gabe, UX Peak, Kole Jain y Apple. USAR al diseñar o
-  revisar una app o un flujo de producto (alta, onboarding, home de app, paywall, perfil, panel), al decidir cómo
+  revisar una app o un flujo de producto (alta, onboarding, home de app, paywall, perfil), al decidir cómo
   retener o cobrar, o al montar la navegación móvil. Medidas y componentes nativos: normas (Apple y Material); técnica de
   móvil y anti-slop: ux-craft (movil.md); una web que debe sentirse nativa en el móvil: mobile-native; animación y gestos:
-  movimiento. NO usar para webs de empresa sin cuentas (conversion, diseno-web) ni en cambios de código triviales. También para preguntas cortas (leer solo la sección pertinente).
+  movimiento. Paneles, tablas y dashboards: paneles. NO usar para webs de empresa sin cuentas (conversion, diseno-web) ni en cambios de código triviales. También para preguntas cortas (leer solo la sección pertinente).
 argument-hint: "[app, flujo o pantalla]"
 ---
 
@@ -74,28 +73,17 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - **Badges** arriba a la derecha del icono, solo para lo importante (UX Peak § 11).
 - **Gestos al estilo Apple** (respuesta inmediata, seguimiento 1:1, interrumpible, muelles, rubber-banding, materiales): `fuentes/apple/guia.md`; para construirlos, skill `movimiento` (expo).
 
-## 7. Dashboards, datos y estados
+## 7. Estados
 
-- **El dato manda sobre la etiqueta:** cifra grande, etiqueta pequeña y atenuada (UX Peak § 6).
-- **La forma sigue a los datos** (línea de tiempo como línea de tiempo) y gráficos sencillos con eje (Jain § 6, § 13).
-- **Divulgación progresiva:** lo frecuente visible, lo raro en menú (Jain § 6).
-- **Pensar en flujos, no en pantallas:** tras crear algo, ¿qué necesita ahora? (Jain § 6).
-- **Ningún estado vacío muerto:** frase de valor, primer paso y botón; búsquedas sin resultados y carritos vacíos también (UX Peak § 13, Jain). Cargas que respetan el hueco final.
+- **Ningún estado vacío muerto:** frase de valor, primer paso y botón; búsquedas sin resultados también (UX Peak § 13, Jain).
 - **Post-acción con incertidumbre:** confirmación rotunda, contacto en un toque y línea de tiempo de estados (UX Peak § 13).
+- Dashboards, tablas y paneles de datos: skill `paneles`.
 
-## 8. Producto con IA
+## 8. Producto y estrategia (resumen)
 
-- **El chat junto al trabajo**, no en una caja vacía central; respuestas que se escanean y se comprueban (Gabe).
-- **Lo emocional e identitario** es la defensa cuando los agentes absorben lo funcional (Gabe).
-- Más en `fuentes/timgabe/references/producto-ia.md`.
-
-## 9. Estrategia de producto (para decidir qué construir)
-
-- **Opiniones fuertes y sobreentregar a un tipo de usuario** antes que competir en funciones (Gabe, Raycast).
-- **Caballo de Troya:** tecnología compleja dentro de un patrón familiar (Gabe, Spotify: Discover Weekly es una playlist). Coherencia = coste de cambio.
-- **Borrar microfricción** del camino de alta al primer éxito: autocompletar, un clic, datos de ejemplo en vez de vacío (Gabe, Netflix).
-- **Mecanismos de enganche** (máquina de ansia, juego infinito, marcador invisible) son moralmente ambiguos: el propio autor lo avisa (Gabe, `fuentes/timgabe/references/gamificacion.md`).
-- **Proceso:** fidelidad por fases (baja → media → alta) y tokens definidos para el traspaso a código (UX Peak § 15). Planificar el flujo en cajas antes de dibujar (Jain § 6).
+- **El chat de IA junto al trabajo**, no en una caja vacía; respuestas que se escanean y se comprueban (Gabe).
+- **Tecnología compleja dentro de un patrón familiar** y borrar microfricción del alta al primer éxito (Gabe: Spotify, Netflix). Más casos (Raycast, nicho, mecanismos de enganche) en `fuentes/timgabe/references/producto-ia.md` y `gamificacion.md`.
+- **Proceso:** fidelidad por fases y tokens definidos para el traspaso (UX Peak § 15).
 
 ## Antes de dar por buena una pantalla
 

@@ -44,7 +44,8 @@ Si el trabajo toca web y móvil, lee las dos. Las reglas comunes están abajo, e
 | layout de secciones, tipografía, color, espaciado, imágenes, estilo de una web | `diseno-web` |
 | que parezca cara, cuidada, no de plantilla ni de IA | `premium` |
 | ficha de producto, listados, filtros, precios, carrito | `tiendas` |
-| app: onboarding, retención, paywalls, navegación inferior, dashboards | `apps-moviles` |
+| app: onboarding, retención, paywalls, navegación inferior | `apps-moviles` |
+| panel, /admin, tabla de datos, dashboard, herramienta de trabajo | `paneles` |
 | cuánto avanzar una tarea frente a lo que el usuario ya conoce | `maya` |
 | animación, transiciones, gestos | `movimiento` |
 
@@ -130,14 +131,7 @@ Con `--solo-revisar`, o si el encargo era solo revisar o auditar, para aquí y o
 ## Reglas comunes a web y móvil
 
 ### Movimiento
-- **Motion solo cuando comunica:** un cambio de estado, de dónde viene o a dónde va un elemento, el feedback de una acción. Una entrada coordinada por pantalla como mucho, no una por bloque.
-- **Frecuencia de uso manda.** Lo que se hace cientos de veces al día (abrir menú, cambiar de pestaña, acciones de teclado) va **sin animación**. Lo ocasional lleva una animación breve. Solo lo raro, como celebrar un hito, se gana un momento vistoso. (Emil Kowalski, "You don't need animations"; Rauno Freiberg, Vercel)
-- **Nunca `ease-in` en la interfaz**: empieza lento justo cuando el usuario mira. Usa `ease-out` para entrar, por ejemplo `cubic-bezier(0.23, 1, 0.32, 1)`.
-- **Duración:** 100–200 ms en feedback, 150–250 ms en menús y popovers, hasta ~300 ms en entradas; nada por encima de 300 ms en la interfaz. La **salida es más rápida que la entrada** (Material: entrada 225 ms, salida 195 ms).
-- **Animar desde el origen:** lo que se abre crece desde el elemento que lo abrió, nunca desde `scale(0)`; se empieza en torno a 0.95 con opacidad 0.
-- **Interrumpible:** una animación debe poder redirigirse a mitad de camino y heredar la velocidad del gesto. Los keyframes cerrados no sirven para eso; los muelles (springs) y las transiciones sí.
-- **Solo `transform` y `opacity`**, nunca `transition: all`, y respeta siempre la opción de **reducir movimiento**: *sustituye* la animación por un fundido, no la elimines si comunica algo.
-- **Gestos destructivos se confirman al soltar**, no al cruzar un umbral.
+- **Solo cuando comunica**, sin animación en lo que se hace cientos de veces al día, nunca `ease-in`, ≤ 300 ms, solo `transform`/`opacity` y respetando reducir movimiento. Cómo hacerlo y revisarlo: skill `movimiento`.
 
 ### Velocidad percibida
 - **Límites de respuesta** (Miller 1968, Card 1991, NN/g): hasta 0,1 s se siente instantáneo, hasta 1 s no rompe el hilo, a partir de 10 s pide barra de progreso. Superhuman apunta a menos de 100 ms por acción y lo mide como *porcentaje de eventos bajo 100 ms*, no con percentiles.
@@ -173,12 +167,7 @@ Con `--solo-revisar`, o si el encargo era solo revisar o auditar, para aquí y o
 - **Se comprueba con inventario, no a ojo:** lista los valores distintos de cada propiedad en lo que se revisa (`p-*`, `gap-*`, `rounded-*` y valores arbitrarios `[13px]` en Tailwind; `padding`, `margin`, `gap`, `borderRadius`, `height` en estilos). Cada valor fuera de la escala, o distinto para el mismo papel, es un **Corregir**. Si la escala no existe, se crea en el archivo de tokens (paso 7) en vez de arreglar valor a valor.
 
 ### Tipografía y color
-- **Cifras tabulares** en números que cambian o se comparan (precios, contadores, tablas, cronómetros), para que no bailen.
-- **Espaciado de letras que se estrecha al crecer el tamaño** (tracking negativo en titulares grandes; Apple e Inter lo hacen por tabla o fórmula).
-- **Color perceptual (OKLCH/LCH), no HSL:** la "L" de HSL miente. Linear genera cada tema desde 3 variables (base, acento, contraste) y Stripe garantiza contraste por distancia entre niveles de su escala.
-- **Escala de 12 pasos con un uso fijo por paso:** 1–2 fondos, 3–5 fondo de componente (reposo, hover, activo), 6–8 bordes, 9–10 sólido, 11–12 texto (Radix Colors).
-- **Modo oscuro no es invertir:** cuanto más elevada la superficie, más clara; acentos menos saturados; fondo base oscuro, no negro puro (salvo tema OLED explícito).
-- **Color con significado fijo:** cada color comunica siempre lo mismo, y nunca es el único portador de la información.
+- **Cifras tabulares** en números que cambian o se comparan; **color con significado fijo** y nunca como único portador de información. El resto (escala, interlineado, paleta, modo oscuro): skill `diseno-web`.
 
 ### Accesibilidad base (WCAG 2.2 AA es la referencia legal)
 - Contraste 4.5:1 en texto y 3:1 en iconos, bordes de controles y anillo de foco.

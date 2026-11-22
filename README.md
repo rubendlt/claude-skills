@@ -23,8 +23,9 @@ Por **para qué sirven**, no por de dónde salen. Claude Code solo lee skills en
 | **Criterio por tema** | `conversion` | Que el visitante contacte: hero, CTA, prueba social, formulario, medir |
 | | `diseno-web` | Layout, tipografía, color, espaciado, imágenes, estilo, proceso |
 | | `premium` | Que parezca caro y cuidado; no plantilla ni IA |
-| | `tiendas` | Ficha de producto, listados, filtros, precios, carrito, catálogo B2B |
-| | `apps-moviles` | Onboarding, retención, gamificación, paywalls, navegación, dashboards |
+| | `tiendas` | Ficha de producto, listados, filtros, precios, carrito, catálogo B2B (con datos de Baymard y NN/g) |
+| | `apps-moviles` | Apps de consumo: onboarding, retención, gamificación, paywalls, navegación |
+| | `paneles` | SaaS, /admin, tablas de datos, dashboards, esperas largas (NN/g + criterio) |
 | | `maya` | Cuánto avanzar una tarea frente a lo que el usuario ya conoce |
 | | `movimiento` | Animación, transiciones, gestos (web y Expo) |
 | | `mobile-native` | Web que se sienta nativa en el móvil |
@@ -56,7 +57,7 @@ Movidas a su skill: casos de Crawford → `conversion/references/casos-crawford.
 
 | Contenido | Origen |
 |---|---|
-| ux-craft, diseno-libre, investigar, capturas, nng, m3, maya, normas, conversion, diseno-web, premium, tiendas, apps-moviles, spec, best-of-n; resúmenes de `fuentes/` (crawford, kolejain, timgabe, uxpeak, selfmade) | Propias |
+| ux-craft, diseno-libre, investigar, capturas, nng, m3, maya, normas, paneles, conversion, diseno-web, premium, tiendas, apps-moviles, spec, best-of-n; resúmenes de `fuentes/` (crawford, kolejain, timgabe, uxpeak, selfmade) | Propias |
 | movimiento, break-ui, mobile-native, pick-ui-library, prototype, `fuentes/emil`, `fuentes/apple` | Emil Kowalski (sin licencia: no publicar) |
 | hig | vabole/apple-skills (texto de las HIG de Apple: no publicar) |
 | govuk | alphagov/govuk-design-system (MIT). Refrescar: `govuk/scripts/update.sh` |

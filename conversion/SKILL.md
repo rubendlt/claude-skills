@@ -19,6 +19,19 @@ Criterio de diseñadores con experiencia, **no evidencia**. Orden de autoridad: 
 
 Casos de antes y después para justificar un cambio: `references/casos-crawford.md` (energía, consultoría, salud, audiovisual, adquisiciones, agencia, catálogo industrial).
 
+## Evidencia B2B (NN/g: tests con usuarios)
+
+Manda sobre el criterio de los demás apartados cuando choquen. Fichas en `~/.claude/skills/nng/fichas/`.
+
+- **La compra B2B es larga y la deciden varios:** el que investiga tiene que justificarla ante otros; darle material reutilizable (fotos de uso real, especificaciones, comparativas, presupuesto detallado) y hablar a quien elige y a quien usa (*b2b-vs-b2c*, *b2b-convincing-decision-makers*).
+- **Precio:** ocultarlo tras «pedir presupuesto» añade un paso, hace que busquen precios fuera y parece caro; la primera web que da un precio fija la expectativa. Si varía, **escenarios de precio habituales** («desde X para…») (*show-price*, *b2b-trust-from-b2c*).
+- **Miedo al comercial:** contactar estresa (insistente, que venda de más); hace falta confianza antes de ese paso y decir qué pasará (*b2b-trust-from-b2c*).
+- **Contacto:** teléfono, email y dirección visibles; teléfono en toda la web sube la confianza; buscan «Contacto» arriba a la derecha o en el pie; el formulario solo **además** del teléfono, de 3 a 5 campos; esperan respuesta en **24 h** y plazo por canal (*contact-us-pages*).
+- **Especificaciones en HTML**, no solo en PDF, con las normas que se usan para medir (*b2b-specs*).
+- **No poner tras un formulario** artículos o guías si el objetivo es confianza o tráfico; solo lo muy valioso y único justifica pedir datos (*content-behind-forms*).
+- **Distintos tamaños de cliente** sin espantar a ninguno (*b2b-vs-b2c*).
+- **Los compradores B2B esperan la misma usabilidad que en una tienda** (ley de Jakob) (*b2b-trust-from-b2c*).
+
 ## 1. Antes de diseñar: qué decisión y qué necesita creer
 
 - **La decisión en una frase** (pedir presupuesto, reservar, comprar). «Si no lo sabes decir, la web tampoco» (Crawford). Cada decisión se juzga con «¿ayuda a la persona correcta a hacer la acción correcta?», no «¿queda bien?».
