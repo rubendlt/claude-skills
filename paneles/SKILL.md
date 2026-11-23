@@ -6,7 +6,7 @@ description: >-
   filas; cabeceras fijas, columnas, filtros visibles), dashboards y gráficos que se leen de un vistazo, formularios densos
   y edición, guardar, deshacer e historial, estados vacío/carga/error y esperas largas, navegación de una app compleja,
   usuarios expertos frente a ocasionales y tablas en móvil. Junta NN/g (investigación con usuarios), los sistemas de
-  diseño de GitHub (Primer), IBM (Carbon) y Atlassian, y los consejos de Kole Jain y UX Peak. USAR al diseñar o revisar un panel, una tabla, un dashboard, un /admin o cualquier pantalla de
+  diseño de GitHub (Primer), IBM (Carbon) y Atlassian, y los consejos de Kole Jain, UX Peak y Mobbin (2.108 dashboards). USAR al diseñar o revisar un panel, una tabla, un dashboard, un /admin o cualquier pantalla de
   trabajo con datos, también en preguntas cortas (leer solo la sección). Apps móviles de consumo: apps-moviles; medidas
   y componentes: normas. NO usar en webs públicas de captación (conversion) ni en cambios de código triviales.
 argument-hint: "[panel, tabla, dashboard o pantalla]"
@@ -14,7 +14,7 @@ argument-hint: "[panel, tabla, dashboard o pantalla]"
 
 # Paneles: pantallas de trabajo con datos
 
-Tres tipos de fuente, marcadas en cada punto: **NN/g** = evidencia (tests con usuarios; fichas en `~/.claude/skills/nng/fichas/`); **sistemas de diseño** de GitHub (Primer), IBM (Carbon) y Atlassian = cómo lo resuelven productos de trabajo usados por millones (§ 7); diseñadores (Jain, UX Peak) = **criterio**. Si chocan, pesa más lo medido y luego lo que hacen esos sistemas. Manda el proyecto; medidas y componentes, `normas`.
+Tres tipos de fuente, marcadas en cada punto: **NN/g** = evidencia (tests con usuarios; fichas en `~/.claude/skills/nng/fichas/`); **sistemas de diseño** de GitHub (Primer), IBM (Carbon) y Atlassian = cómo lo resuelven productos de trabajo usados por millones (§ 7); diseñadores (Jain, UX Peak, Mobbin) = **criterio**. Si chocan, pesa más lo medido y luego lo que hacen esos sistemas. Manda el proyecto; medidas y componentes, `normas`.
 
 ## 0. Antes de diseñar: quién lo usa y cuánto
 
@@ -56,6 +56,10 @@ Y las 10 heurísticas aplicadas a apps complejas (NN/g): estado del sistema siem
 - **El dato manda sobre la etiqueta:** la cifra grande, la etiqueta pequeña y atenuada (UX Peak § 6). No repetir los mismos KPIs en tres sitios (Jain § 6).
 - **La forma sigue a los datos:** una evolución es una línea, no una tabla (Jain § 6).
 - **Gráfico de línea:** cuadrícula y marcadores, sin curvas suavizadas ni degradados que borren el último dato, leyenda, periodo anterior en gris; barras con eje y sin redondear (Jain § 6, § 13).
+- **Un paso por delante:** junto al gráfico, la conclusión y qué hacer; resúmenes semanales y logros ya empaquetados. Jerarquía y buenos gráficos son lo mínimo, no lo que se recuerda (Mobbin § 5).
+- **Una visualización propia de esos datos** cuando aclare (mapa de calor de horas punta, visitantes en directo) y **estado vacío con premio** al terminarlo todo (Mercury), no la plantilla (Mobbin § 5).
+- **IA para el «¿por qué ha cambiado?»:** pregunta sugerida bajo el gráfico o chat junto a los datos (Mobbin § 5).
+- **Prueba final:** «¿Le haría una captura? ¿Por qué?». Gana el que sabe qué dejar fuera (Mobbin § 5).
 
 ## 4. Edición, guardar y errores
 

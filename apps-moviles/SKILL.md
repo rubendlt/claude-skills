@@ -3,9 +3,11 @@ name: apps-moviles
 description: >-
   Criterio de producto y diseño para apps móviles de consumo (Expo/React Native, iOS, Android):
   onboarding y primeros 60 segundos, retención y hábito, diseño emocional y celebraciones, gamificación (rachas, rankings,
-  recompensas) con su ética, monetización y paywalls, navegación inferior y ergonomía del pulgar, interacción y confianza (deshacer, estados, feedback), estados vacío/carga/error, gestos al estilo Apple, rediseñar sin
-  perder usuarios y producto con IA. Junta los consejos de Tim Gabe, UX Peak, Kole Jain y Apple. USAR al diseñar o
-  revisar una app o un flujo de producto (alta, onboarding, home de app, paywall, perfil), al decidir cómo
+  recompensas) con su ética, monetización y paywalls (qué probar y cómo medir), baja de la suscripción (ofertas, encuesta,
+  confirmación), navegación inferior y ergonomía del pulgar, interacción y confianza (deshacer, estados, feedback), estados vacío/carga/error, gestos al estilo Apple, rediseñar sin
+  perder usuarios y producto con IA. Junta los consejos de Tim Gabe, UX Peak, Kole Jain, Apple y Mobbin (datos de miles
+  de apps publicadas y tests de Headspace, Duolingo, Blinkist, Churnkey…). USAR al diseñar o
+  revisar una app o un flujo de producto (alta, onboarding, permisos, home de app, paywall, perfil, cancelar suscripción), al decidir cómo
   retener o cobrar, o al montar la navegación móvil. Medidas y componentes nativos: normas (Apple y Material); técnica de
   móvil y anti-slop: ux-craft (movil.md); una web que debe sentirse nativa en el móvil: mobile-native; animación y gestos:
   movimiento. Paneles, tablas y dashboards: paneles. NO usar para webs de empresa sin cuentas (conversion, diseno-web) ni en cambios de código triviales. También para preguntas cortas (leer solo la sección pertinente).
@@ -26,6 +28,12 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - **Dar antes de pedir:** no secuestrar el resultado tras un email (UX Peak § 12). **Efecto IKEA:** dejar personalizar algo antes del registro (UX Peak, Gabe).
 - **Corto por defecto;** largo solo si personaliza el primer uso o filtra compradores (Gabe: Cal AI, Noom).
 - **Interfaz según la madurez:** nuevo, un objetivo; intermedio, plan del día; experto, panel denso (UX Peak § 12).
+- **El largo no es el problema, el valor sí:** la app media tiene 25 pantallas y algunas de las que más venden están entre las más largas. Un flujo largo no se siente largo si da valor antes de pedir la cuenta (Duolingo: ~60 pantallas) y en cada paso pasa algo. Si el producto se explica solo (un chat de IA), sin onboarding (Mobbin § 1).
+- **Enseñar lo que desbloquean las respuestas:** plan con fecha de llegada, home ya llena con lo suyo. Dejar elegir **varios** objetivos (Headspace: +10 % de pruebas) (Mobbin § 1).
+- **Problema → pequeña revelación → función como solución**, y onboarding según el anuncio de origen (Moonly: LTV ×2) (Mobbin § 1).
+- **Checklist que se queda** en vez de tours y pop-ups (Mural: +10 % de retención a la semana); explicar cada paso cuando llega, no al principio (Mobbin § 1).
+- **Pantalla propia antes del permiso de notificaciones:** para qué es y, mejor, qué aviso recibirá (Mobbin § 1).
+- **¿Hace falta la cuenta?** Preguntarse para qué se pide antes de ponerla; Moonly la quitó (Mobbin § 1).
 
 ## 2. Retención, hábito y emoción
 
@@ -41,6 +49,8 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - **Puntos, insignias y rankings son el marcador, no el juego** (Gabe: LinkedIn retiró sus insignias).
 - **Rankings pequeños y ganables** (Strava: micro-competiciones locales) (Gabe).
 - **Rachas con agencia** (objetivo elegible, congelar); cuanto más duran, más obligan (Gabe).
+- **Rachas que perdonan:** poder congelarlas (Duolingo: +0,38 % de usuarios diarios) y mantenerlas con el mínimo (una lección en vez del objetivo entero: +40 % mantuvo la de 7 días). Diseñar para volver tras fallar: las rachas miden volver a la app, no que el hábito se forme (Mobbin § 4).
+- **El botón como promesa:** «Me comprometo con mi objetivo» en vez de «Continuar» (Duolingo) (Mobbin § 4).
 - **Curva en S:** más mecánicas ayudan hasta un punto y luego restan (Gabe).
 - Rachas, recompensa variable y precios opacos pueden atrapar: transparencia y control del usuario (Gabe lo avisa).
 
@@ -51,7 +61,18 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 - **El total dentro del botón** y precio exacto, no rango (UX Peak § 3).
 - **Opción recomendada en tarjeta, no en radio** (UX Peak § 2). Planes: cinco son demasiados; el precio grande, el nombre pequeño (Jain § 6, § 13).
 - **Bloqueo suave donde sube la intención** (Gabe: Busuu). Marco de palabra: «guest pass» frente a «trial» (Gabe).
-- Patrones oscuros a evitar: monedas opacas, puertas graduales, «anti-calculadora» (Gabe).
+- **Primer paywall sencillo** (titular, dos viñetas, botón); optimizar cuando haya tráfico. Al probar: primero diseños radicalmente distintos, luego personalización, al final precio (Mobbin § 2).
+- **Vender el resultado antes de pedir dinero:** paywall de varias pantallas al final del onboarding, «tu plan está listo» (Opal: del 7 al 17 % de pruebas) (Mobbin § 2).
+- **Anual por defecto y solo dos planes a la vista**, el resto en una hoja; «Sin compromiso, cancela cuando quieras» bajo el botón (Mobbin § 2).
+- **Un paywall único «desbloquea todo»** mejor que uno por función; imagen en la que el público se reconozca (Moonly) (Mobbin § 2).
+- **Medir:** % de instalaciones que ven el paywall (> 80 %), prueba → pago, LTV, retención D1/D7/D30. El ARPU engaña con planes semanales (Mobbin § 2).
+- Patrones oscuros a evitar: monedas opacas, puertas graduales, «anti-calculadora» (Gabe); ruleta de descuento, urgencia falsa, 80 % de descuento nada más acabar el onboarding, interruptores de prueba gratuita (Apple los rechaza desde 2026) (Mobbin § 2).
+
+**Baja de la suscripción** (Mobbin § 3, datos de Churnkey)
+- **Cancelar tan fácil como suscribirse:** «Gestionar suscripción» en la cuenta y salida en cada pantalla del flujo. No baja los rescates y da confianza.
+- **Una oferta según el motivo:** presupuesto → descuento de hasta el 40 % durante 3 meses o plan más barato; descanso → pausa con tope y fecha de vuelta a la vista; prueba recién empezada → alargarla.
+- **Encuesta:** un solo motivo, 4–5 opciones concretas y **sin «Otro»**, en palabras que no cierran la puerta («No me cabe en el presupuesto», «Me tomo un descanso»).
+- **Confirmación con su nombre, fecha exacta y «no se te cobrará más»**, y volver en un toque. Rescatar más del 50 % = oferta demasiado generosa.
 
 ## 5. Navegación móvil y ergonomía
 
@@ -83,12 +104,13 @@ Criterio de diseñadores, **no evidencia**. Manda el proyecto, y en medidas y co
 
 - **El chat de IA junto al trabajo**, no en una caja vacía; respuestas que se escanean y se comprueban (Gabe).
 - **Tecnología compleja dentro de un patrón familiar** y borrar microfricción del alta al primer éxito (Gabe: Spotify, Netflix). Más casos (Raycast, nicho, mecanismos de enganche) en `fuentes/timgabe/references/producto-ia.md` y `gamificacion.md`.
-- **Proceso:** fidelidad por fases y tokens definidos para el traspaso (UX Peak § 15).
+- **Compartir en un toque cosas sobre uno mismo** (no funciones): al detectar una captura, ofrecer el flujo de compartir ya preparado (Moonly) (Mobbin § 6).
+- **Proceso:** fidelidad por fases y tokens definidos para el traspaso (UX Peak § 15). Con IA, referentes reales antes de generar y pedir que marque dónde se desvía de ellos (Mobbin § 7; skill `diseno-libre`).
 
 ## Antes de dar por buena una pantalla
 
 - [ ] ¿Valor en la primera sesión sin tutorial delante?
 - [ ] ¿Un enfoque por pantalla y la acción principal al alcance del pulgar?
 - [ ] ¿Estados vacío, carga, error y éxito diseñados?
-- [ ] ¿Cobro transparente, sin trampas de hábito?
+- [ ] ¿Cobro transparente, sin trampas de hábito? ¿Cancelar es tan fácil como suscribirse?
 - [ ] ¿Medidas y componentes según `normas`, y pasada de `ux-craft` (`movil.md`)?

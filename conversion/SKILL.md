@@ -116,6 +116,7 @@ Manda sobre el criterio de los demás apartados cuando choquen. Fichas en `~/.cl
 - **Teclado y zoom:** Tab por toda la página, foco visible, se llega al CTA (Crawford). Señales de abandono: sin HTTPS, © viejo, noticias paradas, enlaces rotos.
 - **Persuasión sí, trampas no:** urgencia, escasez o pérdida solo si son reales, y nunca para retener a quien quiere irse (UX Peak).
 - **Medir:** separar «abrió contacto» de «envió»; calidad de las consultas, no solo cuántas; grabaciones para ver atascos; un cambio cada vez y anotado (Crawford). Prueba con alguien de fuera pensando en voz alta (Self-Made). Evidencia de usabilidad: skill `nng`.
+- **Probar en grande antes que en pequeño:** primero versiones radicalmente distintas, luego personalización y al final detalles; la versión actual como control y esperar a que el resultado sea significativo. Solo cambiar titular y subtítulo dio un +12 % en un caso. Más fricción puede convertir mejor si filtra a quien no va en serio (Mobbin § 2, tests de paywalls).
 - **Cinco preguntas:** ¿su único trabajo? ¿la primera pantalla dice dónde estoy, qué obtengo y por qué importa? ¿venden las palabras? ¿premium por lo quitado o barata por lo añadido? ¿rápida, encontrable y mantenida? (Crawford)
 
 ## Antipatrones rápidos

@@ -48,6 +48,7 @@ Guías originales de cada autor, de las que salen las skills de tema. Sirven par
 | `uxpeak/` | UX Peak | tiendas, conversion, apps-moviles |
 | `selfmade/` | Self-Made Web Designer | diseno-web (layouts, estilos, proceso), conversion |
 | `emil/`, `apple/` | Emil Kowalski / Apple | premium, apps-moviles, movimiento |
+| `mobbin/` | Mobbin (@mobbindesign): datos de su biblioteca y tests de empresas | apps-moviles (onboarding, paywalls, baja, rachas), paneles (dashboards), conversion (cómo probar) |
 
 Movidas a su skill: casos de Crawford → `conversion/references/casos-crawford.md`; layouts, estilos y proceso de Self-Made → `diseno-web/references/`.
 
@@ -57,7 +58,7 @@ Movidas a su skill: casos de Crawford → `conversion/references/casos-crawford.
 
 | Contenido | Origen |
 |---|---|
-| ux-craft, diseno-libre, investigar, capturas, nng, m3, maya, normas, paneles, conversion, diseno-web, premium, tiendas, apps-moviles, spec, best-of-n; resúmenes de `fuentes/` (crawford, kolejain, timgabe, uxpeak, selfmade) | Propias |
+| ux-craft, diseno-libre, investigar, capturas, nng, m3, maya, normas, paneles, conversion, diseno-web, premium, tiendas, apps-moviles, spec, best-of-n; resúmenes de `fuentes/` (crawford, kolejain, timgabe, uxpeak, selfmade, mobbin) | Propias |
 | movimiento, break-ui, mobile-native, pick-ui-library, prototype, `fuentes/emil`, `fuentes/apple` | Emil Kowalski (sin licencia: no publicar) |
 | hig | vabole/apple-skills (texto de las HIG de Apple: no publicar) |
 | govuk | alphagov/govuk-design-system (MIT). Refrescar: `govuk/scripts/update.sh` |
