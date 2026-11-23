@@ -5,13 +5,15 @@ description: Make a web app feel native on a phone — the small CSS and meta-ta
 
 # Feeling Native On Mobile
 
-## Initial Response
+## Cómo usarla (nota local; el resto es la guía original en inglés)
 
-When this skill is first invoked without a specific question, respond only with:
-
-> I'm ready to make your web app feel native on mobile, my knowledge comes from Emil Kowalski's design engineering philosophy.
-
-Do not provide any other information until the user asks a question.
+- **Sin saludo de entrada:** se aplica directamente a lo que pida el usuario o a los argumentos.
+- **Modo revisión** (cuando otra skill o una auditoría la llama para revisar, no para arreglar): comprobar en el código, sin cambiar nada, las filas de «The Symptom Table», y dar solo lo que falta, una línea por fallo con el porqué y el archivo. Si todo está, decirlo en una línea. Búsqueda rápida:
+  ```bash
+  rg -n "tap-highlight|touch-action|overscroll|user-select|text-size-adjust|100vh|dvh|svh|safe-area|viewport-fit|themeColor|theme-color" src -g '*.css' -g '*.tsx' -g '*.ts'
+  rg -n "<input|<textarea|<select" src -g '*.tsx' -A4 | rg "text-(xs|sm)"   # campos por debajo de 16 px
+  ```
+  En Tailwind v4, `hover:` ya va dentro de `@media (hover: hover)`: no es un fallo. Lo que solo se ve en un móvil real (retraso al tocar, teclado, rebote) se nombra como pendiente de probar, no como correcto.
 
 A fix-it skill. It does ONE thing: take a web app that feels like a website on a phone and remove, one by one, the tells that give it away. It does not design motion (that's `movimiento`), review motion (that's `movimiento` (revisar)), or build for React Native (that's `movimiento` (expo)). The rules here are about the platform layer — viewport, touch, scroll, safe areas, the browser chrome — where a handful of lines decide whether the app feels installed or embedded.
 

@@ -9,15 +9,12 @@
 //   --status         solo decir qué está al día y qué no, sin capturar
 // Salida en .shots/: <pagina>-<vp>.png (página entera) y <pagina>-<vp>-N.png (trozos de una pantalla),
 // manifest.json (firma de cada captura) e index.md (qué hay y si está al día).
-import { createRequire } from "node:module";
+import { die, findPlaywright, browserPool, ensureServer, hideCss, dismissCookies, loadLazy } from "./lib.mjs";
 import { readdirSync, existsSync, mkdirSync, readFileSync, writeFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
-import { homedir, platform } from "node:os";
-import { execSync, spawn } from "node:child_process";
+import { execSync } from "node:child_process";
 import { createHash } from "node:crypto";
 
-const H = homedir();
-const MAC = platform() === "darwin";
 const ROOT = process.cwd();
 const OUT = join(ROOT, ".shots");
 const MAX_SEGMENTS = 10;
@@ -44,7 +41,6 @@ const selPages = names.length ? names.map((n) => pages.find((p) => p.name === n)
 const selVps = (vpArg ? vpArg.split(",") : Object.keys(viewports).filter((v) => viewports[v].key))
   .map((v) => viewports[v] ? v : die(`Viewport «${v}» no está en shots.config.json`));
 
-function die(m) { console.error(m); process.exit(1); }
 
 // ---------- firma del código ----------
 // HEAD + cambios sin commitear + archivos nuevos. Cualquier cambio invalida todo: no se puede saber
@@ -88,72 +84,15 @@ if (flag("--status")) {
 if (!todo.length) { console.log(`Todo al día (firma ${sig}). Nada que capturar.`); process.exit(0); }
 
 // ---------- Playwright ----------
-function findPlaywright() {
-  const roots = [join(ROOT, "node_modules")];
-  try { roots.push(execSync("npm root -g", { encoding: "utf8" }).trim()); } catch {}
-  try { roots.push(execSync("pnpm root -g", { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim()); } catch {}
-  const npx = join(H, ".npm/_npx");
-  if (existsSync(npx)) for (const s of readdirSync(npx)) roots.push(join(npx, s, "node_modules"));
-  for (const r of roots) for (const pkg of ["playwright", "playwright-core"])
-    if (existsSync(join(r, pkg))) return createRequire(join(r, "x.js"))(pkg);
-  return null;
-}
-const pw = findPlaywright() ?? die("No encuentro Playwright: npx -y playwright install chromium webkit");
-
-const browsers = {};
-async function getBrowser(name) {
-  if (browsers[name]) return browsers[name];
-  try { browsers[name] = await pw[name].launch(); }
-  catch {
-    if (name === "chromium") {
-      const cache = process.env.PLAYWRIGHT_BROWSERS_PATH || (MAC ? join(H, "Library/Caches/ms-playwright") : join(H, ".cache/ms-playwright"));
-      const exe = existsSync(cache) && readdirSync(cache).filter((d) => /^chromium-\d+$/.test(d)).sort().reverse()
-        .map((d) => join(cache, d, "chrome-linux64/chrome")).find(existsSync);
-      if (!exe) throw new Error("Sin Chromium: npx -y playwright install chromium");
-      browsers[name] = await pw.chromium.launch({ executablePath: exe });
-    } else {
-      console.error(`(sin ${name}: uso Chromium con viewport móvil)`);
-      browsers[name] = await getBrowser("chromium");
-    }
-  }
-  return browsers[name];
-}
+const pw = findPlaywright(ROOT) ?? die("No encuentro Playwright: npx -y playwright install chromium webkit");
+const { get: getBrowser, closeAll } = browserPool(pw);
 
 // ---------- servidor ----------
+const { server } = await ensureServer(cfg, ROOT);
 const base = (cfg.baseUrl ?? "http://localhost:3000").replace(/\/$/, "");
-const up = async () => { try { const r = await fetch(base, { signal: AbortSignal.timeout(3000) }); return r.status < 500; } catch { return false; } };
-let server;
-if (!(await up())) {
-  if (!cfg.start) die(`${base} no responde y shots.config.json no tiene "start". Arranca el servidor y repite.`);
-  console.log(`Arrancando: ${cfg.start}`);
-  server = spawn(cfg.start, { cwd: ROOT, shell: true, stdio: "ignore", detached: true });
-  const t0 = Date.now();
-  while (!(await up())) {
-    if (Date.now() - t0 > 180000) { process.kill(-server.pid); die(`${base} no respondió en 3 min.`); }
-    await new Promise((r) => setTimeout(r, 1000));
-  }
-}
 
 // ---------- captura ----------
-const HIDE = "nextjs-portal, [data-nextjs-toast], #vite-error-overlay, #__next-build-watcher { display: none !important; }"
-  + (cfg.hideSelectors?.length ? `${cfg.hideSelectors.join(",")} { display: none !important; }` : "");
-
-async function dismissCookies(page) {
-  for (const re of [/^(rechazar|reject|decline|deny|denegar)/i, /^(aceptar|accept|agree|allow|entendido|ok)$/i]) {
-    const btn = page.getByRole("button", { name: re }).first();
-    if (await btn.isVisible({ timeout: 800 }).catch(() => false)) { await btn.click({ timeout: 2000 }).catch(() => {}); return; }
-  }
-}
-async function loadLazy(page) {
-  await page.evaluate(async () => {
-    for (let y = 0; y < document.body.scrollHeight; y += window.innerHeight) {
-      window.scrollTo({ top: y, behavior: "instant" }); await new Promise((r) => setTimeout(r, 120));
-    }
-    window.scrollTo({ top: 0, behavior: "instant" }); await new Promise((r) => setTimeout(r, 200));
-  }).catch(() => {});
-  await page.waitForLoadState("networkidle", { timeout: 8000 }).catch(() => {});
-  await page.evaluate(() => document.fonts?.ready).catch(() => {});
-}
+const HIDE = hideCss(cfg);
 
 mkdirSync(OUT, { recursive: true });
 let failed = 0;
@@ -191,7 +130,7 @@ try {
     await ctx.close();
   }
 } finally {
-  for (const b of new Set(Object.values(browsers))) await b.close().catch(() => {});
+  await closeAll();
   if (server) try { process.kill(-server.pid); } catch {}
   writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   writeIndex();

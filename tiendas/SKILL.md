@@ -13,7 +13,9 @@ argument-hint: "[ficha, listado, filtros, carrito…]"
 
 # Tiendas y catálogos: que se entienda, se compare y se decida
 
-Criterio de diseñadores, **no evidencia**. Manda el proyecto (si es un catálogo sin precios ni carrito, ignorar lo de compra y quedarse con ficha, listado y confianza). Cada consejo lleva su autor; guías completas en `~/.claude/skills/fuentes/<autor>/guia.md`. La evidencia medida (Baymard, NN/g) va en su propio apartado y manda sobre el criterio; para ampliarla, `nng` o `investigar`.
+Criterio de diseñadores, **no evidencia**. Manda el proyecto. Cada consejo lleva su autor; guías completas en `~/.claude/skills/fuentes/<autor>/guia.md`. La evidencia medida (Baymard, NN/g) va en su propio apartado y manda sobre el criterio; para ampliarla, `nng` o `investigar`.
+
+**Catálogo sin precios ni carrito** (escaparate B2B que acaba en «pedir presupuesto»): leer solo NN/g de Evidencia (ficha y filtros; los datos de Baymard son del pago y no aplican), §1, §2 (salvo badges de oferta), §4 y §5, y de §6 las garantías. Saltar §3 y el carrito. Lo que más rinde ahí: fondo y encuadre iguales en listado y ficha, barra fija con la acción en móvil, producto montado en un espacio real y la ficha siempre en el mismo orden. La acción y la confianza alrededor del botón, en `conversion`.
 
 ## Evidencia (mide, no opina)
 

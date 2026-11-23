@@ -1,7 +1,7 @@
 ---
 name: capturas
-description: "Capturas de las pantallas clave del proyecto guardadas en .shots/ con caché por firma del código: se consultan antes de sacar capturas nuevas y solo se rehacen las viejas. USAR siempre que haya que VER la web o la app para responder o verificar (¿cómo se ve…?, ¿qué te parece la home?, revisa el móvil, comprueba el cambio, compara…), al cerrar una tarea con cambios visuales, y para preparar un proyecto con «/capturas init». Sirve para Next.js, Vite, Astro, HTML estático, Expo (vía web) y temas de Shopify."
-argument-hint: "[init | status | pagina... | --all | --vp movil,desk | --force]"
+description: "Capturas de las pantallas clave del proyecto guardadas en .shots/ con caché por firma del código: se consultan antes de sacar capturas nuevas y solo se rehacen las viejas. USAR siempre que haya que VER la web o la app para responder o verificar (¿cómo se ve…?, ¿qué te parece la home?, revisa el móvil, comprueba el cambio, compara…), al cerrar una tarea con cambios visuales, para enseñar propuestas con antes y después reales sin tocar el código o capturar estados (menú abierto, página bajada, error de formulario) con variantes.mjs, y para preparar un proyecto con «/capturas init». Sirve para Next.js, Vite, Astro, HTML estático, Expo (vía web) y temas de Shopify."
+argument-hint: "[init | status | pagina... | --all | --vp movil,desk | --force | variantes <archivo.mjs>]"
 ---
 
 # Capturas con caché
@@ -13,10 +13,32 @@ Script: `node ~/.claude/skills/capturas/scripts/shots.mjs` (siempre desde la ra�
 1. Si existe `.shots/index.md`, **mirarlo primero**. Ejecutar `shots.mjs --status <pagina>` para saber si la que interesa está al día.
 2. **Al día** → leer la captura guardada. **Leer el trozo que interesa** (`<pagina>-<vp>-N.png`, una pantalla cada uno), no la página entera: cuesta menos y se ve mejor. La entera (`<pagina>-<vp>.png`) solo para juzgar el ritmo o el orden de toda la página.
 3. **Vieja o falta** → `shots.mjs <pagina> [--vp …]`: rehace solo esas. Nunca la matriz entera para una pregunta concreta.
-4. **No está en el config** (otra ruta, un estado como menú abierto o error de formulario, otro viewport) → capturar aparte con Playwright, en el scratchpad, sin tocar `.shots/`. Si se va a mirar a menudo, añadirla a `shots.config.json`.
+4. **No está en el config** (otra ruta, un estado como menú abierto o error de formulario, otro viewport) → `variantes.mjs` con `only: true` (abajo), sin escribir otro script de Playwright. Si se va a mirar a menudo, añadirla a `shots.config.json`.
 5. Si la pregunta se responde leyendo el código (un texto, el orden de los bloques, qué componente sale), no hace falta captura.
 
 Al responder, decir de qué captura sale y si estaba al día.
+
+## Variantes: antes y después reales, y estados
+
+Para enseñar una propuesta sin tocar el código: abre la página, captura una zona, aplica el cambio en el navegador y vuelve a capturar la misma zona. Script: `node ~/.claude/skills/capturas/scripts/variantes.mjs <archivo.mjs> [--only a,b] [--out dir]` (salida por defecto en `.shots/variantes/`; el archivo de variantes, en el scratchpad).
+
+```js
+export default [
+  // css o apply (función que corre en la página); region: { selector, pad, height } | { y, height } | nada (la pantalla)
+  { name: "listado-blanco", path: "/productos/oficina", region: { selector: "main section:nth-of-type(2)", height: 700 },
+    css: "#listado { background: #fff !important }" },
+  { name: "sin-nota", path: "/producto/silla-x", apply: () => document.querySelector("#nota")?.remove() },
+  // prepare corre en Node con la página de Playwright: estados (menú abierto, página bajada, formulario con error)
+  { name: "menu-movil", path: "/", vp: "movil", only: true,
+    prepare: async (page) => { await page.locator("summary:visible", { hasText: /menú/i }).first().click(); } },
+];
+```
+
+- Mismas condiciones que `shots.mjs`: viewports de `shots.config.json` (`vp`, por defecto el de escritorio), movimiento reducido, banner de cookies rechazado, imágenes diferidas cargadas (con techo de espera).
+- La zona se recalcula después del cambio: si el cambio mueve el selector, las dos capturas siguen encuadradas.
+- Selectores: mirar antes el JSX (un menú puede ser `<details>` y no `<button>`). Si falla, `DEBUG=1` da el error completo.
+- Para elegir entre propuestas, montar las parejas en un artifact con una casilla por cambio y «Copiar selección» (el user marca y pega).
+- Es un boceto en el navegador, no el cambio: al aplicarlo de verdad, capturar otra vez con `shots.mjs`.
 
 ## Al cerrar una tarea visual
 

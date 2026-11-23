@@ -32,7 +32,7 @@ Por **para qué sirven**, no por de dónde salen. Claude Code solo lee skills en
 | **Evidencia** | `normas` | Consulta Apple, Material y GOV.UK a la vez y decide con criterios escritos (ninguna manda por defecto) |
 | | `hig`, `m3`, `govuk` | Copias locales que lee `normas`; no se activan solas (`disable-model-invocation`), se pueden llamar a mano |
 | | `nng` | Índice y fichas de Nielsen Norman Group |
-| **Herramientas** | `capturas` | Capturas en `.shots/` con caché |
+| **Herramientas** | `capturas` | Capturas en `.shots/` con caché; antes y después reales y estados con `variantes.mjs` |
 | | `break-ui` | Probar una UI con datos extremos |
 | | `pick-ui-library` | Elegir librería de frontend |
 

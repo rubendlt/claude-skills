@@ -80,7 +80,7 @@ El escáner no ve la composición ni el craft. Abre el JSX/markup de las pantall
 - recorre la **revisión rápida** de `web.md` § 9 o `movil.md` § 10: respuesta al tocar, zonas táctiles, motion, navegación, estados de carga, vacío y error, texto grande, lector de pantalla;
 - haz el inventario de medidas (§ Medidas): valores fuera de la escala y valores distintos para el mismo papel (márgenes, rellenos, radios, alturas);
 - lee todo el texto visible con `copy.md`;
-- recorre la **revisión de claridad** de `claridad.md` § 9 y, si la pantalla se puede renderizar, haz la revisión sobre capturas de § 8 con un subagente nuevo que no vea el código. Si no se puede renderizar, dilo en el informe: la claridad no se da por buena leyendo el código.
+- recorre la **revisión de claridad** de `claridad.md` § 9 y, si la pantalla se puede renderizar, haz la revisión sobre capturas de § 8 con un subagente nuevo que no vea el código (si la cuenta no usa subagentes, hazla tú mirando solo las capturas, como dice § 8). Si no se puede renderizar, dilo en el informe: la claridad no se da por buena leyendo el código.
 
 ### 5. Clasificar
 
